@@ -1,0 +1,45 @@
+<%= form_for @post, url: {controller: "home", action: "create"}, html: {class: "form-inline form-con"}, multipart: true do |f| %>  
+  
+  <h3 class="new_selling"># 판매하기</h3>
+  <hr>
+    <p class="form-p">카테고리</p>
+    <%= collection_select(:post, :category_id, Category.all, :id, :item, { multiple: false }, {class: "category-style"}) %>
+    <%= collection_select(:post, :selling_id, Selling.all, :id, :title, { multiple: false }, {class: "category-style"}) %>
+   
+    <p class="form-p">책 이름</p>
+    <!--<input type="text" name="title" class="form-control placeholder_default" placeholder="">-->
+    <%= f.text_field :title, class: "form-control placeholder_default", placeholder: "" %>
+    <div class="form-group">
+    <p class="form-p">출판사</p>
+    <!--<input type="text" name="place" class="form-control input-size placeholder_default" id="exampleInputName2" placeholder="">-->
+    <%= f.text_field :company, class: "form-control input-size0 placeholder_default", id: "exampleInputName2", placeholder:"" %>
+    </div>
+    <div class="form-group">
+    <p class="form-p">저자</p>
+    <!--<input type="text" name="place" class="form-control input-size placeholder_default" id="exampleInputName2" placeholder="">-->
+    <%= f.text_field :writename, class: "form-control input-size0 placeholder_default", id: "exampleInputName2", placeholder:"" %>
+    </div>
+    <div class="form-group">
+    <p class="form-p">구입 가격</p>
+    <!--<input type="text" name="price" class="form-control input-size" id="exampleInputName2" placeholder="">-->
+    <%= f.text_field :standard, class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>  
+    </div>
+    <div class="form-group">
+    <p class="form-p">판매 가격</p>
+    <!--<input type="text" name="price" class="form-control input-size" id="exampleInputName2" placeholder="">-->
+    <%= f.text_field :price, class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>  
+    </div>
+  
+    <p class="form-p">내용</p>
+    <!--<textarea name="content" class="form-control" rows="5", placeholder= "책 정가 & 필기상태는 필수! "></textarea>-->
+     <%= f.text_area :content, class: "form-control", rows: "5", placeholder: "사진은 3장까지 올릴 수 있어요! "%>
+    
+    <!--<input type="file" name="image" class="file-submit">-->
+    <%= f.file_field :image, class: "file-submit", multiple: true %>
+    
+    
+    <!--<button type="submit" class="btn btn-info file-submit">확인</button>-->
+    <%= f.submit "확인", class: "btn btn-info file-submit" %>
+<% end %>
+
+ 

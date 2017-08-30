@@ -1,0 +1,117 @@
+<div class="edit-con">
+<p class="edit-title">개인정보 수정</p>
+
+<% if @user.provider.present? %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <div class="field">
+    <%= f.label :email, '이메일' %><br />
+    <%= f.email_field :email, class: "form-control", readonly: true, autofocus: true %>
+  </div>
+   <div class="field">
+    <%= f.label :nic_name, '닉네임', class: "edit-password" %>
+      <% if @user.errors.any? %>
+    		<% @user.errors.full_messages.each do |x| %>
+    			<% if x.include? "동일한" %>
+    			<span class="edit-password-error">동일한 닉네임이 이미 존재합니다.</span>
+    			<% end %>
+    		<% end %>
+      <% end %>
+      <% if @user.errors.any? %>
+    		<% @user.errors.full_messages.each do |x| %>
+    			<% if x.include? "닉네임을 입력" %>
+    			<span class="edit-password-error">닉네임을 입력해주세요.</span>
+    			<% end %>
+    		<% end %>
+      <% end %>
+      
+    <%= f.text_field :nic_name, class: "form-control", autofocus: true %>
+  </div>
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+   <div class="edit-btn">
+    <%= link_to "뒤로", :back, class: "btn btn-default edit-btn-first" %>
+    <%= f.submit "수정", class: "btn btn-default" %>
+    </div>
+<% end %>
+<% end %> 
+
+<% if @user.provider.nil? %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>  
+    <div class="field">
+    <%= f.label :email, '이메일' %><br />
+    <%= f.email_field :email, class: "form-control", readonly: true, autofocus: true %>
+    </div>
+    <div class="field">
+    <%= f.label :nic_name, '닉네임', class: "edit-password" %>
+    <% if @user.errors.any? %>
+    		<% @user.errors.full_messages.each do |x| %>
+    			<% if x.include? "동일한" %>
+    			<span class="edit-password-error">동일한 닉네임이 이미 존재합니다.</span>
+    			<% end %>
+    		<% end %>
+    <% end %>
+    <% if @user.errors.any? %>
+    		<% @user.errors.full_messages.each do |x| %>
+    			<% if x.include? "닉네임을 입력" %>
+    			<span class="edit-password-error">닉네임을 입력해주세요.</span>
+    			<% end %>
+    		<% end %>
+    <% end %>
+    <%= f.text_field :nic_name, class: "form-control", autofocus: true %>
+  </div>
+  
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+  
+   <div class="field">
+    <%= f.label :current_password, '현재 비밀번호 (필수)', class: "edit-password" %>
+    <% if @user.errors.any? %>
+    		<% @user.errors.full_messages.each do |x| %>
+    			<% if x.include? "입력되지" %>
+    			<span class="edit-password-error">현재 비밀번호를 입력해주세요.</span>
+    			<% elsif x.include? "올바르지" %>
+    			<span class="edit-password-error">비밀번호가 틀렸습니다.</span>
+    			<% end %>
+    			<% end %>
+    <% end %>
+   
+    <p class="edit-content-sub">현재 비밀번호를 입력하셔야 수정이 가능합니다.</p>
+    <%= f.password_field :current_password, class: "form-control", autocomplete: "off" %>
+  </div>
+  
+<div class="password-con">  
+  <div class="field">
+    <%= f.label :password, '비밀번호 변경', class: "edit-password" %>
+    <% if @user.errors.any? %>
+    		<% @user.errors.full_messages.each do |x| %>
+    			<% if x.include? "적어도" %>
+    			<span class="edit-password-error">6자리 이상 입력해주세요.</span>
+    			<% end %>
+    		<% end %>
+    <% end %>
+    <%= f.password_field :password, class: "form-control", autocomplete: "off", placeholder: "6자리 이상 입력해주세요." %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, '비밀번호 재입력', class: "edit-password" %>
+     <% if @user.errors.any? %>
+    		<% @user.errors.full_messages.each do |x| %>
+    			<% if x.include? "서로" %>
+    			<span class="edit-password-error">비밀번호는 서로 일치해야 합니다.</span>
+    			<% end %>
+    		<% end %>
+    <% end %>
+    <%= f.password_field :password_confirmation, class: "form-control", autocomplete: "off" %>
+  </div>
+    <div class="edit-btn">
+    <%= link_to "뒤로", :back, class: "btn btn-default edit-btn-first" %>
+    <%= f.submit "수정", class: "btn btn-default" %>
+    </div>
+<% end %>
+<% end %>
+<!--<p>Unhappy? <%#= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>-->
+</div>
+</div>
+

@@ -1,0 +1,2 @@
+module MoimHelper
+end

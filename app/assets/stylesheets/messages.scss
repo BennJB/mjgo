@@ -1,0 +1,80 @@
+  .message-left-color {
+    background-color: #FFF2E6;
+  }
+  
+  .message-right-color {
+    background-color: #E5FFFF;
+  }
+  
+  .message-all > p {
+      margin: 0 0 2px 0;
+  }
+  
+  .message-user-name-first {
+      color: #D13076;
+      margin: 4px 0 2px 0;    
+      font-size: 14px;
+      font-weight: 600;
+      height: 22px;
+    }
+
+   .message-user-name-coffee {
+      color: #000000;
+      margin: 4px 0 2px 0;    
+      font-size: 14px;
+      font-weight: 600;
+      height: 22px;
+    }    
+    .message-user-name {
+      color: #4374D9;
+      margin: 4px 0 2px 0;    
+      font-size: 14px;
+      font-weight: 600;
+      height: 22px;
+    }
+    
+    .message-user-time {
+      font-weight: 400;
+      color: #949494;
+      margin: 0; 
+      font-size: 12px;
+      height: 20px;
+    }
+    
+@media (min-width: 0px) and (max-width: 550px) {
+  
+    .btn-sm {
+      padding: 4px 10px;
+      font-size: 12px;
+    }
+    
+    .message-user-name-first {
+      color: #D13076;
+      overflow: hidden;
+      margin: 4px 0 2px 0;    
+      font-size: 13px;
+      font-weight: 600;
+      height: 18px;
+    }
+    
+    .message-user-name {
+      color: #4374D9;
+      overflow: hidden;
+      margin: 4px 0 2px 0;    
+      font-size: 13px;
+      font-weight: 600;
+      height: 18px;
+    }
+    
+    .message-user-time {
+      font-weight: 500;
+      color: #949494;
+      margin: 0; 
+      font-size: 13px;
+      height: 18px;
+    }
+    
+    .message-content {
+      font-size: 13px;
+    }
+}

@@ -1,0 +1,89 @@
+<div class="profile grand-row">
+   <i class="fa fa-github-alt fa-4x profile-git" aria-hidden="true" style="color:black"></i>
+   <% if user_signed_in? %> 
+   <div class="profile-con">
+     <p class="profile-name"><%= current_user.nic_name %></p>   
+     <p class="profile-email"><%= current_user.email %></p>   
+     <div class="profile-button">
+     <%= link_to "수정", edit_user_registration_path, class: "btn btn-danger btn-sm" %>
+     </div>
+   </div>
+   <% end %>
+ </div>
+  
+  <!--<div class="profile-gnb">-->
+  <!--<a class="mypage1" href="/mypage1"><span class="profile-menu">사고 팔<span class="go">GO</span></span></a>-->
+  <!--<a href="/mypage2"><span class="profile-menu">만나<span class="go">GO</span></span></a>-->
+  <!--</div>-->
+  
+        <div class="mypage-con">
+          
+          <div class="mypage-category-con">
+            <p class="mypage-main-title">사고 팔<span class="go">GO</span></p>
+              <div class="mypage-row">
+                    <% @my_page.each do |x| %>
+                      <ul class="mypage-gnb">
+                        <li class="mypage-id">#<%= x.id %></p>
+                        <li class="mypage-title"><%= link_to "#{x.title}", "/show/#{x.id}", class: "mypage-text" %></p>
+                        <li class="mypage-time"><%= time_ago_in_words(x.created_at) %></p>
+                      </ul>
+                    <% end %>
+              </div>       
+              <div class="board-title1">
+                <%= will_paginate @my_page, previous_label: '< 이전', next_label: '다음 >', page_links: false, class: "paginate" %>
+              </div>
+          </div>
+          
+          <div class="mypage-category-con">
+              <p class="mypage-main-title">댓글</p>
+              <div class="mypage-row">
+                    <% @my_reply.each do |x| %>
+                      <ul class="mypage-gnb">
+                        <li class="mypage-id">#<%= x.post_id %></p></p>
+                        <li class="mypage-title"><%= link_to "#{x.content}", "/show/#{x.post_id}", class: "mypage-text" %></p>
+                        <li class="mypage-time"><%= time_ago_in_words(x.created_at) %></p>
+                      </ul>
+                    <% end %>
+              </div>    
+              <div class="paginate-con">
+                <%= will_paginate @my_reply, previous_label: '< 이전', next_label: '다음 >', page_links: false, class: "paginate" %>
+              </div>
+            </div>
+            
+            <div class="mypage-category-con">
+            <p class="mypage-main-title">만나<span class="go">GO</span></p>
+              <div class="mypage-row mypage-row-border-color">
+                    <% @moim.each do |x| %>
+                      <ul class="mypage-gnb">
+                        <li class="mypage-id">#<%= x.id %></p>
+                        <li class="mypage-title"><%= link_to "#{x.title}", "/moim_show/#{x.id}", class: "mypage-text" %></p>
+                        <li class="mypage-time"><%= time_ago_in_words(x.created_at) %></p>
+                      </ul>
+                    <% end %>
+              </div>       
+              <div class="board-title1">
+                <%= will_paginate @moim, previous_label: '< 이전', next_label: '다음 >', page_links: false, class: "paginate" %>
+              </div>
+          </div>
+          
+          <div class="mypage-category-con">
+            <p class="mypage-main-title">댓글</p>
+              <div class="mypage-row mypage-row-border-color">
+                    <% @moim_reply.each do |x| %>
+                      <ul class="mypage-gnb">
+                        <li class="mypage-id">#<%= x.moim_id %></p>
+                        <li class="mypage-title"><%= link_to "#{x.content}", "/moim_show/#{x.moim_id}", class: "mypage-text" %></p>
+                        <li class="mypage-time"><%= time_ago_in_words(x.created_at) %></p>
+                      </ul>
+                    <% end %>
+              </div>       
+              <div class="board-title1">
+                <%= will_paginate @moim_reply, previous_label: '< 이전', next_label: '다음 >', page_links: false, class: "paginate" %>
+              </div>
+          </div>
+        </div>
+    </div>  
+
+           
+           
+  

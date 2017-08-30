@@ -1,0 +1,39 @@
+<%= form_for @dongari, url: {controller: "dongari", action: "dongari_update_new"}, html: {class: "form-inline form-con"}, multipart: true do |f| %>  
+  
+  <h3 class="new_selling"># 동아리 홍보하기</h3>
+  <hr>
+   
+    <p class="form-p">모집 상태</p>
+    <%= collection_select(:dongari, :mozipp_id, Mozipp.all, :id, :title, { multiple: false }, {class: "category-style"} ) %>
+    
+    <p class="form-p"># 동아리 한줄 요약</p>
+    <!--<input type="text" name="title" class="form-control placeholder_default" placeholder="">-->
+    <%= f.text_field :title, value: "#{@dongari.title}", class: "form-control placeholder_default", placeholder: "" %>
+ 
+  <div class="form-group">
+    <p class="form-p">동아리 위치</p>
+    <!--<input type="text" name="price" class="form-control input-size" id="exampleInputName2" placeholder="">-->
+    <%= f.text_field :place, value: "#{@dongari.place}", class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>  
+  </div>
+     
+  <div class="form-group">
+    <p class="form-p">모집 인원</p>
+    <!--<input type="text" name="price" class="form-control input-size" id="exampleInputName2" placeholder="">-->
+    <%= f.text_field :person, value: "#{@dongari.person}", class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>  
+  </div>     
+ 
+ 
+    <p class="form-p">내용</p>
+    <!--<textarea name="content" class="form-control" rows="5", placeholder= "책 정가 & 필기상태는 필수! "></textarea>-->
+     <%= f.text_area :content, value: "#{@dongari.content}", class: "form-control", rows: "5", placeholder: "" %>
+    
+    <!--<input type="file" name="image" class="file-submit">-->
+    <%= f.file_field :image, class: "file-submit", multiple: true %>
+    
+    
+    <!--<button type="submit" class="btn btn-info file-submit">확인</button>-->
+    <%= f.submit "확인", class: "btn btn-info file-submit" %>
+<% end %>
+
+ 
+ 

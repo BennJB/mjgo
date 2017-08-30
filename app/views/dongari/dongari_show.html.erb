@@ -1,0 +1,130 @@
+<div class='row card-size'>
+    <div class="panel panel-default panel-post-show">
+        <div class="panel-body">
+            
+        <p class="moim-show-number">#<%= @dongari.id %>번째 동아리</p>
+        <% if @dongari.image.any? %>      
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>   
+    
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+            <div class="item active">
+            <% if @dongari.image[0] %>
+                <a href="<%=@dongari.image[0].url %>">
+                <img src="<%= @dongari.image[0].url %>" class="img-responsive center-block"></a>
+            <% else %>
+                <img src="/assets/no_image.gif" class="img-responsive img-design">
+            <% end %>
+            </div>
+            <div class="item">
+                <% if @dongari.image[1] %>
+                <a href="<%= @dongari.image[1].url %>">
+                <img src="<%= @dongari.image[1].url %>" class="img-responsive center-block"></a>
+                 <% else %>
+                <img src="/assets/no_image.gif" class="img-responsive img-design">
+                <% end %>
+            </div>
+            <div class="item">
+            <% if @dongari.image[2] %>
+                <a href="<%= @dongari.image[2].url %>">
+                <img src="<%= @dongari.image[2].url %>" class="img-responsive center-block"></a>
+                 <% else %>
+                <img src="/assets/no_image.gif" class="img-responsive img-design">
+                <% end %>
+            </div>
+        </div>
+            <!-- Carousel controls -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+        <% end %>
+
+            <hr>
+            <div class="text-right">
+                <% if @dongari.mozipp_id == 2 %>
+                <button type="button" class="btn btn-default moim-panel-button-border-default"><%= @dongari.mozipp_id.title %></button>
+                <% else %>
+                <button type="button" class="btn btn-default moim-panel-button-border"><%= @dongari.mozipp.title %></button>
+                <% end %>   
+            </div> 
+    
+        <div class="show-all">
+            <h4 class="show-name"><%= @dongari.user.name? ? @dongari.user.name : @dongari.user.nic_name %> 님</h4>
+            <p class="show-time show-time-first"><%= time_ago_in_words(@dongari.created_at) %></p>
+            <p class="dongari-show-title"><%= @dongari.title %></p>
+          
+            <% if @dongari.person.present? && @dongari.person > 0 %>
+            <p class="dongari-show-person">위치: <%= @dongari.place %> | 모집인원: <%= @dongari.person %>명</p>
+            <% elsif @dongari.person == 0 %>
+            <p class="dongari-show-person">위치: <%= @dongari.place %> | 모집인원: 미정</p>
+            <% else %>
+            <p class="dongari-show-person">미정</p>
+            <% end %>
+        </div>
+        
+        
+        <div class="show-content">
+        <p><%= simple_format(@dongari.content) %></p>
+         <div class="text-right">    
+        <% if user_signed_in? && current_user.id == @dongari.user.id %>
+            <a href="/dongari_update/<%= @dongari.id %>" class="delete-update-link">게시글 수정</a>
+            <a href="/dongari_destroy/<%= @dongari.id %>" class="delete-update-link" data-confirm="진짜 지울거에요?" data-method="post">삭제</a>
+        <% end %>
+        
+        </div>
+        </div><br>
+        
+         <!--쪽지 보내기-->
+        
+        <% if user_signed_in? && @dongari.user.id != current_user.id %> <!--해당 게시글과 현재 접속 유저가 같지 않다면~ -->
+            <div class="text-right">
+            <%= link_to '쪽지 보내기', conversations_path(sender_id: current_user.id, recipient_id: @dongari.user.id), method: 'post', class: "btn btn-success btn-sm" %>
+            </div>
+        <% end %>
+        
+        <%= form_tag("/dongari_reply/#{@dongari.id}", method:"post") do %>
+        <div class="form-group">
+            <input type="text" name="rep" class="form-control reply-input" id="exampleInputName2">
+            <button type="submit" class="btn btn-warning btn-sm reply_submit">댓글</button>
+        </div>
+        <% end %>
+     
+        <% @dongari.dongarireplies.each do |r| %>
+        <div class="reply-all"> 
+            <p class="reply-name"><%= r.user.name? ? r.user.name : r.user.nic_name %> <span class="show-time"><%= time_ago_in_words(r.created_at) %></span></p>
+            <p class="reply-content"><%= r.content %></p>
+            <% if user_signed_in? && current_user.id == r.user.id %>
+                <a href="/destroy4/<%= @dongari.id %>/<%= r.id %>" class="reply-delete" data-confirm="진짜 지울거에요?" data-method="post"><i class="fa fa-trash-o" aria-hidden="true"></i> 삭제</a><br>
+            <% end %>
+          <hr>
+        </div>    
+        <% end %>
+        
+    </div>
+    <div class="text-center">
+    <%= link_to '목록으로 가기', '/dongari', class: "btn btn-default btn-sm" %>
+    </div> 
+  </div>
+ </div>
+
+ 
+  <script>  
+$(document).ready(function() {  
+   $("#myCarousel").swiperight(function() {  
+      $("#myCarousel").carousel('prev');  
+    });  
+   $("#myCarousel").swipeleft(function() {  
+      $("#myCarousel").carousel('next');  
+   });  
+});  
+</script> 

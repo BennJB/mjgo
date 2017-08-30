@@ -1,0 +1,136 @@
+<div class='row card-size'>
+    <div class="panel panel-default panel-post-show">
+        <div class="panel-body">
+            
+        <p class="moim-show-number">#<%= @moim.id %>번째 만나GO</p>
+        <% if @moim.image.any? %>      
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>   
+    
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+            <div class="item active">
+            <% if @moim.image[0] %>
+                <a href="<%= @moim.image[0].url %>">
+                <img src="<%= @moim.image[0].url %>" class="img-responsive center-block"></a>
+            <% else %>
+                <img src="/assets/no_image.gif" class="img-responsive img-design">
+            <% end %>
+            </div>
+            <div class="item">
+                <% if @moim.image[1] %>
+                <a href="<%= @moim.image[1].url %>">
+                <img src="<%= @moim.image[1].url %>" class="img-responsive center-block"></a>
+                 <% else %>
+                <img src="/assets/no_image.gif" class="img-responsive img-design">
+                <% end %>
+            </div>
+            <div class="item">
+            <% if @moim.image[2] %>
+                <a href="<%= @moim.image[2].url %>">
+                <img src="<%= @moim.image[2].url %>" class="img-responsive center-block"></a>
+                 <% else %>
+                <img src="/assets/no_image.gif" class="img-responsive img-design">
+                <% end %>
+            </div>
+        </div>
+            <!-- Carousel controls -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+        <% end %>
+
+            <hr>
+            <div class="text-right">
+                <% if @moim.mozip_id == 2 %>
+                <button type="button" class="btn btn-default moim-panel-button-border-default"><%= @moim.mozip.title %></button>
+                <% else %>
+                <button type="button" class="btn btn-default moim-panel-button-border"><%= @moim.mozip.title %></button>
+                <% end %>   
+            </div>
+    
+        <div class="show-all">
+            <h4 class="show-name"><%= @moim.user.name? ? @moim.user.name : @moim.user.nic_name %> 님</h4>
+            <p class="show-time show-time-first"><%= time_ago_in_words(@moim.created_at) %></p>
+            <p class="show-title"><%= @moim.title %></p>
+            <% if @moim.person.present? && @moim.person > 0 %>
+            <p class="dongari-show-person">모집인원: <%= @moim.person %>명</p>
+            <% elsif @moim.person == 0 %>
+            <p class="dongari-show-person">미정</p>
+            <% else %>
+            <p class="dongari-show-person">미정</p>
+            <% end %>
+        </div>
+        
+         <% if user_signed_in? && @moim.user.id == current_user.id %> 
+           <%= form_for @moim, url: {controller: "moim", action: "moim_update_new"}, html: {class: ""}, multipart: true do |f| %>
+            <%= collection_select(:moim, :mozip_id, Mozip.all, :id, :title, { multiple: false }, {class: "category-style"} ) %>
+            <br>
+            <%= f.submit "상태 변경", class: "btn btn-default btn-sm file-submit" %>
+            <% end %>
+        <% end %>  
+        
+        <div class="show-content">
+        <p><%= simple_format(@moim.content) %></p>
+         <div class="text-right">    
+        <% if user_signed_in? && current_user.id == @moim.user.id %>
+            <a href="/moim_update/<%= @moim.id %>" class="delete-update-link">게시글 수정</a>
+            <a href="/moim_destroy/<%= @moim.id %>" class="delete-update-link" data-confirm="진짜 지울거에요?" data-method="post">삭제</a>
+        <% end %>
+        
+        </div>
+        </div><br>
+        
+         <!--쪽지 보내기-->
+        
+        <% if user_signed_in? && @moim.user.id != current_user.id %> <!--해당 게시글과 현재 접속 유저가 같지 않다면~ -->
+            <div class="text-right">
+            <%= link_to '쪽지 보내기', conversations_path(sender_id: current_user.id, recipient_id: @moim.user.id), method: 'post', class: "btn btn-success btn-sm" %>
+            </div>
+        <% end %>
+        
+        <%= form_tag("/moim_reply/#{@moim.id}", method:"post") do %>
+        <div class="form-group">
+            <input type="text" name="rep" class="form-control reply-input" id="exampleInputName2">
+            <button type="submit" class="btn btn-warning btn-sm reply_submit">댓글</button>
+        </div>
+        <% end %>
+     
+        <% @moim.moimreplies.each do |r| %>
+        <div class="reply-all"> 
+            <p class="reply-name"><%= r.user.name? ? r.user.name : r.user.nic_name %> <span class="show-time"><%= time_ago_in_words(r.created_at) %></span></p>
+            <p class="reply-content"><%= r.content %></p>
+            <% if user_signed_in? && current_user.id == r.user.id %>
+                <a href="/destroy3/<%= @moim.id %>/<%= r.id %>" class="reply-delete" data-confirm="진짜 지울거에요?" data-method="post"><i class="fa fa-trash-o" aria-hidden="true"></i> 삭제</a><br>
+            <% end %>
+          <hr>
+        </div>    
+        <% end %>
+        
+    </div>
+    <div class="text-center">
+    <%= link_to '목록으로 가기', '/moim', class: "btn btn-default btn-sm" %>
+    </div> 
+  </div>
+ </div>
+
+ 
+  <script>  
+$(document).ready(function() {  
+   $("#myCarousel").swiperight(function() {  
+      $("#myCarousel").carousel('prev');  
+    });  
+   $("#myCarousel").swipeleft(function() {  
+      $("#myCarousel").carousel('next');  
+   });  
+});  
+</script> 

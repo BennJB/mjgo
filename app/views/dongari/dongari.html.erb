@@ -1,0 +1,62 @@
+<div class="container">  
+
+        <div class="board-title-size">
+          <p class="notice">notice <span class="notice-span">동아리 홍보란은 모집기간만 운영합니다.</span></p> 
+      
+          <p class="board-content2">동아리가 필요할 때</p>
+          <p class="type-box"></p>
+        </div>    
+            
+          <form class="input-group search-con">
+            <input type="text" class="form-control placeholder_default" name="query" placeholder="원하는 동아리를 검색해보세요.">
+            <span class="input-group-btn">
+            <button class="btn btn-primary" type="submit"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+            </span>
+          </form>
+          
+          <p class="dongari-warning">명지대 <span style="font-weight:600;">인문캠퍼스 동아리 & 외부 연합동아리</span> 외의 기타 광고는 즉각 삭제합니다.</p>
+          
+          <div class="dongari-button-padding">  
+          <%= link_to "동아리 홍보하기", "/dongari_new", class: "btn btn-default new_team_button dongari-button" %>
+          </div>   
+</div>
+
+    <div class="dongari-background">  
+      <div class="container"> 
+        
+        <div class="row dongari-view-4">
+          <hr>
+           <% @dongaris.each do |x| %>
+              <div class="col-xs-6 col-sm-3 col-md-3 dongari-view-padding">
+                <div class="dongari-index">
+                  <div class="dongari-img"> 
+                  <% if x.image.present? %>
+                  <a href="/dongari_show/<%= x.id %>"><img src="<%= x.image[0].url %>" class="img-responsive dongari-img-design"></a>
+                  <% else %>
+                  <a href="/dongari_show/<%= x.id %>"><img src="assets/no_image.gif" class="img-responsive dongari-img-design"></a>
+                  <% end %>
+                  <!--<div class="caption">-->
+                  <p class="dongari-user-name"><span class="by_name">by</span> <%= x.user.name? ? x.user.name : x.user.nic_name %></p>
+                  <p class="dongari-title"><%= x.title %></p>
+                  <!--</div>-->
+                  </div>
+                </div>
+              </div>
+            <% end %>
+        </div>
+        <div class="paginate-con">
+          <%= will_paginate @dongaris, previous_label: '<< 이전', next_label: '다음 >>', page_links: false, class: "paginate" %>
+        </div>
+        
+      </div>
+    </div>  
+ 
+
+
+<script>
+$(document).ready(function() { 
+ $('.type-box').typeIt({
+  })
+  .tiType('2017년 2학기 신입회원 모집중');
+});     
+</script>

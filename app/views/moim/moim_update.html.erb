@@ -1,0 +1,32 @@
+<%= form_for @moim, url: {controller: "moim", action: "moim_update_new"}, html: {class: "form-inline form-con"}, multipart: true do |f| %>  
+  
+  <h3 class="new_selling"># 소모임 개설</h3>
+  <hr>
+   
+    <p class="form-p">모집 상태</p>
+    <%= collection_select(:moim, :mozip_id, Mozip.all, :id, :title, { multiple: false }, {class: "category-style"} ) %>
+    <%= collection_select(:moim, :moimcategory_id, Moimcategory.all, :id, :title, { multiple: false }, {class: "category-style"} ) %>
+    
+    <p class="form-p">모임 주제</p>
+    <!--<input type="text" name="title" class="form-control placeholder_default" placeholder="">-->
+    <%= f.text_field :title, value: "#{@moim.title}", class: "form-control placeholder_default", placeholder: "" %>
+ 
+  <div class="form-group">
+    <p class="form-p">모집 인원</p>
+    <!--<input type="text" name="price" class="form-control input-size" id="exampleInputName2" placeholder="">-->
+    <%= f.text_field :person, value: "#{@moim.person}", class: "form-control input-size", id: "exampleInputName2", placeholder: "숫자만 기입!" %>  
+  </div>
+ 
+    <p class="form-p">모임 소개</p>
+    <!--<textarea name="content" class="form-control" rows="5", placeholder= "책 정가 & 필기상태는 필수! "></textarea>-->
+     <%= f.text_area :content, value: "#{@moim.content}", class: "form-control", rows: "5", placeholder: "" %>
+    
+    <!--<input type="file" name="image" class="file-submit">-->
+    <%= f.file_field :image, class: "file-submit", multiple: true %>
+    
+    
+    <!--<button type="submit" class="btn btn-info file-submit">확인</button>-->
+    <%= f.submit "확인", class: "btn btn-info file-submit" %>
+<% end %>
+
+ 

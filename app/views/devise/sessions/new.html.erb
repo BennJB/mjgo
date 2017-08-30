@@ -1,0 +1,92 @@
+<div class="container">
+        <div class="no_sign">
+        <p class="no_email_text_facebook">모든 활동은 로그인이 필요합니다.</p>
+        <a class="nav-item-child btn btn-default" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">
+        로그인</a><br> <br>
+    
+    <% unless @user.email.blank? %>
+        <% unless User.find_by_email(params[:user][:email]) %>
+            <p class="edit-password-error"># 일치하는 이메일이 없습니다.</p>
+        <% else %>
+            <% unless User.find_by_email(params[:user][:email]).valid_password?(params[:user][:password]) %>
+            <p class="edit-password-error"># 비밀번호가 틀렸습니다.</p>
+            <% end %>
+        <% end %>
+    <% end %>
+    </div>    
+    
+    <div class="no_sign2">
+        <p class="password-forgot-title">비밀번호를 까먹으셨나요..?</p>
+            <p class="forgot-admin"><span style="font-weight:600;">가입하신 이메일</span>로 개발자에게 문의주세요.</p>
+            <div class="admin-content">
+                <p class="forgot-admin1"><span style="color:#FFFFFF; background-color:black">이메일</span> mjugo@naver.com</p>
+                <p class="forgot-admin2"><span style="color:#FFEB35; background-color:black">옐로우톡 ID</span> mjugo</p>
+            </div>
+    </div>        
+</div>
+    
+    
+    <div class="container">
+	    <div class="modal fade login" id="loginModal">
+		 <div class="modal-dialog login animated">
+    		 <div class="modal-content">
+    		    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">SNS</h4> <!-- 자바 스크립트에서 변경 -->
+                </div>
+                <div class="modal-body">  
+                    <div class="box">
+                        <div class="content">
+                            <div class="social">
+                                 <a class="circle naver" href="">
+                                <%#= image_tag "naver.png", class: "" %>
+                                </a>
+                                 <a class="circle kakao" href="">
+                                <%#= image_tag "kakao.png", class: "" %>
+                                </a>
+                                </a>
+                            </div>
+                            <div class="division">
+                                <div class="line l"></div>
+                                    <span class="modal-title">또는</span>
+                                <div class="line r"></div>
+                            </div>
+                                <div class="error"></div>
+                                
+                                <div class="form loginBox">
+                                <%= form_for(:user, url: session_path(:user)) do |f| %>
+                                    <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "이메일" %>
+                                    <%= f.password_field :password, autocomplete: "off", id: "password", class: "form-control", placeholder: "비밀번호" %>
+                                    <%= f.submit "로그인", class: "btn btn-default btn-login", onclick: "loginAjax()" %>
+                                   <% end %>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="box">
+                          <div class="content registerBox" style="display:none;">
+                            <div class="form">
+                                <%= form_for(:user, :url => registration_path(:user), :remote => true, :html => { :multipart => true }) do |f| %>
+                                
+                                  <%= f.text_field :nic_name, autofocus: true, class: "form-control", placeholder: "닉네임" %>
+                                  <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "이메일" %>
+                                  <hr>
+                                  <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "비밀번호(6자 이상 입력해주세요.)" %>
+                                  <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "비밀번호 재입력" %>
+                                  <%= f.submit "회원가입", class: "btn btn-default btn-register" %>
+                              <% end %>
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="forgot login-footer">
+                                 <a href="javascript: showRegisterForm();">회원가입</a>
+                        </div>
+                        <div class="forgot register-footer" style="display:none">
+                             <a href="javascript: showLoginForm();">로그인</a>
+                        </div>
+                    </div>        
+    		      </div>
+		      </div>
+		  </div>
+    </div>

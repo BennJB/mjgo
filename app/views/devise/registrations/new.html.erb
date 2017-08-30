@@ -1,0 +1,66 @@
+<div class="register-con text-center">
+    <a class="nav-item-child btn btn-info" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">
+    회원가입</a>
+    <hr> 
+  
+    <div class="error-content">
+    <p class="password-forgot-title"># 주의</p>
+    
+        <% if @user.errors.any? %>
+    		<% @user.errors.full_messages.each do |x| %>
+    			<% if x.include? "닉네임을 입력" %>
+    			<p class="error-title1">닉네임을 입력해주세요.</h5>
+    			<% end %>
+    			<% end %>
+    		<% end %>
+    		
+    	<% if @user.errors.any? %>
+    		<% @user.errors.full_messages.each do |x| %>
+    			<% if x.include? "동일한 닉네임" %>
+    			<p class="error-title1">동일한 닉네임이 이미 존재합니다.</h5>
+    			<% end %>
+    			<% end %>
+    		<% end %>	
+    		
+    	 <% if @user.errors.any? %>
+    		<% @user.errors.full_messages.each do |x| %>
+    			<% if x.include? "Email가 입력" %>
+    			<p class="error-title1">이메일을 입력해주세요.</h5>
+    			<% end %>
+    			<% end %>
+    		<% end %>
+    		
+    	<% if @user.errors.any? %>
+    		<% @user.errors.full_messages.each do |x| %>
+    			<% if x.include? "동일한 이메일" %>
+    			<p class="error-title1">동일한 이메일이 이미 존재합니다.</h5>
+    			<% end %>
+    			<% end %>
+    		<% end %>
+    	
+    	 <% if @user.errors.any? %>
+    		<% @user.errors.full_messages.each do |x| %>
+    			<% if x.include? "Password가 입력" %>
+    			<p class="error-title1">비밀번호를 입력해주세요.</h5>
+    			<% end %>
+    			<% end %>
+    		<% end %>
+    	
+    	<% if @user.errors.any? %>
+    		<% @user.errors.full_messages.each do |x| %>
+    			<% if x.include? "Password은(는) 적어도 6자" %>
+    			<p class="error-title1">비밀번호는 적어도 6자를 넘어야 합니다.</h5>
+    			<% end %>
+    			<% end %>
+    		<% end %>
+    		
+        <% if @user.errors.any? %>
+    		<% @user.errors.messages.each do |x| %>
+    			<% if x.include? :password_confirmation %>
+    			<p class="error-title1">비밀번호는 서로 일치해야 합니다.</h5>
+    			<% end %>
+    			<% end %>
+    		<% end %>
+ 
+    </div>    
+</div>

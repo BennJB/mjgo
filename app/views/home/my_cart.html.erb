@@ -1,0 +1,25 @@
+<div class="container mypage-con"> 
+            <h3 class="board-title1">찜한 목록</h3>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                  <th class="col-1 col-sm-1 col-lg-1 col-xl-1"></th>
+                  <th class="col-7 col-sm-7 col-lg-7 col-xl-7 board">제목</th>
+                  <th class="col-2 col-sm-2 col-lg-2 col-xl-2 board-writer">작성자</th>
+                  <th class="col-2 col-sm-2 col-lg-2 col-xl-2 board-time">작성시간</th>
+                  
+                </tr>
+                </thead>
+                  <tbody>
+                    <% current_user.liked_posts.each do |x| %>
+                      <tr>
+                        <td><%= x.id %></td>
+                        <td><%= link_to "#{x.title}", "/show/#{x.id}", class: "x-title" %></td>
+                        <td><%= x.user.name? ? x.user.name : x.user.nic_name %></td>
+                        <td><%=  time_ago_in_words(x.created_at) %></td>
+                        <td></td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+            </table>
+</div>            

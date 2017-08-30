@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row card-size message-con-bottom">
+  <p class="message-title">내 쪽지함</p>
+
+    <% @conversations.each do |conversation| %>
+      <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
+        <% if conversation.sender_id == current_user.id %>
+          <% recipient = User.find(conversation.recipient_id) %>
+        <% else %>
+          <% recipient = User.find(conversation.sender_id) %>
+        <% end %>
+      
+      <% if conversation.messages.present? %>
+        <a href="/conversations/<%= conversation.id %>/messages">  
+        
+          <div class="panel panel-default">
+            <div class="panel-body messages-panel-body grand-row">
+              <span class="messages-panel-user"><%= recipient.nic_name %></span>
+              <span><%= conversation.messages.last.body %></span>
+              <div class="parent-right">
+              <%= time_ago_in_words(conversation.messages.last.created_at) %>
+              </div>
+            </div>
+      <% else %>
+            <div class="panel-body messages-panel-body grand-row">
+            <p class="messages-panel-user"><%= recipient.nic_name %></p>
+            </div>
+      <% end %> 
+          </div>  
+        </a>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+  <!--<h3>모든 유저</h3>-->
+    <%# @users.each do |user| %>
+      <%# if user.id != current_user.id %>
+        <%#= user.nic_name %> <%#= link_to '쪽지 보내기', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post'%>
+      <%# end %>
+    <%# end %>

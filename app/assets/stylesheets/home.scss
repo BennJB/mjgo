@@ -1,0 +1,2276 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+    
+    ul, li {
+    margin: 0;
+    padding: 0;
+    }
+
+    body {
+    padding-top: 76px;    //   nav 바 맨 위에 fixed 하면, 아래 content가 네브로 올라오는 것 방지
+    font-family: 'Nanum Gothic', sans-serif;
+    }
+    
+    .freetalk-parent {
+    position: relative;    
+    }
+    
+    .freetalk {
+    font-family: 'Architects Daughter', cursive;    
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    }
+    
+    .go {
+    font-family: 'Architects Daughter', cursive;  
+    font-weight: 800;
+    color: #F15F5F;
+    }
+    
+    .notice {
+    color: #F15F5F;    
+    font-family: 'Architects Daughter', cursive;  
+    font-weight: 800;
+    font-size: 15px;  
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    }
+    
+    .notice-span {
+    text-decoration: underline;    
+    color: #5E5E5E;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 600;    
+    font-size: 13px;
+    }
+    
+    
+    .sell-background {
+    margin-top: 15px;
+    height: 30px;
+    // background-position: center center;
+    // background-image: url("/assets/sell.png");
+    // background-repeat: no-repeat;
+    }
+    
+    .navbar-fixed-top {
+    height: 76px;
+    border-bottom:1px solid rgba(150, 150, 150, 0.22);
+    background-color: white;
+    }
+    
+    .type-box {
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;    
+    }
+    
+    // 광고 이미지
+    .advertise1 {
+    height: 110px;
+    background-color: #FFA7A7;
+    }
+    .advertise2 {
+    background-size: cover;
+    background-image: url("/assets/pagoda1.png");
+    background-repeat: no-repeat;
+    height: 110px;
+    // background-color: #FAED7D;
+    }
+  
+    .modal-body {
+    padding-top: 5px;
+    }  
+  
+    .modal-contents {
+    margin: 0 auto;
+    width: 288px;
+    font-size: 13px;
+    margin-top: 15px;
+    text-align: center;
+    } 
+    
+    // show 이미지 높이 고정
+    .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    height: 450px;
+    width: 100%;
+    }
+ 
+    .dropdown-backdrop {    // 폰에서 드롭박스 #서적, #기타 링크가 눌리지 않은거 해결책! 
+    position: static;
+    }
+    
+    .dropdown-menu {
+    text-align: center;
+    min-width: 105px;
+    }
+    
+    .background {    
+    margin-top: 10px;
+    padding: 10px 0;
+    // background-size: cover;
+    // background-repeat:no-repeat;
+    // background-position: center center;
+    }
+    
+    .background-etc-index {
+    background-color: #e9ebee;   
+    }
+
+    .service-background {
+    margin-top: 20px;
+    padding: 20px 0;
+    background-color: #D4F4FA;
+    }
+    
+    
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p, .header .nav-item-child {
+    font-family: 'Nanum Gothic', sans-serif;
+    }
+    
+    .dropdown-menu > li > a {
+    margin-top: 6px;
+    font-weight: 700;
+    }
+    
+    .header .nav-item-child {
+    font-size: 15px;
+    }
+    
+    .header .nav-item-child:focus, .nav-item-child:hover  {
+    color: #F15F5F;
+    }
+    
+    .modal-title {
+    font-family: 'Architects Daughter', cursive;      
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    }
+    
+    div.form > hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+    
+    .login .box .social {
+    margin: 0 auto 20px;
+    }
+    
+    .modal-content {
+        background-color: #ffffff;
+    }
+    
+    .no_sign {
+        border-top: 4px solid #F15F5F;
+        border-left: 1px solid #ececec;
+        border-right: 1px solid #ececec;
+        border-bottom: 1px solid #ececec;
+        border-radius: 2px;
+        text-align: center;
+        width: 440px;
+        margin: 50px auto 50px;
+    }
+    
+    .no_sign2 {
+        border-top: 4px solid #008299;
+        border-left: 1px solid #ececec;
+        border-right: 1px solid #ececec;
+        border-bottom: 1px solid #ececec;
+        border-radius: 2px;
+        text-align: center;
+        width: 440px;
+        margin: 50px auto 400px;
+    }
+    
+    .no_email {
+        border-top: 4px solid #F15F5F;
+        border-left: 1px solid #ececec;
+        border-right: 1px solid #ececec;
+        border-bottom: 1px solid #ececec;
+        border-radius: 2px;
+        text-align: center;
+        width: 440px;
+        margin: 50px auto 400px;
+    }
+    .no_email_text_facebook{
+        margin-top: 10px;
+        margin-bottom: 15px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .no_email_link {
+        text-decoration: underline;
+        color: #F15F5F;
+    }
+    
+    .no_email_text {
+        font-size: 17px;
+    }
+
+
+    // 회원가입 에러시, 에러 메세지 창 크기 //
+    .register-con {
+        margin: 0 auto;
+        width: 350px;
+        padding-top: 30px;
+        padding-bottom: 220px;
+    }
+    
+    // 개인정보 수정시, 창 크기 //
+    .edit-con {
+        border-top: 4px solid #F15F5F;
+        border-left: 1px solid #ececec;
+        border-right: 1px solid #ececec;
+        border-bottom: 1px solid #ececec;
+        border-radius: 2px; 
+        margin: 15px auto 50px;
+        width: 350px;
+        padding: 25px 20px 50px 20px;
+    }
+    .edit-title {
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 23px;
+    }
+    
+    // 현재 비밀번호 
+    .edit-password {
+        margin-bottom: 1px;
+    }
+    .edit-password-error {
+        font-size: 15px;
+        margin: 0px;
+        color: red;
+    }
+    
+    .edit-content-sub {
+        margin-bottom: 4px;
+        font-size: 12px;
+        color: #868686;
+    }
+    .edit-btn {
+        text-align: center;
+    }
+    .edit-btn-first {
+        margin-right: 30px;
+    }
+    
+    
+    .field {
+        margin-bottom: 20px;
+    }
+    
+    
+    // 가격 & 좋아요 가로 배치 //
+    .grand-row::after {
+        content:'';
+        display: block;
+        clear: both;}
+        
+    .parent-left {
+        float: left;}
+     
+     .parent-right {
+        float: right;}
+    // ----------------------- //
+     
+    
+    .panel {
+    border-radius: 10px;
+    }
+    
+    .border-radius-0 {
+    border-radius: 0px;
+    }
+    
+    .grand-parent-write-size{
+        padding-left: 90px;
+    }
+    
+    .grand-parent {
+        margin: 0 auto;
+        width: 880px;
+    }
+    
+    .grand-parent::after {
+        content:'';
+        display: block;
+        clear: both; 
+    }
+
+    .parent {
+       float: left;
+       width: 210px;
+    //   margin: 0 auto;
+    }
+    
+    .parent_first {
+       margin-bottom: 10px;
+       margin-right: 5px;
+       margin-left: 5px;
+    }
+   
+    // .parent::after {
+    //   content:'';
+    //   display: block;
+    //   clear: both; 
+    //   }
+    
+    .panel-default-white {
+    border-color: #FFFFFF;
+    }
+     
+    .panel-body {
+      padding: 20px;
+    }  
+    
+    // 메세지 디자인
+    
+    .message-con-bottom {
+    margin-bottom: 400px;    
+    }
+    
+    .message-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    }
+    
+    .messages-panel-body {
+    padding: 15px;    
+    }
+    
+    .messages-panel-user {
+    color: #4374D9;
+    font-weight: 700;
+    margin-right: 8px;
+    }
+    
+    .panel-padding {
+        padding: 0px;
+    }
+    
+    .child {
+      position: relative;         // selling-button이 참조하는 부모!
+    //   height: 108px;
+      height: 160px;
+    }
+    
+    // 글쓰기 버튼 색깔
+    .btn-black {
+    color: #BDBDBD;
+    background-color: #242424;
+    border-color: #BDBDBD;
+    }
+    
+    .btn-info:hover {
+    color: #fff;
+    }
+    
+    .img-design {
+      border: 1px solid #ececec;
+      border-radius: 10px;
+      height: 100%;
+      width: 100%;         // width: 100%은 index에서 이미지의 크기가 부모 보다 클 때, 알아서 맞춰줌
+                           // 근데 크기가 부모보다 작으면, 빈 공간이 생긴다.
+         
+    }
+    
+
+    .index-post-img {
+    //   width: 108px;
+    //   float: left;
+    }
+      
+    .index-post-content {
+      height: 130px;
+      width: 185px;
+      margin-left: 15px;
+      margin-right: 15px;
+      float: left;
+    }
+    
+    .index-post-content-item {
+      height: 115px;
+    }
+    
+    .index-post-content > a {
+      display: block;
+    }
+    
+    .parent-right > .index-user-time {
+    padding-top: 2px;    
+    color: #707070;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    }
+    
+    .post-title {
+    margin-bottom: 0;  // content이 바로 아래에 보일 수 있게!
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 15px;
+    color: black;
+    }
+    
+    .post-title > a > .span-content {
+     text-decoration: none;
+     font-size: 14px;   
+    }
+    
+    // 사고팔고 글쓰기 폼
+    .form-con {
+    border-top: 4px solid #F15F5F;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    border-radius: 2px;
+    padding: 15px 30px;
+    width: 530px;
+    margin: 0 auto 80px auto;
+    }
+
+
+    .child > .index-user-name {
+      color: #4374D9;
+      overflow: hidden;
+      margin: 8px 0 0px 0;    
+      font-size: 15px;
+      font-weight: 600;
+      height: 22px;
+    }
+    
+    .child > .index-user-time {
+      color: #707070;
+      margin: 5px 0 0 0; 
+      font-size: 13px;
+      font-weight: 500;
+      height: 22px;
+    }
+    
+    .child > .index-post-title {
+       overflow: hidden;   // 글자가 칸을 초과하면, div 크기에 맞추고 나머지는 숨겨준다.
+    //   width: 245px;     메인 컨텐트 4개짜리로 바꾸면서 글자가 초과해서 없애줬다.
+       height: 23px;        // 이걸로 아래 가격과의 간격 조절(가격의 폰트 크기 바꿀 때, 이것도 수정)
+       margin-top: 3px;
+       margin-bottom: 5px;
+    }
+    
+    .child > .index-post-title-present {
+       overflow: hidden;   
+       height: 23px;      
+       margin-top: 3px;
+       margin-bottom: 5px;
+    }
+    
+    
+    .child > .index-post-title-item {
+       overflow: hidden;  
+       height: 45px;       
+       margin-top: 3px;
+       margin-bottom: 27px;
+    }
+    
+    .child > .index-post-title2 {
+       overflow: hidden;  
+       height: 16px;       
+       margin-top: 0px;
+       margin-bottom: 0px;
+    }
+    
+    .child > .index-post-title3 {
+       overflow: hidden; 
+       height: 18px;       
+       margin-top: 0px;
+       margin-bottom: 10px;
+    }
+    
+    .index-post-company {
+    margin: 0;    
+    color: #707070;       
+    font-size: 13px;    
+    }
+    .index-post-writename {
+    margin: 0;    
+    color: #707070;       
+    font-size: 13px;    
+    }
+    
+    .index-standard {
+        margin-top: 3px;
+        font-size: 13px;
+        text-decoration: line-through; 
+        float: left;
+    }
+    
+    .parent-left > .index-price {
+       margin-left: 5px;
+       font-size: 15px;
+       font-weight: 800;
+       color: #FF7012;
+    //   margin-bottom: 13px;
+    }
+
+.show-name {
+    color:#4374D9;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.moim-show-number {
+    color: #616161;
+    margin-top: 6px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.show-title {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    }
+    
+.show-company-writename {
+    margin: 0;
+    color: #707070;
+    font-size: 16px;
+}   
+
+.writename-bottom {
+    margin-bottom: 15px;
+}
+
+.text-right {
+    margin-bottom: 10px;
+    }    
+
+.show-time {
+    color: #9E9E9E;
+    font-size: 13px;
+    margin-bottom: 0px;
+    }    
+
+.show-time-first {
+    font-size: 15px;
+    }    
+
+.reply-all > hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.show-standard {
+    margin: 0px;
+    font-size: 16px;
+    text-decoration: line-through; 
+    }
+
+.show-price {
+    font-weight: 600;
+    font-size: 19px;
+    color: #FF7012;
+}
+
+ .show-content {
+     border-bottom: 1px solid rgba(150, 150, 150, 0.22);
+     font-size: 16px;
+ }
+
+.main-title {
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.need_login {
+   font-size: 24px;
+}
+
+.password-forgot-title {
+    padding-top: 10px;
+    font-family: 'NanumSquare', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.forgot-admin {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.forgot-admin1 {
+    margin-bottom: 0px;
+    font-size: 17px;
+}
+
+.forgot-admin2 {
+    margin-bottom: 10px;
+    font-size: 17px;
+    }
+
+.forgot-con {
+    border: 1px solid #ececec;
+    border-radius: 10px;
+}
+
+.admin-content {
+    padding-left: 115px;
+    text-align: left;
+}
+
+.error-title1 {
+    font-family: 'NanumSquare', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.error-content {
+    margin: 0 auto;
+    width: 300px;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    padding: 10px 0px 10px 0px;
+}
+
+.board-title-size {
+    margin-top: 0px;
+}
+
+.board-title1 {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.board-content {
+    font-weight: 400;
+    font-size: 35px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.board-content2 {
+    color: #cacaca;
+    font-size: 20px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.advertise {
+    margin-bottom: 30px;
+}
+
+.advertise-content {
+    font-size: 20px;
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.category-title {
+    margin: 0px;
+    font-size: 20px;
+}
+
+.category-cotent {
+    margin: 0px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 17px;
+}
+
+.category-con {
+    text-align: center;
+    padding-top: 0px;
+    margin: 0 auto;
+}
+
+.category-style {  // 글쓰기에서 카테고리 스타일
+    width: 80px;
+    height: 30px;
+}
+
+.nav-margin {
+    margin-left: 0px;
+}
+
+.board-top {
+    margin-top: 50px;
+}
+
+a {
+    color: black;
+}
+
+.btn-default {
+    border-color: #BDBDBD;
+}
+
+.btn-color {
+    border-color: #BDBDBD;
+}
+
+.new_button {
+    color: #F15F5F;
+    border-color: #F15F5F;
+    margin-top: 35px;
+    font-weight: 600;
+}
+
+.new_team_button {
+    color: #2457BD;
+    border-color: #2457BD;
+    margin-top: 35px;
+    font-weight: 600;
+}
+
+.new_selling {
+    letter-spacing: 1px;
+    color: #F15F5F; 
+    font-weight: 600;
+    text-align: center;
+}
+
+.fa-github-alt {
+    padding-left: 15px;
+}
+
+.like-color {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.like-icon-color-main {
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+}
+
+
+.like-icon-color {
+    
+    font-weight: 500;
+    color: black;
+}
+
+.form-p {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+
+.file-submit {
+    margin-top: 5px;
+}
+
+.delete-update-link {
+    font-weight: 700;
+    font-size: 14px;
+    margin-right: 10px;
+    color: #D13076;
+}
+
+.delete-update-link:hover {
+    color: #FFABED;
+}
+
+.like-link {
+    color: #D13076;
+}
+
+.reply-name {
+    color:#4374D9;
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+.reply-content {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.reply-delete {
+    margin-right: 10px;
+}
+
+.reply-input {
+    height: 25px;
+}
+
+// paginate CSS //
+
+.paginate-con {
+    text-align: center;
+}
+.paginate {
+    margin-bottom: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #F15F5F;
+}
+
+.paginate > a { 
+    margin-right: 20px;
+}
+
+.paginate > a:visited {
+    color: black;
+}
+
+.paginate > .current {
+    margin-right: 20px;
+    font-weight: 700;
+}
+
+.previous_page {
+    margin-left: 20px;
+}
+
+.disabled {
+     margin-right: 20px;
+}
+
+.search-con {
+    width: 400px;
+    margin: 20px auto 0px;
+  }
+
+ .card-size {
+    width: 550px;
+    margin: 0 auto;
+  }
+  
+  .message-con-bottom {
+    margin-bottom: 400px;    
+    }
+  
+
+   .panel {
+    border: 1px solid #ececec;
+    margin-bottom: 10px;
+    }
+    
+    .panel-post-show {
+    margin-top: 20px;
+    margin-bottom: 80px;
+    }
+    
+    footer {
+    background-color: #222222;
+    padding: 30px 0;
+    color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    }
+    
+    .footer-font {
+    margin-bottom: 3px;
+    color: #FFFFFF;
+    }
+    
+    // selling view
+    
+    .selling-button {
+    position: absolute;    // 이 아이의 기준은 position: relative인 child가 된다.  
+    top: 0px;              // top이든 뭐든 참조할 좌표의 크기는 지정해줘야 이동한다.
+    }
+    
+    .selling-border {  // selling 버튼 모서리 둥글게
+    border-radius: 10px;
+    }
+    
+    // friend & team index
+    
+    .moim-index-padding {
+    padding-left: 10px;    
+    padding-right: 10px;
+    }
+    
+    .friend-img {
+    float: left;
+    height: 130px;
+    width: 100px;
+    }
+    
+    .friend-talk {
+    margin: 8px 12px 12px 12px;
+    height: 145px;
+    }
+    
+    .friend-reply {
+    font-weight: 600;
+    }
+    
+    .col-web {
+    padding-right: 0px;    
+    }
+    
+    .friend-number {
+    // font-family: 'Nanum Myeongjo',sans-serif;    
+    margin-top: 10px;    
+    margin-left: 15px;    
+    color: #EDEDED;    
+    font-size: 12px;    
+    }
+    
+    .friend-go {
+    font-size: 13px;    
+    font-family: 'Architects Daughter', cursive; 
+    }
+    
+    .friend-user-name {
+    margin-bottom: 5px;    
+    text-align: center; 
+    color: #B4B4B4;  
+    font-size: 13px;
+    }
+    
+    .by_name {
+    color: #B4B4B4;   
+    font-family: 'Damion', cursive;     
+    }
+    
+    .friend-time {
+    margin-right: 15px;    
+    text-align: right;    
+    color: #EAEAEA;
+    font-size: 12px;
+    font-weight: 500;
+    }
+    
+    .friend-title {
+    text-align: center;    
+    font-weight: 500;    
+    color: #FFFFFF;    
+    overflow: hidden;
+    height: 60px;
+    font-size: 23px;
+    font-weight: 500;
+    margin: 23px 40px 10px 40px;
+    }
+    
+     .friend-title-con {
+    padding: 0px;    
+    } 
+    
+    .friend-person {
+    margin-bottom: 10px;    
+    font-size: 13px;
+    }
+    
+    .friend-detail-button {
+    color: #FF5A5A;
+    font-weight: 700;
+    }
+    
+    mark {
+    background-color: #D4F4FA;
+    }
+    
+    .friend-img-design {
+    height: 100%;
+    }
+    
+    .friend-sub-img {
+    height: 200px;    
+    }
+    
+    .friend-sub-img-design {
+    width: 100%;
+    height: 100%;
+    }
+    
+    .mypick_gongmo-text {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    }
+    
+    .friend-content {
+    float: left;
+    }
+    
+    .friend-panel-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;    
+    }
+    
+    .friend-panel-mozip-size {
+    padding: 10px;
+    text-align: center;    
+    background-color: #FFFFFF;    
+    width: 55px;
+    height: 65px;
+    }
+    
+    .friend-panel-mozip-size > p {
+    font-weight: 600;    
+    color: #959595;    
+    font-size: 15px;    
+    }
+    
+    
+    .friend-panel-button-border {
+    border-radius: 0px;
+    border-color: #FFFFFF;
+    }
+    
+    .friend-panel-body {
+    position: relative;    
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    height: 170px;
+    padding: 0px;    
+    }
+    
+    .friend-panel-community1 {
+    background-image: url("/images/community.jpg");
+    }
+    .friend-panel-community2 {
+    background-image: url("/images/community2.jpg");
+    }
+    .friend-panel-community3 {
+    background-image: url("/images/community3.jpg");
+    }
+    .friend-panel-community4 {
+    background-image: url("/images/community4.jpg");
+    }
+    .friend-panel-community5 {
+    background-image: url("/images/community5.jpg");
+    }
+    .friend-panel-community6 {
+    background-image: url("/images/community6.jpg");
+    }
+    .friend-panel-community7 {
+    background-image: url("/images/community7.jpg");
+    }
+    .friend-panel-community8 {
+    background-image: url("/images/community8.jpg");
+    }
+    
+    
+    .friend-panel-art1 {
+    background-image: url("/images/art.jpg");
+    }
+    .friend-panel-art2 {
+    background-image: url("/images/art2.jpg");
+    }
+    .friend-panel-art3 {
+    background-image: url("/images/art3.jpg");
+    }
+    .friend-panel-art4 {
+    background-image: url("/images/art4.jpg");
+    }
+    .friend-panel-art5 {
+    background-image: url("/images/art5.jpg");
+    }
+    .friend-panel-art6 {
+    background-image: url("/images/art6.jpg");
+    }
+    .friend-panel-art7 {
+    background-image: url("/images/art7.jpg");
+    }
+    .friend-panel-art8 {
+    background-image: url("/images/art8.jpg");
+    }
+    .friend-panel-art9 {
+    background-image: url("/images/art9.jpg");
+    }
+    
+    .friend-panel-it1 {
+    background-image: url("/images/it.jpg");
+    }
+    .friend-panel-it2 {
+    background-image: url("/images/it2.jpg");
+    }
+    .friend-panel-it3 {
+    background-image: url("/images/it3.jpg");
+    }
+    .friend-panel-it4 {
+    background-image: url("/images/it4.jpg");
+    }
+     .friend-panel-it5 {
+    background-image: url("/images/it5.jpg");
+    }
+    .friend-panel-it6 {
+    background-image: url("/images/it6.jpg");
+    }
+    .friend-panel-it7 {
+    background-image: url("/images/it7.jpg");
+    }
+    .friend-panel-it8 {
+    background-image: url("/images/it8.jpg");
+    }
+    
+    .friend-panel-study1 {
+    background-image: url("/images/study.jpg");
+    }
+    .friend-panel-study2 {
+    background-image: url("/images/study2.jpg");
+    }
+    .friend-panel-study3 {
+    background-image: url("/images/study3.jpg");
+    }
+    .friend-panel-study4 {
+    background-image: url("/images/study4.jpg");
+    } 
+    .friend-panel-study5 {
+    background-image: url("/images/study5.jpg");
+    }
+    .friend-panel-study6 {
+    background-image: url("/images/study6.jpg");
+    }
+    .friend-panel-study7 {
+    background-image: url("/images/study7.jpg");
+    }
+    .friend-panel-study8 {
+    background-image: url("/images/study8.jpg");
+    }
+    .friend-panel-study9 {
+    background-image: url("/images/study9.jpg");
+    }
+    
+    .moim-panel-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    }
+    
+    .moim-panel-button-border {
+    border-radius: 0px;
+    border-color: #EAEAEA;
+    border-top: 5px solid #FF5A5A;
+    }
+    
+    .moim-panel-button-border-default {
+    border-radius: 0px;
+    border-color: #EAEAEA;
+    border-top: 5px solid #747474;
+    }
+    
+    .moim-panel-button-text {
+    color: #F15F5F;
+    font-weight: 800;
+    }
+    
+    // 동아리
+    .dongari-button-padding {
+    padding-left: 175px;
+    }
+    
+    .dongari-warning {
+    margin-top: 10px;
+    text-align: center;
+    }
+    
+    .dongari-background {
+    margin-bottom: 300px;
+    }
+    
+    .dongari-view-4 {
+    width: 800px;
+    margin: 0 auto;
+    }
+    
+    .dongari-view-padding {
+    padding-left: 5px;
+    padding-right: 5px;
+    }
+    
+    .dongari-button {
+    margin-top: 10px;    
+    }
+    
+    .dongari-user-name { 
+    padding-top: 5px;
+    margin-bottom: 0px;
+    color: #989898;
+    font-size: 13px;
+    font-weight: 600;
+    }
+    
+    .dongari-title {
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 700;
+    height: 45px;
+    }
+    
+    .dongari-index {
+    height: 325px;
+    }
+    
+    .dongari-img {
+    height: 250px;
+    }
+    
+    .dongari-show-person {
+    font-size: 15px;
+    font-weight: 700;
+    color: #353535;
+    }
+    
+    .dongari-show-title {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    }
+    
+    .dongari-img-design {
+    height: 100%;
+    width: 100%;
+    }
+    
+    .poster-text {
+    font-weight: 700;    
+    }
+    
+    .thumbnail-padding {
+    padding: 0px;
+    }
+    
+    .profile {
+    border-top: 4px solid #F15F5F;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    border-radius: 2px;    
+    padding-top: 20px;
+    width: 400px;
+    margin: 0 auto 50px;
+    }
+    
+    .profile-gnb {
+    text-align: center;    
+    width: 300px;
+    margin: 0 auto;
+    }
+    
+    .profile-gnb > a:link {
+    color: #F15F5F;    
+    }
+    
+    
+    .profile-menu {
+    padding-right: 10px;    
+    padding-left: 10px;    
+    font-size: 20px;    
+    }
+    
+    .profile-button {
+    text-align: right;    
+    }
+    
+    .profile-con {
+    padding-top: 5px;    
+    }
+    
+    .profile-git {
+    padding-left: 60px;    
+    padding-right: 20px;    
+    float: left;
+    font-size: 4em;    
+    }
+    
+    .profile-name {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 0px;    
+    }
+
+    // my_page
+    
+    .mypage-con{
+    width: 860px;
+    margin: 0 auto 200px;
+    }
+    .mypage-con::after {
+    content: '';
+	display: block;
+	clear: both;  
+    }    
+    .mypage-category-con {
+    width: 420px;
+    float: left;
+    }
+    .mypage-category-con:first-child {
+    margin-bottom: 50px;    
+    margin-right: 20px;
+    }
+    .mypage-category-con:nth-child(3) {
+    margin-right: 20px;
+    }
+    
+    .mypage-main-title {
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0px;
+    }
+    
+    .mypage-row {
+    border-top: 4px solid #FF9436;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    border-radius: 2px;  
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    height: 165px;
+    }
+    
+    .mypage-row-border-color {
+    border-top: 4px solid #428bca;   
+    }
+    
+    .mypage-gnb::after {
+    content: '';
+	display: block;
+	clear: both;  
+    }    
+    
+    .mypage-gnb {
+    list-style-type: none;
+    }
+    ul.mypage-gnb > li {
+	float: left;
+    }
+    
+    .mypage-id {
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+    .mypage-title {
+    width: 65%;    
+    overflow: hidden;    
+    height: 24px;    
+    }
+    .mypage-time {
+    padding-left: 20px;
+    }
+    
+    .mypage-text {
+    font-weight: 600;   
+    }
+    
+
+@media (max-width: 991px) {
+    
+    .mypage-con{
+    width: 650px;
+    margin: 0 auto 200px;
+    }
+  
+    .mypage-category-con {
+    width: 315px;
+    float: left;
+    }
+    
+    .mypage-title {
+    width: 53%;
+    }
+    
+   .panel {
+    margin-bottom: 10px;
+   }
+   
+    .panel-post-show {
+    margin-bottom: 80px;
+    }
+
+  .like-icon-color {
+    font-size: 20px;}
+    
+  .dropdown-menu {   // 991px 아래에서 서적/기타 토글이 왼쪽으로 올라오는 거 방지. 아래로 뻗게.
+    position: absolute;
+  }
+  
+  .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+    
+    .header .navbar-nav {
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-color: white;
+    border: 1px solid #D5D5D5;
+    }  
+
+    .menu-bar-right {  // 메뉴바 오른쪽으로 위치시키기
+    float: right;
+    }  
+     
+   .grand-parent-only-size{
+    width: 600px;
+    }
+    
+   .grand-parent-write-size {
+    padding-left: 70px;
+    }
+    
+  .parent {
+       float: left;
+       width: 210px;
+    //   margin: 0 auto;
+    }
+    
+  .parent_first {
+       margin-bottom: 10px;
+       margin-right: 5px;
+       margin-left: 5px;
+    }
+    
+ .grand-parent {
+    width: 660px;
+    }
+
+  .search-con {
+      width: 400px;
+  }
+  
+  .card-size {
+    width: 550px;
+    margin: 0 auto;
+  }
+  
+  .message-con-bottom {
+    margin-bottom: 400px;    
+    }
+  
+  /*동아리*/
+   .dongari-view-4 {
+    width: 700px;
+    margin: 0 auto;
+    }
+    .dongari-button-padding {
+    padding-left: 0px;
+    }
+  
+}
+
+@media(max-width: 767px) {
+    
+    .background {
+    margin-top: 0px;
+    }
+    
+    .header .nav-item-second {
+    padding-top: 3px;
+    }
+    
+    .header .nav-item-first {
+    padding-top: 10px;
+    }
+    
+    .header .navbar-logo-wrap {
+    padding: 7px 0;
+    }
+    
+    .navbar-fixed-top {
+    height: 73px;
+    }
+    
+    .form-con {              
+    width: 500px;
+    margin: 0 auto 80px auto;
+    }
+    
+     .panel-post-show {
+    margin-bottom: 80px;
+    }
+    
+    .grand-parent-write-size {
+    padding-left: 70px;
+    }
+    
+    .parent_first {
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    }
+    
+    .grand-parent {
+    width: 440px;
+    }
+    
+    .menu-bar-right {  // 메뉴바 오른쪽으로 위치시키기
+    float: right;
+    }  
+     
+    .search-con {
+      width: 400px;
+      margin: 20px auto 0;
+  }
+  
+    .card-size {
+    width: 550px;
+    margin: 0 auto;
+  }
+  
+  .message-con-bottom {
+    margin-bottom: 400px;    
+    }
+  
+  // friend
+    .col-mobile {
+    margin: 0 auto;
+    width: 400px;
+    padding-left: 0px;
+    padding-right: 0px;
+    }
+  
+  /*동아리*/
+   .dongari-view-4 {
+    width: 600px;
+    margin: 0 auto;
+    }
+    
+    .dongari-button-padding {
+    padding-left: 0px;
+    }
+}
+
+@media(max-width: 654px) {
+   
+    .board-title1 {
+    font-size: 20px;
+    }
+    
+    .profile {
+    margin-bottom: 0px;
+    }
+    
+    .mypage-con{
+    margin: 0 auto;    
+    width: 600px;
+    }
+    .mypage-category-con {
+    margin: 0 auto 10px;    
+    width: 400px;
+    float: none;
+    }
+    .mypage-category-con:first-child {
+    margin: 0 auto 10px;
+    }
+    .mypage-category-con:nth-child(3) {
+    margin: 0 auto 10px;
+    }
+    
+    .mypage-title {
+    width: 63%;
+    }
+    
+    .sell-background {
+    height: 10px;
+    }
+    
+    .header .nav-item-second {
+    padding-top: 3px;
+    }
+    
+    .header .navbar-logo-wrap {
+    padding: 7px 0;
+    }
+    
+    .header .nav-item-first {
+    padding-top: 10px;
+    }
+    
+     .panel-padding {      // 메인 게시글 틀 여백 없애기
+    padding: 0px;
+    }  
+     
+    .menu-bar-right {  // 메뉴바 오른쪽으로 위치시키기
+    float: right;
+    }  
+    
+    .dropdown-menu {    // 토글바 오른족 여백 없애기. 기본값 160px 이었음.
+    min-width: 0px;
+    }
+    
+    .panel {
+    margin-bottom: 10px; 
+    }
+    
+     .panel-post-show {
+    margin-bottom: 60px;
+    }
+    
+    .background {
+    padding: 10px 0;
+    }
+    
+    .grand-parent-only-size{
+    width: 330px;
+    }
+
+    .grand-parent {
+    width: 330px;
+    }
+    
+    .parent {
+    margin: 0 auto;
+    float: none; // 이걸 해줘야 grand-parent 안에서 div.parent가 가운데 정렬이 된다.
+    width: 330px;
+    }
+    
+    .child {
+    height: 115px;
+    }
+    
+    .index-post-img {
+    width: 115px;	
+    float: left;
+    }
+      
+    .index-post-content {
+    // padding: 4px;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 190px;
+    float: left;
+    }
+    
+    .post-title {
+    margin-bottom: 0;  // content(작성내용)이 바로 아래에 보일 수 있게!
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    color: black;
+    }
+    
+    .post-title > a > .span-content {
+     text-decoration: none;
+     font-size: 13px;   
+    }
+    
+    .child > .index-user-name {
+      color: #4374D9;
+      overflow: hidden;
+      margin: 4px 0 0 0;    
+      font-size: 14px;
+      font-weight: 600;
+      height: 18px;
+    }
+    
+    .child > .index-user-time {
+      color: #707070;
+      margin: 0; 
+      font-size: 12px;
+      height: 18px;
+    }
+          
+    .child > .index-post-title {
+      overflow: hidden;   // 글자가 칸을 초과하면, div 크기에 맞추고 나머지는 숨겨준다.
+       height: 41px;
+       margin-top: 3px;
+       margin-bottom: 3px;
+    }
+    
+  .parent-left > .index-price {
+       margin-left: 5px;
+       font-size: 14px;
+       font-weight: 800;
+       color: #FF7012;
+       margin-bottom: 0px;
+    }
+    
+    .index-like {
+    // margin-left: 90px;
+    }
+    
+    .search-con {
+      width: 400px;
+      margin: 20px auto 0;
+  }
+    
+   .board-title {
+     width: 190px;
+   }
+   .board-writer {
+     width: 70px;
+   }
+   .board-time {
+     width: 70px;
+    }
+    
+    // 폰화면 index에서 selling 버튼 크기 조절 
+    .selling-border {
+    font-size: 12px;
+    padding: 3px 8px;
+    }
+    
+    // friend
+    .col-mobile {
+    margin: 0 auto;
+    width: 400px;
+    padding-left: 0px;
+    padding-right: 0px;
+    }
+
+    /*동아리*/
+   .dongari-view-4 {
+    width: 550px;
+    margin: 0 auto;
+    }
+    .dongari-button-padding {
+    padding-left: 0px;
+    }
+
+}
+ 
+@media (min-width: 0px) and (max-width: 550px) {
+    
+    body {
+    padding-top: 66px; 
+    }
+
+    .paginate-con {
+    margin-top: 20px;    
+    }
+
+    .notice-span {
+    font-size: 12px;    
+    color: #828282;    
+    }
+    
+    .friend-detail-button {
+    display: none;    
+    }
+    
+    .new_selling {
+    font-size: 18px;    
+    margin-top: 0px;
+    margin-bottom: 0px;
+    }
+    
+    .input-size {
+    width: 136px;    
+    }
+    
+    .mypage-row {
+    height: 150px;    
+    }
+    
+    .mypage-title {
+    height: 18px;
+    }
+     
+    .mypage-con{
+    margin: 0 auto;    
+    width: 300px;
+    }
+    .mypage-category-con {
+    margin: 0 auto 10px;    
+    width: 300px;
+    float: none;
+    }
+    .mypage-category-con:first-child {
+    margin: 0 auto 10px;
+    }
+     .mypage-category-con:nth-child(3) {
+    margin: 0 auto 10px;
+    }
+    
+    .mypage-title {
+    width: 55%;
+    }
+    .no_sign {
+        width: 330px;
+        margin: 30px auto 30px;
+    }
+    
+    .no_sign2 {
+        width: 330px;
+        margin: 30px auto 400px;
+    }
+      
+    .no_email {
+        width: 330px;
+        margin: 30px auto 400px;
+    }
+    .no_email_text {
+        font-size: 14px;
+    }
+    
+    .type-box {
+    margin-top: 0px;
+    font-size: 25px;
+    }
+    
+    .sell-background {
+    height: 40px;    
+    margin-top: 0px;    
+    // background-image: url("/assets/phone_sell.png");
+    }
+    
+    .header .nav-item-second {
+    padding-top: 3px;
+    }
+    
+    .header .nav-item-first {
+    padding-top: 10px;
+    }
+    
+    .navbar-fixed-top {
+    height: 63px;
+    }
+
+    .advertise1 {
+    margin: 0;
+    padding: 0;
+    font-size: 0;     
+    height: 0;
+    width: 0;
+    }
+    
+    .advertise2 {
+    width: 100%;
+    height: 90px;
+    }
+    
+    .grand-parent-write-size{
+    padding-left: 5px;
+    }
+    
+    .background {
+    background-image: none;
+    background-color: #e9ebee;
+    margin-top: 10px;
+    padding: 10px 0;
+    }
+    
+    .board-title-size {
+    margin-top: 10px;
+    }
+    
+    .board-title1 {
+    font-weight: 700;
+    margin-top: 0px;
+    font-size: 18px;
+    }
+    
+    .board-content {
+    margin-bottom: 0px;
+    font-size: 25px;
+    }
+    
+    .board-content2 {
+    margin-top: 2px;
+    margin-bottom: 0px;
+    font-size: 17px;
+    }
+    
+    // friend view
+    .col-mobile {
+    margin: 0 auto;    
+    width: 330px;
+    padding-left: 0px;
+    padding-right: 0px;
+    }
+
+    .friend-panel-body {
+    height: 146px;    
+    }
+
+    .friend-title {
+    line-height: 26px;    
+    height: 52px;    
+    font-size: 20px;
+    font-weight: 500;
+    margin: 15px 25px 2px 25px;
+    }
+    
+    .dongari-user-name {
+    color: #B4B4B4;
+    font-size: 11px;
+    font-weight: 600;
+    }
+    
+    .friend-number {
+    margin-top: 8px;    
+    font-size: 11px;    
+    color: #B4B4B4;
+    }
+    
+    .friend-user-name {
+    margin-bottom: 10px;
+    }
+    
+    .friend-time {
+    font-size: 11px;   
+    }
+    
+    .friend-person {
+    font-size: 12px;
+    }
+    
+    .moblie-margin-top {
+    margin-top: 50px;    
+    }
+    
+    
+    .category-con {
+    padding-top: 10px;
+    }
+    
+    .category-title {
+    font-size: 15px;
+    }
+    
+    // 폰 view에서 이미지 높이 조절
+    .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    height: 300px;
+    width: 100%;
+    }
+    
+    .show-name {
+    font-size: 15px;
+    }
+    
+    .show-title {
+    margin-top: 10px;
+    font-size: 18px;
+    }
+    
+    .show-price {
+    font-weight: 600;
+    font-size: 18px;
+    }
+    
+    .show-company-writename {
+    font-size: 14px;
+    }
+   
+    .show-content {
+    font-weight: 500;
+    font-size: 15px;
+    }
+
+    .delete-update-link {
+    font-weight: 600;
+    font-size: 14px;
+    }
+    
+    .reply-name {
+    font-size: 13px;
+    }
+    
+    .show-time {
+    font-size: 12px;
+    }
+    
+    .show-time-first {
+    font-size: 13px;
+    }
+    
+    .reply-content {
+    font-size: 14px;
+    font-weight: 600;
+}
+    
+    .panel-padding {      // 메인 게시글 틀 여백 없애기
+    padding: 0px;
+    }  
+     
+    .menu-bar-right {  // 메뉴바 오른쪽으로 위치시키기
+    float: right;
+    }  
+    
+    .dropdown-menu {    // 토글바 오른족 여백 없애기. 기본값 160px 이었음.
+    min-width: 0px;
+    }
+    
+    .panel {
+    margin-bottom: 4px; 
+    }
+    
+    .panel-post-show {
+    margin-bottom: 60px;
+    }
+    
+    .grand-parent-only-size{
+    width: 330px;
+    }
+    
+    .grand-parent {
+    width: 330px;
+    }
+    
+    .parent {
+    margin: 0 auto;
+    float: none; // 이걸 해줘야 grand-parent 안에서 div.parent가 가운데 정렬이 된다.
+    width: 330px;
+    }
+    
+    .child {
+    height: 115px;
+    }
+    
+    .index-post-img {
+    width: 130px;	
+    float: left;
+    }
+    
+   .index-standard {
+    margin-top: 3px;
+    font-size: 12px;
+    }  
+      
+    .index-post-content {
+    // padding: 4px;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 175px;
+    float: left;
+    }
+    
+    .post-title {
+    margin-bottom: 0;  // content(작성내용)이 바로 아래에 보일 수 있게!
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    color: black;
+    }
+    
+    .child > .index-post-title-item {
+    margin-bottom: 15px;
+    }
+    
+    .post-title > a > .span-content {
+     text-decoration: none;
+     font-size: 13px;   
+    }
+    
+    .child > .index-user-name {
+      color: #4374D9;
+      overflow: hidden;
+      margin: 4px 0 0 0;    
+      font-size: 13px;
+      font-weight: 600;
+      height: 18px;
+    }
+    
+    .child > .index-user-time {
+      color: #707070;
+      margin: 6px 0 5px 0; 
+      font-size: 11px;
+      height: 18px;
+    }
+    
+    .child > .index-post-title {
+       overflow: hidden;   // 글자가 칸을 초과하면, div 크기에 맞추고 나머지는 숨겨준다.
+       height: 21px;
+       margin-top: 1px;
+       margin-bottom: 3px;
+    }
+    
+    .child > .index-post-title3 {
+    margin-bottom: 3px;    
+    }
+    
+    .index-post-company {
+    font-size: 11px;
+    }
+    
+    .index-post-writename {
+    font-size: 11px;
+    }
+    
+    .parent-left > .index-price {
+       margin-left: 5px;
+       font-size: 14px;
+       font-weight: 800;
+       color: #FF7012;
+       margin-bottom: 0px;
+    }
+    
+    .index-like {
+    // margin-left: 90px;
+    }
+    
+    .search-con {
+      width: 300px;
+      margin: 10px auto 0;
+  }
+    .like-color {
+      font-size: 13px;
+      font-weight: 600;
+    }
+    
+    .like-icon-color-main {
+    font-size: 13px;}
+    
+    
+    .card-size {
+      width: 330px;
+      margin: 0 auto;
+  }
+  
+  .message-con-bottom {
+    margin-bottom: 300px;    
+    }
+  
+   .form-con {
+    padding: 15px;
+    width: 330px;
+    margin: 0 auto 80px auto;
+  }
+
+  .uni-title {             // 폰 뷰에서 메뉴 토글바 메인 타이틀과 그아래 li요소들 사이의 마진.
+      margin-bottom: 0px;
+  }
+  
+  .register-con {
+    width: 320px;
+    padding-top: 20px;
+    padding-bottom: 130px;
+    }
+   
+   .need_login {
+   font-size: 21px;
+   }
+   
+  .forgot-admin {
+    margin-bottom: 10px;
+    font-size: 13px;
+    }
+    
+    .forgot-admin1 {
+    margin-bottom: 0px;
+    font-size: 15px;
+    }
+    
+  .forgot-admin2 {
+    margin-bottom: 10px;
+    font-size: 15px;
+    }
+    
+    .admin-content {
+    padding-left: 68px;
+    }    
+    
+    .error-title1 {
+    font-size: 15px;
+    }
+   
+    .selling-border {
+    font-size: 12px;
+    padding: 3px 8px;
+    }
+    
+    
+   .new_button {
+    margin-top: 20px;
+   }
+   
+   .new_team_button {
+    margin-top: 20px;
+   }
+    
+   footer {
+    padding: 20px 0;
+   }
+   
+   // 서적, 기타 카테고리 버튼
+   .btn-color {
+    padding: 5px 8px;
+   }
+    
+    // index 화면 댓글
+    .parent-right > .index-user-time {
+    font-size: 12px;
+    padding-top: 3px;  // 가격 라인과 높이 같아보이게
+    }
+    
+    // every_item 페이지 
+   .advertise-content {
+    width: 300px;
+   }
+    
+    // 개인정보 수정
+    .edit-title {
+    margin-bottom: 15px;
+    }
+    
+    // 현재 비밀번호 
+    .edit-password {
+    margin-bottom: 0px;
+    }
+    
+    .edit-con {
+    padding-bottom: 40px;
+    width: 300px;
+    }
+    .field {
+    margin-bottom: 13px;
+    }
+    
+    /*동아리*/
+   .dongari-view-4 {
+    width: 330px;
+    margin: 0 auto;
+    }
+    
+    .dongari-button {
+    margin-top: 5px;    
+    }
+    
+    .dongari-button-padding {
+    padding-left: 0px;
+    }
+    
+    .fa-github-alt {
+    padding-left: 0px;
+}
+    .dongari-show-title {
+    margin-top: 10px;
+    font-size: 18px;
+    }
+    
+    .header .navbar-logo-wrap {
+    padding: 0px;
+    }
+
+    // 메세지 디자인
+    .message-title {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    }
+    
+    .profile {
+    padding-top: 10px;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    }
+    
+    .profile-git {
+    padding-left: 30px;    
+    }
+    
+     // my_page
+    .table {
+    height: 160px;
+    }
+    
+}

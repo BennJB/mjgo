@@ -1,0 +1,19 @@
+class CreatePosts < ActiveRecord::Migration[5.1]
+  def change
+    create_table :posts do |t|
+      
+      t.string :title
+      t.string :company
+      t.string :writename
+      t.integer :price
+      t.text :content
+      
+      t.integer :selling_id
+      t.integer :category_id
+    # [t.belongs_to :user] == [t.references :user]
+      t.integer :user_id
+
+      t.timestamps
+    end
+  end
+end

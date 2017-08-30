@@ -1,0 +1,72 @@
+<div class="container">  
+
+        <div class="board-title-size">
+          <p class="board-title1">만나<span style="color: #F15F5F; font-weight: 800;">GO</span></p>
+          <p class="board-content2">소모임 & 스터디가 필요할 때</p>
+          <p class="type-box"></p>
+        </div>    
+            
+          <form class="input-group search-con">
+            <input type="text" class="form-control placeholder_default" name="query" placeholder="원하는 모임을 검색해보세요.">
+            <span class="input-group-btn">
+            <button class="btn btn-primary" type="submit"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+            </span>
+          </form>
+          
+          <div class="grand-parent-write-size">  
+            <%= link_to "모임 개설", "/moim_new", class: "btn btn-default new_team_button" %>
+        </div>
+</div>
+
+    <div class="background">  
+      <div class="container">  
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-12 col-web col-mobile">
+                <% @moims.each do |x| %>
+                <div class="col-md-6 col-sm-6 moim-index-padding">
+                    <div class="panel panel-default border-radius-0">
+                        <div class="panel-body moim-panel-body">
+                     
+                          <div class="friend-talk">
+                            <p class="friend-number">#<%= x.id %>번째 만나GO</p>
+                            <!--<p class="friend-user-name"><%#= x.user.name? ? x.user.name : x.user.nic_name %><span class="friend-time"> <%= time_ago_in_words(x.created_at) %></span></p>-->
+                            <p class="friend-title"><mark><%= link_to "#{x.title}", "/moim_show/#{x.id}" %></mark></p>
+                            <div class="grand-row">
+                                <div class="parent-left">
+                                <% if x.person.present? %>    
+                                <!--<p class="friend-person"><span class="friend-reply">댓글(<%#= x.moimreplies.size %>)</span></p>-->
+                                <% else %>
+                                <!--<p class="friend-person"><span class="friend-reply">댓글(<%#= x.moimreplies.size %>)</span></p>-->
+                                <% end %>
+                                </div>
+                                <div class="parent-right">
+                                <%= link_to "자세히 보기 >", "/moim_show/#{x.id}", class: "friend-detail-button" %>
+                                </div>
+                            </div>
+                          </div>
+                        
+                        </div>
+                        <div class="moim-panel-button">
+                            <% if x.mozip_id == 2 %>
+                            <button type="button" class="btn btn-default moim-panel-button-border-default"><%= x.mozip.title %></button>
+                            <% else %>
+                            <button type="button" class="btn btn-default moim-panel-button-border"><%= x.mozip.title %></button>
+                            <% end %>   
+                        </div>
+                    </div>
+                </div>    
+                <% end %>
+            </div>
+           
+      </div>
+    </div>  
+
+
+<script>
+$(document).ready(function() { 
+ $('.type-box').typeIt({
+  })
+  .tiType('내가 찾던 그분 맞나요?');
+});     
+</script>
+
