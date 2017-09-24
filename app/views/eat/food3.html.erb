@@ -124,9 +124,11 @@ var positions = [
     {
         title: '<%= x.title %>',
         content: '<p class="eat_title"><%= x.title %></p>' +
-                <% if x.image[0] %>
+                <% if x.image[0].present? %>
                 '<img src="<%= x.image[0] %>" class="eat_image" alt="map">' +
-                <% end %>
+                 <% else %>
+                '<img src="/images/no_image.gif" class="eat_image" alt="map">' +
+                 <% end %>
                 '<p class="menu_content-text2">추천메뉴 <%= x.menuone %></p>' +
                 '<p class="menu_content-text3">리뷰 <span style="color: #ff4200; font-weight: 600;"><%= x.cookreplies.size %></span></p>' +
                 '<a href="/eat_show/<%= x.id %>"><button type="button" class="btn btn-danger btn-sm eat_button">자세히 보기</button></a>',

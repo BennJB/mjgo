@@ -16,8 +16,10 @@
         <% else %>
         <% end %>
         
-        <% if x.image[0] %>
-        <img src="<%= x.image[0] %>" alt="koreacook">
+        <% if x.image[0].present? %>
+        <img src="<%= x.image[0].url %>" alt="koreacook">
+        <% else %>
+        <img src="/images/no_image.gif" alt="koreacook">
         <% end %>
         <div class="menu_content">    
             <p class="menu_content-text1"><%= x.title %></p>

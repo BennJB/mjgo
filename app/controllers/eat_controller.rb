@@ -111,7 +111,7 @@ class EatController < ApplicationController
   
   
   def eat_update
-    if user_signed_in? && current_user.id == Cook.find(params[:id]).user_id 
+    if user_signed_in? && (current_user.id == Cook.find(params[:id]).user_id or current_user.admin)
     else
       redirect_to "/"
     end
@@ -125,7 +125,7 @@ class EatController < ApplicationController
   end
   
   def destroy
-    if user_signed_in? && current_user.id == Cook.find(params[:id]).user_id 
+    if user_signed_in? && (current_user.id == Cook.find(params[:id]).user_id or current_user.admin)
     @cook.destroy
     redirect_to "/"
     else

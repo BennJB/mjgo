@@ -8,7 +8,7 @@
                             <div class="carousel-inner onebyone-carosel">
                                 <div class="item active">
                                     <div class="col-md-4 col-sm-4 col-xs-4">
-                                        <% if @cook.image[0] %>
+                                        <% if @cook.image[0].present? %>
                                         <a href="<%= @cook.image[0].url %>">
                                         <img src="<%= @cook.image[0].url %>" class="img-responsive center-block cook_image" alt="cookimage"></a>
                                         <% else %>
@@ -18,7 +18,7 @@
                                 </div>
                                 <div class="item">
                                     <div class="col-md-4 col-sm-4 col-xs-4">
-                                        <% if @cook.image[1] %>
+                                        <% if @cook.image[1].present? %>
                                         <a href="<%= @cook.image[1].url %>">
                                         <img src="<%= @cook.image[1].url %>" class="img-responsive center-block cook_image" alt="cookimage"></a>
                                         <% else %>
@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="item">
                                     <div class="col-md-4 col-sm-4 col-xs-4">
-                                        <% if @cook.image[2] %>
+                                        <% if @cook.image[2].present? %>
                                         <a href="<%= @cook.image[2].url %>">
                                         <img src="<%= @cook.image[2].url %>" class="img-responsive center-block cook_image" alt="cookimage"></a>
                                         <% else %>
@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="item">
                                     <div class="col-md-4 col-sm-4 col-xs-4">
-                                        <% if @cook.image[3] %>
+                                        <% if @cook.image[3].present? %>
                                         <a href="<%= @cook.image[3].url %>">
                                         <img src="<%= @cook.image[3].url %>" class="img-responsive center-block cook_image" alt="cookimage"></a>
                                         <% else %>
@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="item">
                                     <div class="col-md-4 col-sm-4 col-xs-4">
-                                        <% if @cook.image[4] %>
+                                        <% if @cook.image[4].present? %>
                                         <a href="<%= @cook.image[4].url %>">
                                         <img src="<%= @cook.image[4].url %>" class="img-responsive center-block cook_image" alt="cookimage"></a>
                                         <% else %>
@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="item">
                                     <div class="col-md-4 col-sm-4 col-xs-4">
-                                        <% if @cook.image[5] %>
+                                        <% if @cook.image[5].present? %>
                                         <a href="<%= @cook.image[5].url %>">
                                         <img src="<%= @cook.image[5].url %>" class="img-responsive center-block cook_image" alt="cookimage"></a>
                                         <% else %>
@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="item">
                                     <div class="col-md-4 col-sm-4 col-xs-4">
-                                        <% if @cook.image[6] %>
+                                        <% if @cook.image[6].present? %>
                                         <a href="<%= @cook.image[6].url %>">
                                         <img src="<%= @cook.image[6].url %>" class="img-responsive center-block cook_image" alt="cookimage"></a>
                                         <% else %>
@@ -130,7 +130,7 @@
     <div class="row store_detail_con">
         <div class="store_detail_text1">
             <div class="store_manage">
-                <% if user_signed_in? && current_user.id == @cook.user.id %>
+                <% if user_signed_in? && (current_user.id == @cook.user.id or current_user.admin) %>
                     <a href="/eat_update/<%= @cook.id %>" class="store_manage_txt"><mark>게시글 수정</mark></a>
                     <a href="/eat_destroy/<%= @cook.id %>" class="store_manage_txt" data-confirm="진짜 지울거에요?" data-method="post"><mark>삭제</mark></a>
                 <% end %>    
@@ -264,7 +264,7 @@
                         <p class="store-modal-title" id="myModalLabel"><%= @cook.title %></p>
                       </div>
                       <div class="modal-body store-modal-body">
-                        <% if @cook.image[2] %>  
+                        <% if @cook.image[2].present? %> %>  
                         <img src="<%= @cook.image[2].url %>" id="imagepreview" class="store-modal-content" alt="cook_menu">
                         <% end %>
                       </div>
@@ -427,7 +427,11 @@ var positions = [
     {
         title: '이디야',
         content: '<p class="eat_title"><%= @cook.title %></p>' +
-                 '<img src="<%= @cook.image[0].url %>" class="eat_image">' +
+                 <% if @cook.image[0].present? %>
+                 '<img src="<%= @cook.image[0].url %>" class="eat_image" alt="image">' +
+                 <% else %>
+                 '<img src="/images/no_image.gif" class="eat_image" alt="image">' +
+                 <% end %>
                  '<p class="menu_content-text2">추천메뉴 <%= @cook.menuone %></p>' +
                  '<p class="menu_content-text3">리뷰 <span style="color: #ff4200; font-weight: 600;"><%= @cook.cookreplies.size %></span></p>' +
                  '<a href="/eat_show/<%= @cook.id %>"><button type="button" class="btn btn-danger btn-sm eat_button">자세히 보기</button></a>',
