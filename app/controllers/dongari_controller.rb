@@ -1,12 +1,12 @@
 class DongariController < ApplicationController
     
-  before_action :authenticate_user!, except: [:dongari]
+  before_action :authenticate_user!, except: [:dongari, :dongari_show]
   before_action :set_dongari, only: [:dongari_show, :dongari_destroy, :dongari_update, :dongari_update_new]
  
  
   def dongari
    if params[:query].nil?
-      @dongaris = Dongari.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 12)
+      @dongaris = Dongari.all.paginate(:page => params[:page], :per_page => 20)
     else
       @dongaris = Dongari.all.where("title LIKE ?", "%#{params[:query]}%") && Dongari.all.where("title LIKE ?", "%#{params[:query].gsub(" ","")}%").order('created_at DESC').paginate(:page => params[:page], :per_page => 12)
     end

@@ -1,0 +1,193 @@
+<style>
+
+.dot {overflow:hidden;float:left;width:12px;height:12px;background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/mini_circle.png');}    
+.dotOverlay {position:relative;bottom:10px;border-radius:6px;border: 1px solid #ccc;border-bottom:2px solid #ddd;float:left;font-size:12px;padding:5px;background:#fff;}
+.dotOverlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}    
+.number {font-weight:bold;color:#ee6152;}
+.dotOverlay:after {content:'';position:absolute;margin-left:-6px;left:50%;bottom:-8px;width:11px;height:8px;background:url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white_small.png')}
+.distanceInfo {position:relative;top:5px;left:5px;list-style:none;margin:0;}
+.distanceInfo .label {display:inline-block;width:50px;}
+.distanceInfo:after {content:none;}
+
+
+ 
+        .radius_border{border:1px solid #919191;border-radius:5px;}     
+        .custom_typecontrol {position:absolute;top:10px;right:10px;overflow:hidden;width:130px;height:30px;margin:0;padding:0;z-index:1;font-size:12px;font-family:'Malgun Gothic', '맑은 고딕', sans-serif;}
+        .custom_typecontrol span {display:block;width:65px;height:30px;float:left;text-align:center;line-height:30px;cursor:pointer;}
+        .custom_zoomcontrol {position:absolute;top:50px;right:10px;width:36px;height:80px;overflow:hidden;z-index:1;background-color:#F15F5F;} 
+        .custom_zoomcontrol span {display:block;width:36px;height:40px;text-align:center;cursor:pointer;}     
+        .custom_zoomcontrol span img {width:15px;height:15px;padding:12px 0;border:none;}             
+        .custom_zoomcontrol span:first-child{border-bottom:1px solid #FFFFFF;}  
+        .fa-plus {padding-top: 13px; color:#FFFFFF;}
+        .fa-minus {padding-top: 13px; color:#FFFFFF;}
+        infowindow.getPanels().overlayLayer{border-radius: 5px;
+            border: 1px solid #EAEAEA;}
+        
+        .eat_image {height: 70px; width: 140px; margin-bottom: 4px; margin-left: 4px;}
+        .eat_title {padding-top: 4px;
+                    padding-left: 7px;
+                    color: #008299;
+                    font-size: 14px;
+                    font-weight: 600;
+                    margin-bottom: 5px;}
+        .eat_content {font-size: 13px;
+                      font-weight: 600;
+                      margin-bottom: 2px;
+                      padding-left: 7px;}
+        .eat_content_margin {margin-bottom: 10px;}
+        .eat_button {width: 148px;}
+</style>
+<div class="container cook_map_every">
+    
+    <div class="cook_map_title_con">
+    <p class="cook_map_title2">골라 먹는 재미</p>
+    <p class="cook_map_title">명지대 맛집 지도</p>
+    </div>
+    
+<div class="row map_menu_icon_con">
+    <div class="map_menu_icon">
+        <a href="/food1">
+        <img src="/images/rice.png" class="map_menu_icon_size" alt="rice">
+        <p class="map_menu_icon_text">한식</p>
+        </a>
+    </div>
+    <div class="map_menu_icon">
+        <a href="/food2">
+        <img src="/images/grill.png" class="map_menu_icon_size" alt="grill">
+        <p class="map_menu_icon_text">양식/고기</p>
+        </a>
+    </div>
+    <div class="map_menu_icon">
+        <a href="/food3">
+        <img src="/images/noodles.png" class="map_menu_icon_size" alt="noodle">
+        <p class="map_menu_icon_text">일식/중식</p>
+        </a>
+    </div>
+    <div class="map_menu_icon">
+        <a href="/food4">
+        <img src="/images/chicken.png" class="map_menu_icon_size" alt="chicken">
+        <p class="map_menu_icon_text">분식/치킨</p>
+        </a>
+    </div>
+    <div class="map_menu_icon">
+        <a href="/food5">
+        <img src="/images/coffee.png" class="map_menu_icon_size" alt="coffee">
+        <p class="map_menu_icon_text">카페</p>
+        </a>
+    </div>
+</div>
+
+           
+            <!--<div class="cook_body">-->
+                <div class="map_wrap_icon map_menu_icon_con_map">
+                    <div id="map" class="maps maps_every_size"></div> 
+                    <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
+                    <div class="custom_zoomcontrol radius_border"> 
+                        <span onclick="zoomIn()"><i class="fa fa-plus" aria-hidden="true"></i></span>  
+                        <span onclick="zoomOut()"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+            <!--</div>-->
+
+</div>     
+
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=53535b6a4f840c7180d6c79984b17e02"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+    mapOption = { 
+        center: new daum.maps.LatLng(37.5802650, 126.924414), // 지도의 중심좌표
+        level: 3, // 지도의 확대 레벨
+        disableDoubleClickZoom: true,
+        scrollwheel: true
+    };
+
+var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+var drawingFlag = false; // 선이 그려지고 있는 상태를 가지고 있을 변수입니다
+var moveLine; // 선이 그려지고 있을때 마우스 움직임에 따라 그려질 선 객체 입니다
+var clickLine // 마우스로 클릭한 좌표로 그려질 선 객체입니다
+var distanceOverlay; // 선의 거리정보를 표시할 커스텀오버레이 입니다
+var dots = {}; // 선이 그려지고 있을때 클릭할 때마다 클릭 지점과 거리를 표시하는 커스텀 오버레이 배열입니다.
+// 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+function zoomIn() {
+    map.setLevel(map.getLevel() - 1);
+}
+
+// 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+function zoomOut() {
+    map.setLevel(map.getLevel() + 1);
+}
+
+<% @map.each do |x| %>
+// 마커를 표시할 위치와 title 객체 배열입니다 
+var positions = [
+    {
+        title: '<%= x.title %>',
+        content: '<p class="eat_title"><%= x.title %></p>' +
+                <% if x.image[0] %>
+                '<img src="<%= x.image[0] %>" class="eat_image" alt="map">' +
+                <% end %>
+                '<p class="menu_content-text2">추천메뉴 <%= x.menuone %></p>' +
+                '<p class="menu_content-text3">리뷰 <span style="color: #ff4200; font-weight: 600;"><%= x.cookreplies.size %></span></p>' +
+                '<a href="/eat_show/<%= x.id %>"><button type="button" class="btn btn-danger btn-sm eat_button">자세히 보기</button></a>',
+        latlng: new daum.maps.LatLng(<%= x.latitude %>, <%= x.longitude %>)
+        
+    }
+];
+
+
+// 마커 이미지의 이미지 주소입니다
+var imageSrc = "/images/rice.png"; 
+
+    
+for (var i = 0; i < positions.length; i ++) {
+    
+    // 마커 이미지의 이미지 크기 입니다
+    var imageSize = new daum.maps.Size(24, 35); 
+    
+    // 마커 이미지를 생성합니다    
+    var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize); 
+    
+    // 마커를 생성합니다
+    var marker = new daum.maps.Marker({
+        clickable: true, // 마커를 클릭했을 때 지도의 클릭 이벤트가 발생하지 않도록 설정합니다
+        map: map, // 마커를 표시할 지도
+        position: positions[i].latlng, // 마커를 표시할 위치
+        title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+        image : markerImage // 마커 이미지 
+    });
+    
+    var iwRemoveable = true;
+    
+    // 마커에 표시할 인포윈도우를 생성합니다 
+    var infowindow = new daum.maps.InfoWindow({
+        removable : iwRemoveable,
+        content: positions[i].content // 인포윈도우에 표시할 내용
+    });
+    
+            
+    // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+    // 이벤트 리스너로는 클로저를 만들어 등록합니다 
+    // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+    daum.maps.event.addListener(marker, 'click', makeOverListener(map, marker, infowindow));
+    // daum.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+    
+}    
+
+    // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+    function makeOverListener(map, marker, infowindow) {
+    return function() {
+        infowindow.open(map, marker);
+    };
+}
+
+    // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+    function makeOutListener(infowindow) {
+    return function() {
+        infowindow.close();
+    };
+}
+<% end %>
+
+</script>

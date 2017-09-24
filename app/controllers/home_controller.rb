@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   
-  before_action :authenticate_user!, except: [:index, :etc, :team, :friend, :every_item, :no_email]
-  before_action :set_post, only: [:show, :destroy, :update, :item_update, :update_new]
+  before_action :authenticate_user!, except: [:index, :box, :no_email]
+  before_action :set_post, only: [:show, :event, :destroy, :update, :update_new]
 
   def index
     if params[:query].nil?
@@ -13,7 +13,7 @@ class HomeController < ApplicationController
     end
   end
   
-  def etc
+  def box
    if params[:query].nil?
       @books = Category.find(2)  
       @posts = @books.posts.order('created_at DESC').paginate(:page => params[:page], :per_page => 12)
@@ -35,6 +35,9 @@ class HomeController < ApplicationController
     # @post = Post.find(params[:id])
   end
   
+  def event
+  end
+  
   def create
     @post = Post.new(post_params)
     # @post.title = params[:title]
@@ -49,6 +52,10 @@ class HomeController < ApplicationController
   end
   
   def update
+    if user_signed_in? && current_user.id == Post.find(params[:id]).user_id 
+    else
+      redirect_to "/index"
+    end
     # @post = Post.find(params[:id])
   end
   

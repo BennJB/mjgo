@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170828090458) do
+ActiveRecord::Schema.define(version: 20170923073617) do
 
   create_table "categories", force: :cascade do |t|
     t.string "item"
@@ -21,6 +21,62 @@ ActiveRecord::Schema.define(version: 20170828090458) do
   create_table "conversations", force: :cascade do |t|
     t.integer "sender_id"
     t.integer "recipient_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cookchoices", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cookevents", force: :cascade do |t|
+    t.string "title"
+    t.string "image"
+    t.integer "cook_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cooklists", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cookreplies", force: :cascade do |t|
+    t.string "content"
+    t.string "rating"
+    t.integer "cook_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cooks", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.text "address"
+    t.string "phone"
+    t.string "opertime"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "menuone"
+    t.string "menutwo"
+    t.string "menuthr"
+    t.string "menufour"
+    t.string "menufive"
+    t.string "one"
+    t.string "two"
+    t.string "thr"
+    t.string "four"
+    t.string "five"
+    t.string "image"
+    t.integer "cookchoice_id"
+    t.integer "cooklist_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -153,6 +209,7 @@ ActiveRecord::Schema.define(version: 20170828090458) do
     t.string "uid"
     t.string "image"
     t.boolean "admin", default: false
+    t.boolean "storeceo", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

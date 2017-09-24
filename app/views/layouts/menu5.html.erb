@@ -1,0 +1,61 @@
+<div class="container">
+<div class="cook_grandparent">
+    
+    <% @koreacook.each do |x| %>
+    <a href="/eat_show/<%= x.id %>"> 
+    <div class="cook_mediparent">
+    <div class="cook_parent">
+        
+        <% if x.cookevents.first %>
+            <div class="cook_event">
+            <p class="cook_event_txt">이벤트</p>
+            </div>
+            <div class="cook_event_detail">
+            <p class="cook_event_detail_txt"><%= x.cookevents.first.title %></p>
+            </div>
+        <% else %>
+        <% end %>
+        
+        <% if x.image[0] %>
+        <img src="<%= x.image[0] %>" alt="koreacook">
+        <% end %>
+        <div class="menu_content">    
+            <p class="menu_content-text1"><%= x.title %></p>
+            <p class="menu_content-text2">추천메뉴 <%= x.menuone %></p>
+            <% if x.cookreplies.blank? %>
+    		<p class="menu_content-text2">평점 0</p>
+    		<% else %>
+    		<div class="star-rating menu_content-rating" data-score= '<%= x.cookreplies.average(:rating).round(2) %>' ></div>
+        	<% end %>
+        	<p class="menu_content-text3">리뷰 <span style="color: #ff4200; font-weight: 600;"><%= x.cookreplies.size %></span></p>
+        </div>
+    </div>
+    </div>
+    </a>
+    <% end %>
+ 
+    
+</div>
+</div>
+
+
+<script src="/jquery.raty.js" type="text/javascript"></script>  
+
+<script>
+$('.star-rating').raty({
+path: '/images/',
+readOnly: true,
+half: true,
+score: function() {
+	return $(this).attr('data-score');	
+	}
+});
+</script>
+
+<script>
+$('#star-rating').raty({
+path: '/images/',
+half: true,
+scoreName: 'rating'  // Name of the hidden field that holds the score value.
+});
+</script>

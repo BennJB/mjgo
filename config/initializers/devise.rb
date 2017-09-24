@@ -9,7 +9,7 @@ Devise.setup do |config|
   # config.secret_key = '720869ab8831f96f601db6e768ef7e5e67f9e18b9244e5c486f5869fbfe2150b02a696c175b3e84d6f7ba4c77de38802a1bf51917e45e0655bef14048bdf87cc'
   
   
-  config.omniauth :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_APP_SECRET"], scope: 'email', info_fields: 'email,name',
+  config.omniauth :facebook, "", "", scope: 'email', info_fields: 'email,name',
   callback_url: "http://13.124.238.45/users/auth/facebook/callback"
 
 

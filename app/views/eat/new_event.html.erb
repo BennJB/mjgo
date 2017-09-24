@@ -1,0 +1,13 @@
+<div class="new_background">
+
+<%= form_tag("/event_create/#{@cook.id}", method:"post", class: "form-inline form-con", multipart: true) do %>
+    <h3 class="new_selling"># 가게 이벤트 등록</h3>
+    <hr>
+    <p class="form-p">이벤트 한줄 소개</p>
+    <input type="text" name="title" class="form-control placeholder_default" placeholder="">
+    <input type="file" name="image" class="file-submit">
+    <button type="submit" class="btn btn-info file-submit">확인</button>
+
+<% end %>
+
+</div>

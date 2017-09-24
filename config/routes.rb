@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   # 전체 게시판
-  root 'dongari#dongari'
+  root 'eat#index'
   
   mount ActionCable.server => '/cable'
   
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get '/no_email' => 'home#no_email'
  
   # category 기타
-  get '/etc' => 'home#etc'
+  get '/box' => 'home#box'
   
   # 게시판 글쓰기
   get '/new' => 'home#new'
@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   
   # 게시글 수정하기
   get '/update/:id' => 'home#update'
-  get '/item_update/:id' => 'home#item_update'
+  # get '/item_update/:id' => 'home#item_update'
   patch '/update_new/:id' => 'home#update_new'
   
   # 댓글 작성하기 & 삭제하기
@@ -39,6 +39,10 @@ Rails.application.routes.draw do
   
   # 모임
   get '/moim' => 'moim#friend'
+  get '/communication' => 'moim#communication'
+  get '/art' => 'moim#art'
+  get '/it' => 'moim#it'
+  get '/study' => 'moim#study'
   
   # 모임 글쓰기
   get '/moim_new' => 'moim#moim_new'
@@ -55,6 +59,53 @@ Rails.application.routes.draw do
   # 모임 댓글 작성하기 & 삭제하기
   post '/moim_reply/:id' => 'moim#reply'
   post '/destroy3/:moim_id/:moimreply_id' => 'moim#destroy'
+  
+  
+  # ---------------- 메인 가게 리스트 
+  get '/menu1' => 'menu1#menu1'
+  get '/menu2' => 'menu2#menu2'
+  get '/menu3' => 'menu3#menu3'
+  get '/menu4' => 'menu4#menu4'
+  get '/menu5' => 'menu5#menu5'
+   
+  get '/food1' => 'eat#food1'
+  get '/food2' => 'eat#food2'
+  get '/food3' => 'eat#food3'
+  get '/food4' => 'eat#food4'
+  get '/food5' => 'eat#food5' 
+   
+  get '/random_cook' => 'eat#random_cook'
+  get '/random_page' => 'eat#random_page'
+  get '/every_map' => 'eat#every_map'
+  
+  # 이벤트 등록
+  get '/new_event/:id' => 'eat#new_event'
+  post '/event_create/:id' => 'eat#event_create'
+  
+  # 이벤트 수정
+  get '/event_update/:cook_id/:cookevent_id' => 'eat#event_update'
+  post '/event_update_new/:cook_id/:cookevent_id' => 'eat#event_update_new'
+
+  # 이벤트 삭제
+  post '/destroy6/:cook_id/:cookevent_id' => 'eat#destroy3'
+  
+  
+  # 가게 등록
+  get '/eat_new' => 'eat#eat_new'
+  post '/eat_create' => 'eat#create'
+  
+  # 가게 보여주기 & 삭제
+  get '/eat_show/:id' => 'eat#eat_show'
+  post '/eat_destroy/:id' => 'eat#destroy'
+  
+  # 가게 수정하기
+  get '/eat_update/:id' => 'eat#eat_update'
+  patch '/eat_update_new/:id' => 'eat#eat_update_new'
+  
+  # 가게 댓글 작성하기 & 삭제하기
+  post '/cook_reply/:id' => 'eat#reply'
+  post '/destroy5/:cook_id/:cookreply_id' => 'eat#destroy2'
+  
   
   
   # 동아리

@@ -1,3 +1,5 @@
+<div class="new_background">
+
 <%= form_for @post, url: {controller: "home", action: "create"}, html: {class: "form-inline form-con"}, multipart: true do |f| %>  
   
   <h3 class="new_selling"># 판매하기</h3>
@@ -42,4 +44,4 @@
     <%= f.submit "확인", class: "btn btn-info file-submit" %>
 <% end %>
 
- 
+</div> 

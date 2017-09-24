@@ -1,29 +1,59 @@
-<div class="container">  
-
+<div class="container meet_main">
+    
+    <div class="index-con">
         <div class="board-title-size">
-          <p class="notice">notice <span class="notice-span">페북 가입자도 닉네임 변경 가능합니다.</span></p>    
-          <p class="board-title1">만나<span class="go">GO</span></p>
-          <p class="board-content2">소모임 & 스터디가 필요할 때</p>
-          <p class="type-box"></p>
-        </div>    
-            
-          <form class="input-group search-con">
-            <input type="text" class="form-control placeholder_default" name="query" placeholder="원하는 모임을 검색해보세요.">
-            <span class="input-group-btn">
-            <button class="btn btn-primary" type="submit"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
-            </span>
-          </form>
-          
-         
-          <div class="grand-parent-write-size">  
-            <%= link_to "모임 개설", "/moim_new", class: "btn btn-default new_team_button" %>
+              <!--<p class="notice">notice <span class="notice-span">모바일에 최적화되어, PC는 크롬 사용을 권장합니다.</span></p>  -->
+              <p class="board-title1">만나<span class="go">GO</span></p>
+              <p class="board-content"></p>
         </div>
+    
+        <form class="input-group book_query_input">
+            <input type="text" class="form-control placeholder_default index-input" name="query" placeholder="찾는 모임을 검색해보세요.">
+            <span class="input-group-btn">
+            <button class="btn btn-primary btn-lg btn-mobile" type="submit"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+            </span>
+        </form>
+    </div>    
+         
+        <div class="row moim_menu_con">
+            <div class="moim_menu">
+                <a href="/moim_new">
+                <img src="/images/text.png" class="book_menu_img" alt="book">  
+                <p class="moim_menu_title" style="color: #3DB7CC;">모임 개설</p>
+                </a>
+            </div>
+            <div class="moim_menu">
+                <a href="/communication">
+                <img src="/images/friendship.png" class="book_menu_img" alt="communication">  
+                <p class="moim_menu_title">친목</p>
+                </a>
+            </div>
+            <div class="moim_menu">
+                <a href="/study">
+                <img src="/images/studyhard.png" class="book_menu_img" alt="study">  
+                <p class="moim_menu_title">스터디</p>
+                </a>
+            </div>
+            <div class="moim_menu">
+                <a href="/art">
+                <img src="/images/palette.png" class="book_menu_img" alt="art">  
+                <p class="moim_menu_title">예체능</p>
+                </a>
+            </div>
+            <div class="moim_menu">
+                <a href="/it">
+                <img src="/images/cloud.png" class="book_menu_img" alt="it">  
+                <p class="moim_menu_title">IT</p>
+                </a>
+            </div>
+        </div>
+   
 </div>
 
-      <div class="container">
+      <div class="container friend-main-list">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 col-sm-12 col-web col-mobile">
-                <hr>
+            
                 <% @moims.each do |x| %>
                 <div class="col-md-6 col-sm-6 moim-index-padding">
                     <div class="panel panel-default border-radius-0">
@@ -58,8 +88,21 @@
                                 <!--<p class="friend-user-name"><%#= x.user.name? ? x.user.name : x.user.nic_name %><span class="friend-time"> <%= time_ago_in_words(x.created_at) %></span></p>-->
                                 <p class="friend-title"><%= x.title %></p>
                             </div>
-                                <p class="friend-user-name"><span class="by_name">by</span> <%= x.user.nic_name %></p>
-                                <p class="friend-time"><%= time_ago_in_words(x.created_at) %> | 댓글(<%= x.moimreplies.size %>)</p>
+                                <!--<p class="friend-user-name"><span class="by_name">by</span> <%#= x.user.nic_name %></p>-->
+                                 <div class="grand-row">
+                                    <% if x.person %>
+                                    <div class="parent-left">
+                                    <p class="friend-time">모집인원 <%= x.person %>명</p>
+                                    </div>
+                                    <% else %>
+                                    <div class="parent-left">
+                                    <p class="friend-time">모집인원 미정</p>
+                                    </div>
+                                    <% end %>
+                                    <div class="parent-right">
+                                    <p class="friend-time"><%= time_ago_in_words(x.created_at) %> | 댓글(<%= x.moimreplies.size %>)</p>
+                                    </div>
+                                </div>
 
                             </div>
                             </a>
@@ -97,8 +140,21 @@
                                 <!--<p class="friend-user-name"><%#= x.user.name? ? x.user.name : x.user.nic_name %><span class="friend-time"> <%= time_ago_in_words(x.created_at) %></span></p>-->
                                 <p class="friend-title"><%= x.title %></p>
                             </div>
-                                <p class="friend-user-name"><span class="by_name">by</span> <%= x.user.nic_name %></p>
-                                <p class="friend-time"><%= time_ago_in_words(x.created_at) %> | 댓글(<%= x.moimreplies.size %>)</p>
+                                <!--<p class="friend-user-name"><span class="by_name">by</span> <%#= x.user.nic_name %></p>-->
+                                 <div class="grand-row">
+                                    <% if x.person %>
+                                    <div class="parent-left">
+                                    <p class="friend-time">모집인원 <%= x.person %>명</p>
+                                    </div>
+                                    <% else %>
+                                    <div class="parent-left">
+                                    <p class="friend-time">모집인원 미정</p>
+                                    </div>
+                                    <% end %>
+                                    <div class="parent-right">
+                                    <p class="friend-time"><%= time_ago_in_words(x.created_at) %> | 댓글(<%= x.moimreplies.size %>)</p>
+                                    </div>
+                                </div>
                         </div>
                         </a>
                         
@@ -133,8 +189,21 @@
                                 <!--<p class="friend-user-name"><%#= x.user.name? ? x.user.name : x.user.nic_name %><span class="friend-time"> <%= time_ago_in_words(x.created_at) %></span></p>-->
                                 <p class="friend-title"><%= x.title %></p>
                             </div>
-                                <p class="friend-user-name"><span class="by_name">by</span> <%= x.user.nic_name %></p>
-                                <p class="friend-time"><%= time_ago_in_words(x.created_at) %> | 댓글(<%= x.moimreplies.size %>)</p>
+                                <!--<p class="friend-user-name"><span class="by_name">by</span> <%#= x.user.nic_name %></p>-->
+                                 <div class="grand-row">
+                                    <% if x.person %>
+                                    <div class="parent-left">
+                                    <p class="friend-time">모집인원 <%= x.person %>명</p>
+                                    </div>
+                                    <% else %>
+                                    <div class="parent-left">
+                                    <p class="friend-time">모집인원 미정</p>
+                                    </div>
+                                    <% end %>
+                                    <div class="parent-right">
+                                    <p class="friend-time"><%= time_ago_in_words(x.created_at) %> | 댓글(<%= x.moimreplies.size %>)</p>
+                                    </div>
+                                </div>
                         </div>
                         </a>
                         
@@ -171,8 +240,22 @@
                                 <!--<p class="friend-user-name"><%#= x.user.name? ? x.user.name : x.user.nic_name %><span class="friend-time"> <%= time_ago_in_words(x.created_at) %></span></p>-->
                                 <p class="friend-title"><%= x.title %></p>
                             </div>
-                                <p class="friend-user-name"><span class="by_name">by</span> <%= x.user.nic_name %></p>
-                                <p class="friend-time"><%= time_ago_in_words(x.created_at) %> | 댓글(<%= x.moimreplies.size %>)</p>
+                                <!--<p class="friend-user-name"><span class="by_name">by</span> <%#= x.user.nic_name %></p>-->
+                                
+                               <div class="grand-row">
+                                    <% if x.person %>
+                                    <div class="parent-left">
+                                    <p class="friend-time">모집인원 <%= x.person %>명</p>
+                                    </div>
+                                    <% else %>
+                                    <div class="parent-left">
+                                    <p class="friend-time">모집인원 미정</p>
+                                    </div>
+                                    <% end %>
+                                    <div class="parent-right">
+                                    <p class="friend-time"><%= time_ago_in_words(x.created_at) %> | 댓글(<%= x.moimreplies.size %>)</p>
+                                    </div>
+                                </div>
                             </div>
                             </a>
                         <% end %>
@@ -185,13 +268,14 @@
         </div>
       </div>
     </div>  
-
+    
 
 <script>
 $(document).ready(function() { 
- $('.type-box').typeIt({
+ $('.board-content').typeIt({
+     autoStart: false
   })
-  .tiType('같이 해볼래?');
+  .tiType('소모임 & 스터디가 필요할 때');
 });     
-</script>
-
+</script>    
+    

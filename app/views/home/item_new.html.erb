@@ -1,3 +1,5 @@
+<div class="new_background">
+
 <%= form_for @post, url: {controller: "home", action: "create"}, html: {class: "form-inline form-con"}, multipart: true do |f| %>  
   
   <h3 class="new_selling"># 판매하기</h3>
@@ -9,7 +11,7 @@
     <p class="form-p">제목</p>
     <!--<input type="text" name="title" class="form-control placeholder_default" placeholder="">-->
     <%= f.text_field :title, class: "form-control placeholder_default", placeholder: "" %>
-   
+    
     <div class="form-group">
     <p class="form-p">구입 가격</p>
     <!--<input type="text" name="price" class="form-control input-size" id="exampleInputName2" placeholder="">-->
@@ -19,6 +21,11 @@
     <p class="form-p">판매 가격</p>
     <!--<input type="text" name="price" class="form-control input-size" id="exampleInputName2" placeholder="">-->
     <%= f.text_field :price, class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>  
+    </div>
+    <div class="form-group">
+    <p class="form-p">구입 시기</p>
+    <!--<input type="text" name="place" class="form-control input-size placeholder_default" id="exampleInputName2" placeholder="">-->
+    <%= f.text_field :company, class: "form-control input-size0 placeholder_default", id: "exampleInputName2", placeholder:"" %>
     </div>
   
     <p class="form-p">내용</p>
@@ -33,4 +40,4 @@
     <%= f.submit "확인", class: "btn btn-info file-submit" %>
 <% end %>
 
- 
+ </div>

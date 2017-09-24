@@ -1,6 +1,6 @@
 class MoimController < ApplicationController
     
-  before_action :authenticate_user!, except: [:friend]
+  before_action :authenticate_user!, except: [:friend, :communication, :art, :it, :study]
   before_action :set_moim, only: [:moim_show, :moim_destroy, :moim_update, :moim_update_new]
  
  
@@ -9,6 +9,46 @@ class MoimController < ApplicationController
       @moims = Moim.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 12)
     else
       @moims = Moim.all.where("title LIKE ?", "%#{params[:query]}%") && Moim.all.where("title LIKE ?", "%#{params[:query].gsub(" ","")}%").order('created_at DESC').paginate(:page => params[:page], :per_page => 12)
+    end
+  end
+  
+  def communication
+    if params[:query].nil?
+      @moim = Moimcategory.find(1)  
+      @moims = @moim.moims.order('created_at DESC').paginate(:page => params[:page], :per_page => 12)
+    else
+      @moim = Moimcategory.find(1) 
+      @moims = @moim.moims.where("title LIKE ?", "%#{params[:query]}%") && @moim.moims.where("title LIKE ?", "%#{params[:query].gsub(" ","")}%").order('created_at DESC').paginate(:page => params[:page], :per_page => 12)
+    end
+  end
+  
+  def art
+    if params[:query].nil?
+      @moim = Moimcategory.find(2)  
+      @moims = @moim.moims.order('created_at DESC').paginate(:page => params[:page], :per_page => 12)
+    else
+      @moim = Moimcategory.find(2) 
+      @moims = @moim.moims.where("title LIKE ?", "%#{params[:query]}%") && @moim.moims.where("title LIKE ?", "%#{params[:query].gsub(" ","")}%").order('created_at DESC').paginate(:page => params[:page], :per_page => 12)
+    end
+  end
+  
+  def it
+    if params[:query].nil?
+      @moim = Moimcategory.find(3)  
+      @moims = @moim.moims.order('created_at DESC').paginate(:page => params[:page], :per_page => 12)
+    else
+      @moims = Moimcategory.find(3) 
+      @moims = @moim.moims.where("title LIKE ?", "%#{params[:query]}%") && @moim.moims.where("title LIKE ?", "%#{params[:query].gsub(" ","")}%").order('created_at DESC').paginate(:page => params[:page], :per_page => 12)
+    end
+  end
+  
+  def study
+    if params[:query].nil?
+      @moim = Moimcategory.find(4)  
+      @moims = @moim.moims.order('created_at DESC').paginate(:page => params[:page], :per_page => 12)
+    else
+      @moim = Moimcategory.find(4) 
+      @moims = @moim.moims.where("title LIKE ?", "%#{params[:query]}%") && @moim.moims.where("title LIKE ?", "%#{params[:query].gsub(" ","")}%").order('created_at DESC').paginate(:page => params[:page], :per_page => 12)
     end
   end
   
@@ -27,6 +67,10 @@ class MoimController < ApplicationController
   end
   
   def moim_update
+    if user_signed_in? && current_user.id == Moim.find(params[:id]).user_id 
+    else
+      redirect_to "/moim"
+    end
     # @moim = Moim.find(params[:id])
   end
   

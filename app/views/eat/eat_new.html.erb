@@ -1,0 +1,108 @@
+<div class="new_background">
+
+<%= form_for @cook, url: {controller: "eat", action: "create"}, html: {class: "form-inline form-con"}, multipart: true do |f| %>  
+  
+  <h3 class="new_selling"># 가게 등록</h3>
+  <hr>
+    <p class="form-p">카테고리</p>
+    <%= collection_select(:cook, :cookchoice_id, Cookchoice.all, :id, :title, { multiple: false }, {class: "category-style"}) %>
+    <%= collection_select(:cook, :cooklist_id, Cooklist.all, :id, :title, { multiple: false }, {class: "category-style"}) %>
+   
+    <p class="form-p">가게 이름</p>
+    <!--<input type="text" name="title" class="form-control placeholder_default" placeholder="">-->
+    <%= f.text_field :title, class: "form-control placeholder_default", placeholder: "" %>
+    
+   
+    <p class="form-p">주소</p>
+    <!--<input type="text" name="place" class="form-control input-size placeholder_default" id="exampleInputName2" placeholder="">-->
+    <%= f.text_field :address, class: "form-control input-size0 placeholder_default", id: "exampleInputName2", placeholder:"" %>
+
+    <div class="form-group">
+    <p class="form-p">전화번호</p>
+    <!--<input type="text" name="place" class="form-control input-size placeholder_default" id="exampleInputName2" placeholder="">-->
+    <%= f.text_field :phone, class: "form-control input-size0 placeholder_default", id: "exampleInputName2", placeholder:"" %>
+    </div>
+    
+    <p class="form-p">영업시간</p>
+    <!--<input type="text" name="price" class="form-control input-size" id="exampleInputName2" placeholder="">-->
+    <%= f.text_field :opertime, class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>  
+
+    <div class="form-group">
+    <p class="form-p">위도</p>
+    <!--<input type="text" name="price" class="form-control input-size" id="exampleInputName2" placeholder="">-->
+    <%= f.text_field :latitude, class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>  
+    </div>
+     
+    <div class="form-group">  
+    <p class="form-p">경도</p>
+    <!--<textarea name="content" class="form-control" rows="5", placeholder= "책 정가 & 필기상태는 필수! "></textarea>-->
+    <%= f.text_field :longitude, class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>
+    </div>
+    
+     <div class="form-group">  
+    <p class="form-p">메뉴1</p>
+    <!--<textarea name="content" class="form-control" rows="5", placeholder= "책 정가 & 필기상태는 필수! "></textarea>-->
+    <%= f.text_field :menuone, class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>
+    </div>
+     <div class="form-group">  
+    <p class="form-p">메뉴1 가격</p>
+    <!--<textarea name="content" class="form-control" rows="5", placeholder= "책 정가 & 필기상태는 필수! "></textarea>-->
+    <%= f.text_field :one, class: "form-control input-size", id: "exampleInputName2", placeholder: "숫자만 입력해주세요." %>
+    </div>
+    
+     <div class="form-group">  
+    <p class="form-p">메뉴2</p>
+    <!--<textarea name="content" class="form-control" rows="5", placeholder= "책 정가 & 필기상태는 필수! "></textarea>-->
+    <%= f.text_field :menutwo, class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>
+    </div>
+     <div class="form-group">  
+    <p class="form-p">메뉴2 가격</p>
+    <!--<textarea name="content" class="form-control" rows="5", placeholder= "책 정가 & 필기상태는 필수! "></textarea>-->
+    <%= f.text_field :two, class: "form-control input-size", id: "exampleInputName2", placeholder: "숫자만 입력해주세요." %>
+    </div>
+    
+     <div class="form-group">  
+    <p class="form-p">메뉴3</p>
+    <!--<textarea name="content" class="form-control" rows="5", placeholder= "책 정가 & 필기상태는 필수! "></textarea>-->
+    <%= f.text_field :menuthr, class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>
+    </div>
+    
+     <div class="form-group">  
+    <p class="form-p">메뉴3 가격</p>
+    <!--<textarea name="content" class="form-control" rows="5", placeholder= "책 정가 & 필기상태는 필수! "></textarea>-->
+    <%= f.text_field :thr, class: "form-control input-size", id: "exampleInputName2", placeholder: "숫자만 입력해주세요." %>
+    </div>
+    
+     <div class="form-group">  
+    <p class="form-p">메뉴4</p>
+    <!--<textarea name="content" class="form-control" rows="5", placeholder= "책 정가 & 필기상태는 필수! "></textarea>-->
+    <%= f.text_field :menufour, class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>
+    </div>
+    
+     <div class="form-group">  
+    <p class="form-p">메뉴4 가격</p>
+    <!--<textarea name="content" class="form-control" rows="5", placeholder= "책 정가 & 필기상태는 필수! "></textarea>-->
+    <%= f.text_field :four, class: "form-control input-size", id: "exampleInputName2", placeholder: "숫자만 입력해주세요." %>
+    </div>
+    
+     <div class="form-group">  
+    <p class="form-p">메뉴5</p>
+    <!--<textarea name="content" class="form-control" rows="5", placeholder= "책 정가 & 필기상태는 필수! "></textarea>-->
+    <%= f.text_field :menufive, class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>
+    </div>
+    
+     <div class="form-group">  
+    <p class="form-p">메뉴5 가격</p>
+    <!--<textarea name="content" class="form-control" rows="5", placeholder= "책 정가 & 필기상태는 필수! "></textarea>-->
+    <%= f.text_field :five, class: "form-control input-size", id: "exampleInputName2", placeholder: "숫자만 입력해주세요." %>
+    </div>
+    
+    <!--<input type="file" name="image" class="file-submit">-->
+    <%= f.file_field :image, class: "file-submit", multiple: true %>
+    
+    <!--<button type="submit" class="btn btn-info file-submit">확인</button>-->
+    <%= f.submit "확인", class: "btn btn-info file-submit" %>
+    
+<% end %>
+
+</div>

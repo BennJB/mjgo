@@ -1,0 +1,54 @@
+<div class="container random_every random_page_every">
+    
+    <div class="random_title_con">
+    <p class="cook_map_title2">뽑는 즐거움</p>
+    <p class="cook_map_title">오늘 뭐 먹지?</p>
+    </div>
+    
+    <% @random.each do |x| %>
+    <a href="/eat_show/<%= x.id %>"> 
+        <div class="random_page_content">
+             <p class="random_page_title">'<%= x.title %>'</p>
+            <% if x.image[0] %>
+            <img src="<%= x.image[0] %>" alt="random_page_content">
+            <% end %>
+            <p class="random_page_pic"><mark style="background-color: #FFFFFF">추천메뉴 <%= x.menuone %></mark></p>
+            <% if x.cookreplies.blank? %>
+        	<p class="random_page_pic">평점 0</p>
+        	<% else %>
+        	<div class="star-rating menu_content-rating" data-score= '<%= x.cookreplies.average(:rating).round(2) %>' ></div>
+            <% end %>
+            <p class="random_page_review">리뷰 <span style="color: #ff4200; font-weight: 600;"><%= x.cookreplies.size %></span></p>
+         </div>
+    </a>
+    <% end %>     
+    
+    <div class="text-center">
+    <%= link_to '한번 더', '/random_cook', class: "btn btn-default btn-lg btn-random-onemore" %>
+    </div> 
+ 
+</div>
+
+
+
+
+<script src="/jquery.raty.js" type="text/javascript"></script>  
+
+<script>
+$('.star-rating').raty({
+path: '/images/',
+readOnly: true,
+half: true,
+score: function() {
+	return $(this).attr('data-score');	
+	}
+});
+</script>
+
+<script>
+$('#star-rating').raty({
+path: '/images/',
+half: true,
+scoreName: 'rating'  // Name of the hidden field that holds the score value.
+});
+</script>

@@ -2,14 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
     
+    
     ul, li {
     margin: 0;
     padding: 0;
     }
 
     body {
-    padding-top: 76px;    //   nav 바 맨 위에 fixed 하면, 아래 content가 네브로 올라오는 것 방지
+    // padding-top: 76px;    //   nav 바 맨 위에 fixed 하면, 아래 content가 네브로 올라오는 것 방지
     font-family: 'Nanum Gothic', sans-serif;
+    }
+    
+    .navbar-fixed-top {
+    height: 76px;
+    background-color: rgba(0, 0, 0, 0.3);
     }
     
     .freetalk-parent {
@@ -50,17 +56,13 @@
     
     .sell-background {
     margin-top: 15px;
-    height: 30px;
-    // background-position: center center;
-    // background-image: url("/assets/sell.png");
-    // background-repeat: no-repeat;
     }
     
-    .navbar-fixed-top {
-    height: 76px;
-    border-bottom:1px solid rgba(150, 150, 150, 0.22);
-    background-color: white;
-    }
+    // .navbar-fixed-top {
+    // height: 76px;
+    // border-bottom:1px solid rgba(150, 150, 150, 0.22);
+    // background-image: url('/images/navback85.png');
+    // }
     
     .type-box {
     font-size: 35px;
@@ -109,7 +111,6 @@
     }
     
     .background {    
-    margin-top: 10px;
     padding: 10px 0;
     // background-size: cover;
     // background-repeat:no-repeat;
@@ -117,6 +118,7 @@
     }
     
     .background-etc-index {
+    padding-top: 20px;    
     background-color: #e9ebee;   
     }
 
@@ -172,7 +174,7 @@
         border-radius: 2px;
         text-align: center;
         width: 440px;
-        margin: 50px auto 50px;
+        margin: 150px auto 50px;
     }
     
     .no_sign2 {
@@ -194,7 +196,7 @@
         border-radius: 2px;
         text-align: center;
         width: 440px;
-        margin: 50px auto 400px;
+        margin: 160px auto 400px;
     }
     .no_email_text_facebook{
         margin-top: 10px;
@@ -216,7 +218,7 @@
     .register-con {
         margin: 0 auto;
         width: 350px;
-        padding-top: 30px;
+        padding-top: 140px;
         padding-bottom: 220px;
     }
     
@@ -227,7 +229,7 @@
         border-right: 1px solid #ececec;
         border-bottom: 1px solid #ececec;
         border-radius: 2px; 
-        margin: 15px auto 50px;
+        margin: 120px auto 50px;
         width: 350px;
         padding: 25px 20px 50px 20px;
     }
@@ -331,6 +333,7 @@
     // 메세지 디자인
     
     .message-con-bottom {
+    margin-top: 100px;    
     margin-bottom: 400px;    
     }
     
@@ -427,6 +430,7 @@
     
     // 사고팔고 글쓰기 폼
     .form-con {
+    background-color: #FFFFFF;    
     border-top: 4px solid #F15F5F;
     border-left: 1px solid #ececec;
     border-right: 1px solid #ececec;
@@ -434,7 +438,7 @@
     border-radius: 2px;
     padding: 15px 30px;
     width: 530px;
-    margin: 0 auto 80px auto;
+    margin: 0px auto;
     }
 
 
@@ -555,6 +559,7 @@
     color: #9E9E9E;
     font-size: 13px;
     margin-bottom: 0px;
+    margin-left: 5px;
     }    
 
 .show-time-first {
@@ -584,6 +589,7 @@
  }
 
 .main-title {
+    color: #FFFFFF;
     font-family: 'Architects Daughter', cursive;
     font-weight: 600;
     font-size: 20px;
@@ -639,42 +645,135 @@
     padding: 10px 0px 10px 0px;
 }
 
+.book_main {
+    width: 100%;
+    height: 450px;
+    background-position: center center;
+    background-image: url(/images/index50.jpg);
+    background-repeat: no-repeat;
+}
+
+.meet_main {
+    width: 100%;
+    height: 450px;
+    background-position: center center;
+    background-image: url(/images/meet39.jpg);
+    background-repeat: no-repeat;
+}
+
+.nav-item-second {
+color: white;
+}
+
+.index-con {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 50px;
+}    
+
+.index-input {
+    padding-top: 21px;
+    padding-bottom: 22px;
+}
+
 .board-title-size {
     margin-top: 0px;
 }
 
 .board-title1 {
-    font-size: 25px;
+    margin-top: 60px;
+    color: #FFFFFF;
+    font-size: 35px;
     text-align: center;
-    margin-bottom: 0px;
+    margin-bottom: 40px;
+}
+
+.mypage_paginate {
+    margin-top: 0px;
+    text-align: center;
 }
 
 .board-content {
     font-weight: 400;
-    font-size: 35px;
+    color: #FFFFFF;
+    font-size: 30px;
     margin-bottom: 0px;
     margin-top: 0px;
     text-align: center;
 }
 
 .board-content2 {
-    color: #cacaca;
-    font-size: 20px;
+    color: #FFFFFF;
+    font-size: 22px;
     margin-bottom: 0px;
     margin-top: 10px;
     text-align: center;
 }
 
-.advertise {
-    margin-bottom: 30px;
+.book_query_input {
+    margin-top: 10px;   
 }
 
-.advertise-content {
-    font-size: 20px;
-    text-align: center;
-    width: 500px;
-    margin: 0 auto;
+.book_menu_con {
+    width: 231px;
+    margin: 60px auto 0;
 }
+
+.book_menu {
+    text-align: center;
+    float: left;
+    margin-right: 40px;
+}
+
+.book_menu_title {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.book_menu_img {
+    width: 50px;
+    }
+
+.book_menu_title:hover {
+    color: #FFA7A7;
+}
+
+.book_menu:nth-child(3) {
+    margin-right: 0px;
+}
+
+.moim_menu_con {
+    width: 422px;
+    margin: 50px auto 0;
+}
+
+.moim_menu {
+    text-align: center;
+    float: left;
+    margin-right: 40px;
+}
+
+.moim_menu:nth-child(5) {
+    margin-right: 0px;
+}
+
+.book_menu:nth-child(5) {
+    margin-right: 0px;
+}
+
+.moim_menu_title {
+    padding-top: 5px;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+    }
+
+.moim_menu_title:hover {
+    color: #3DB7CC;
+}    
 
 .category-title {
     margin: 0px;
@@ -713,16 +812,8 @@ a {
 .btn-default {
     border-color: #BDBDBD;
 }
-
 .btn-color {
     border-color: #BDBDBD;
-}
-
-.new_button {
-    color: #F15F5F;
-    border-color: #F15F5F;
-    margin-top: 35px;
-    font-weight: 600;
 }
 
 .new_team_button {
@@ -790,7 +881,7 @@ a {
 .reply-name {
     color:#4374D9;
     margin-bottom: 0px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .reply-content {
@@ -812,7 +903,7 @@ a {
     text-align: center;
 }
 .paginate {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-size: 13px;
     font-weight: 700;
     color: #F15F5F;
@@ -839,14 +930,10 @@ a {
      margin-right: 20px;
 }
 
-.search-con {
-    width: 400px;
-    margin: 20px auto 0px;
-  }
 
  .card-size {
     width: 550px;
-    margin: 0 auto;
+    margin: 90px auto;
   }
   
   .message-con-bottom {
@@ -910,6 +997,7 @@ a {
     }
     
     .col-web {
+    margin-top: 20px;    
     padding-right: 0px;    
     }
     
@@ -939,6 +1027,7 @@ a {
     }
     
     .friend-time {
+    padding-left: 15px;    
     margin-right: 15px;    
     text-align: right;    
     color: #EAEAEA;
@@ -951,10 +1040,10 @@ a {
     font-weight: 500;    
     color: #FFFFFF;    
     overflow: hidden;
-    height: 60px;
+    height: 64px;
     font-size: 23px;
     font-weight: 500;
-    margin: 23px 40px 10px 40px;
+    margin: 18px 40px 10px 40px;
     }
     
      .friend-title-con {
@@ -1029,7 +1118,7 @@ a {
     background-size: cover;
     background-repeat:no-repeat;
     background-position: center center;
-    height: 170px;
+    height: 146px;
     padding: 0px;    
     }
     
@@ -1207,7 +1296,7 @@ a {
     }
     
     .dongari-index {
-    height: 325px;
+    height: 315px;
     }
     
     .dongari-img {
@@ -1247,7 +1336,7 @@ a {
     border-radius: 2px;    
     padding-top: 20px;
     width: 400px;
-    margin: 0 auto 50px;
+    margin: 130px auto 50px;
     }
     
     .profile-gnb {
@@ -1304,7 +1393,7 @@ a {
     float: left;
     }
     .mypage-category-con:first-child {
-    margin-bottom: 50px;    
+    margin-bottom: 0px;    
     margin-right: 20px;
     }
     .mypage-category-con:nth-child(3) {
@@ -1357,7 +1446,7 @@ a {
     height: 24px;    
     }
     .mypage-time {
-    padding-left: 20px;
+    padding-left: 18px;
     }
     
     .mypage-text {
@@ -1366,6 +1455,22 @@ a {
     
 
 @media (max-width: 991px) {
+    
+    
+    // navbar 배경 & 드롭바 폰트색
+    .navbar-fixed-top {
+    background-color: #FFFFFF;
+    height: 73px;
+    }
+    
+    .main-title {
+    color: #000000;    
+    }
+    
+    .header .nav-item-child {
+    color: #000000;
+    }
+    // navbar end
     
     .mypage-con{
     width: 650px;
@@ -1441,13 +1546,10 @@ a {
     width: 660px;
     }
 
-  .search-con {
-      width: 400px;
-  }
-  
+
   .card-size {
     width: 550px;
-    margin: 0 auto;
+    margin: 90px auto;
   }
   
   .message-con-bottom {
@@ -1475,6 +1577,10 @@ a {
     padding-top: 3px;
     }
     
+    .header .nav-item-child {
+    color: #000000;
+    }
+    
     .header .nav-item-first {
     padding-top: 10px;
     }
@@ -1484,12 +1590,17 @@ a {
     }
     
     .navbar-fixed-top {
+    background-color: #FFFFFF;    
     height: 73px;
+    }
+    
+    .main-title {
+    color: #000000;    
     }
     
     .form-con {              
     width: 500px;
-    margin: 0 auto 80px auto;
+    margin: 100px auto 80px auto;
     }
     
      .panel-post-show {
@@ -1514,14 +1625,10 @@ a {
     float: right;
     }  
      
-    .search-con {
-      width: 400px;
-      margin: 20px auto 0;
-  }
-  
+ 
     .card-size {
     width: 550px;
-    margin: 0 auto;
+    margin: 90px auto;
   }
   
   .message-con-bottom {
@@ -1530,7 +1637,7 @@ a {
   
   // friend
     .col-mobile {
-    margin: 0 auto;
+    margin: 20px auto 0;
     width: 400px;
     padding-left: 0px;
     padding-right: 0px;
@@ -1550,7 +1657,10 @@ a {
 @media(max-width: 654px) {
    
     .board-title1 {
-    font-size: 20px;
+    color: #FFFFFF;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 40px;
     }
     
     .profile {
@@ -1577,16 +1687,16 @@ a {
     width: 63%;
     }
     
-    .sell-background {
-    height: 10px;
-    }
-    
     .header .nav-item-second {
     padding-top: 3px;
     }
     
     .header .navbar-logo-wrap {
     padding: 7px 0;
+    }
+    
+    .header .nav-item-child {
+    color: #000000;
     }
     
     .header .nav-item-first {
@@ -1652,8 +1762,12 @@ a {
     margin-bottom: 0;  // content(작성내용)이 바로 아래에 보일 수 있게!
     text-decoration: none;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     color: black;
+    }
+    
+    .index-post-writename {
+    font-size: 11px;
     }
     
     .post-title > a > .span-content {
@@ -1671,17 +1785,21 @@ a {
     }
     
     .child > .index-user-time {
-      color: #707070;
-      margin: 0; 
-      font-size: 12px;
-      height: 18px;
+    color: #707070;
+    margin: 6px 0 5px 0;
+    font-size: 11px;
+    height: 18px;
     }
           
     .child > .index-post-title {
       overflow: hidden;   // 글자가 칸을 초과하면, div 크기에 맞추고 나머지는 숨겨준다.
-       height: 41px;
+       height: 21px;
        margin-top: 3px;
        margin-bottom: 3px;
+    }
+    
+    .child > .index-post-title3 {
+    margin-bottom: 3px;
     }
     
   .parent-left > .index-price {
@@ -1691,15 +1809,6 @@ a {
        color: #FF7012;
        margin-bottom: 0px;
     }
-    
-    .index-like {
-    // margin-left: 90px;
-    }
-    
-    .search-con {
-      width: 400px;
-      margin: 20px auto 0;
-  }
     
    .board-title {
      width: 190px;
@@ -1719,7 +1828,7 @@ a {
     
     // friend
     .col-mobile {
-    margin: 0 auto;
+    margin: 20px auto 0px;
     width: 400px;
     padding-left: 0px;
     padding-right: 0px;
@@ -1816,13 +1925,84 @@ a {
     }
     
     .sell-background {
-    height: 40px;    
     margin-top: 0px;    
-    // background-image: url("/assets/phone_sell.png");
     }
     
+    .book_main {
+    background-image: url(/images/book_mobile33.jpg);     
+    height: 190px;
+    }
+    
+    .meet_main {
+    background-image: url(/images/meet_mobile33.jpg);    
+    height: 190px;
+    }
+    
+    .index-con {
+    width: 310px;
+    padding-top: 30px;
+    }    
+    .index-input {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+    
+    .book_menu {
+    padding-bottom: 3px;
+    border-radius: 30%;    
+    background-color: #FFFFFF;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 5px;
+    }
+     
+    .book_menu_con {
+    margin: 51px auto 0;    
+    width: 190px;  
+    }
+    
+    .book_menu_title {
+    padding-top: 3px;
+    margin: 0;
+    font-size: 12px;
+    color: #363636;
+    }
+    
+    .book_menu_img {
+    width: 40px;
+    }
+
+    .friend-main-list {
+    margin-top: 45px;
+    }
+    
+    .moim_menu_con {
+    border-bottom: 1px solid rgba(150, 150, 150, 0.22);    
+    width: 290px;
+    margin: 50px auto 0;
+    }
+    
+    .moim_menu {
+    margin-right: 20px;
+    }
+    
+    .moim_menu:nth-child(5) {
+    margin-right: 0px;
+    }
+    
+    .moim_menu_title {
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 600;
+    }
+
     .header .nav-item-second {
     padding-top: 3px;
+    }
+    
+    .header .nav-item-child {
+    color: #000000;
     }
     
     .header .nav-item-first {
@@ -1830,21 +2010,13 @@ a {
     }
     
     .navbar-fixed-top {
+    background-color: #FFFFFF;    
     height: 63px;
     }
-
-    .advertise1 {
-    margin: 0;
-    padding: 0;
-    font-size: 0;     
-    height: 0;
-    width: 0;
-    }
-    
-    .advertise2 {
-    width: 100%;
-    height: 90px;
-    }
+ 
+    .main-title {
+    color: #000000;    
+    } 
     
     .grand-parent-write-size{
     padding-left: 5px;
@@ -1853,23 +2025,25 @@ a {
     .background {
     background-image: none;
     background-color: #e9ebee;
-    margin-top: 10px;
-    padding: 10px 0;
+    margin: 0;
+    padding: 80px 0;
     }
     
+    
     .board-title-size {
-    margin-top: 10px;
+    margin-top: 0px;
     }
     
     .board-title1 {
     font-weight: 700;
     margin-top: 0px;
+    margin-bottom: 20px;
     font-size: 18px;
     }
     
     .board-content {
     margin-bottom: 0px;
-    font-size: 25px;
+    font-size: 20px;
     }
     
     .board-content2 {
@@ -1879,15 +2053,17 @@ a {
     }
     
     // friend view
+    
+    
     .col-mobile {
-    margin: 0 auto;    
+    margin: 45px auto 0px;    
     width: 330px;
     padding-left: 0px;
     padding-right: 0px;
     }
 
     .friend-panel-body {
-    height: 146px;    
+    height: 119px;    
     }
 
     .friend-title {
@@ -2102,14 +2278,7 @@ a {
        margin-bottom: 0px;
     }
     
-    .index-like {
-    // margin-left: 90px;
-    }
-    
-    .search-con {
-      width: 300px;
-      margin: 10px auto 0;
-  }
+
     .like-color {
       font-size: 13px;
       font-weight: 600;
@@ -2121,7 +2290,7 @@ a {
     
     .card-size {
       width: 330px;
-      margin: 0 auto;
+      margin: 0px auto;
   }
   
   .message-con-bottom {
@@ -2176,10 +2345,6 @@ a {
     padding: 3px 8px;
     }
     
-    
-   .new_button {
-    margin-top: 20px;
-   }
    
    .new_team_button {
     margin-top: 20px;
@@ -2218,12 +2383,17 @@ a {
     .edit-con {
     padding-bottom: 40px;
     width: 300px;
+    margin-top: 30px;
     }
     .field {
     margin-bottom: 13px;
     }
     
     /*동아리*/
+    .dongari-index {
+    height: 315px;
+    }
+    
    .dongari-view-4 {
     width: 330px;
     margin: 0 auto;
@@ -2260,8 +2430,7 @@ a {
     .profile {
     padding-top: 10px;
     width: 300px;
-    margin: 0 auto;
-    margin-bottom: 15px;
+    margin: 20px auto 15px;
     }
     
     .profile-git {

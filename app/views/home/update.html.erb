@@ -1,3 +1,5 @@
+<div class="new_background">
+
 <%= form_for @post, url: {controller: "home", action: "update_new"}, html: {class: "form-inline form-con"}, multipart: true do |f| %>  
   
   <h3 class="new_selling"># 판매하기</h3>
@@ -8,6 +10,16 @@
     
     <p class="form-p">책 이름</p>
     <%= f.text_field :title, value: "#{@post.title}", class: "form-control placeholder_default", placeholder: "" %>
+     
+    <div class="form-group">
+    <p class="form-p">구입 가격</p>
+    <!--<input type="text" name="price" class="form-control input-size" id="exampleInputName2" placeholder="">-->
+    <%= f.text_field :standard, value: "#{@post.standard}", class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>  
+    </div>
+    <div class="form-group">
+    <p class="form-p">판매가격</p>
+    <%= f.text_field :price, value: "#{@post.price}", class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>  
+    </div>
     
     <% if @post.category_id == 1 %>
     <div class="form-group">
@@ -21,17 +33,13 @@
     <%= f.text_field :writename, value: "#{@post.writename}", class: "form-control input-size0 placeholder_default", id: "exampleInputName2", placeholder:"" %>
     </div> 
     <% else %>
+    <div class="form-group">
+    <p class="form-p">구입 시기</p>
+    <!--<input type="text" name="place" class="form-control input-size placeholder_default" id="exampleInputName2" placeholder="">-->
+    <%= f.text_field :company, value: "#{@post.company}", class: "form-control input-size0 placeholder_default", id: "exampleInputName2", placeholder:"" %>
+    </div>
     <% end %>
-     
-    <div class="form-group">
-    <p class="form-p">구입 가격</p>
-    <!--<input type="text" name="price" class="form-control input-size" id="exampleInputName2" placeholder="">-->
-    <%= f.text_field :standard, value: "#{@post.standard}", class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>  
-    </div>
-    <div class="form-group">
-    <p class="form-p">판매가격</p>
-    <%= f.text_field :price, value: "#{@post.price}", class: "form-control input-size", id: "exampleInputName2", placeholder: "" %>  
-    </div>
+    
     <p class="form-p">내용</p>
      <%= f.text_area :content, value: "#{@post.content}", class: "form-control", rows: "5", placeholder: "사진은 3장까지 올릴 수 있어요! "%>
   
@@ -39,3 +47,5 @@
     
     <%= f.submit "확인", class: "btn btn-info file-submit" %>
 <% end %>
+
+</div>

@@ -1,0 +1,280 @@
+<div class="container meet_main">
+    
+    <div class="index-con">
+        <div class="board-title-size">
+              <!--<p class="notice">notice <span class="notice-span">모바일에 최적화되어, PC는 크롬 사용을 권장합니다.</span></p>  -->
+              <p class="board-title1">만나<span class="go">GO</span></p>
+              <p class="board-content"></p>
+        </div>
+    
+        <form class="input-group book_query_input">
+            <input type="text" class="form-control placeholder_default index-input" name="query" placeholder="찾는 모임을 검색해보세요.">
+            <span class="input-group-btn">
+            <button class="btn btn-primary btn-lg btn-mobile" type="submit"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+            </span>
+        </form>
+    </div>    
+         
+        <div class="row moim_menu_con">
+            <div class="moim_menu">
+                <a href="/moim_new">
+                <img src="/images/text.png" class="book_menu_img" alt="book">  
+                <p class="moim_menu_title" style="color: #3DB7CC;">모임 개설</p>
+                </a>
+            </div>
+            <div class="moim_menu">
+                <a href="/communication">
+                <img src="/images/friendship.png" class="book_menu_img" alt="communication">  
+                <p class="moim_menu_title">친목</p>
+                </a>
+            </div>
+            <div class="moim_menu">
+                <a href="/study">
+                <img src="/images/studyhard.png" class="book_menu_img" alt="study">  
+                <p class="moim_menu_title">스터디</p>
+                </a>
+            </div>
+            <div class="moim_menu">
+                <a href="/art">
+                <img src="/images/palette.png" class="book_menu_img" alt="art">  
+                <p class="moim_menu_title">예체능</p>
+                </a>
+            </div>
+            <div class="moim_menu">
+                <a href="/it">
+                <img src="/images/cloud.png" class="book_menu_img" alt="it">  
+                <p class="moim_menu_title">IT</p>
+                </a>
+            </div>
+        </div>
+   
+</div>
+
+      <div class="container friend-main-list">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-12 col-web col-mobile">
+     
+                <% @moims.each do |x| %>
+                <div class="col-md-6 col-sm-6 moim-index-padding">
+                    <div class="panel panel-default border-radius-0">
+                        <% if x.moimcategory.id == 1 %>
+                        <a href="/moim_show/<%= x.id %>">
+                            <% if x.id.to_s.include? '8' %>    
+                            <div class="panel-body friend-panel-body friend-panel-community8">
+                            <% elsif x.id.to_s.include? '7' %>    
+                            <div class="panel-body friend-panel-body friend-panel-community7">
+                            <% elsif x.id.to_s.include? '6' %>    
+                            <div class="panel-body friend-panel-body friend-panel-community6">
+                            <% elsif x.id.to_s.include? '5' %>    
+                            <div class="panel-body friend-panel-body friend-panel-community5">
+                            <% elsif x.id.to_s.include? '4' %>    
+                            <div class="panel-body friend-panel-body friend-panel-community4">
+                            <% elsif x.id.to_s.include? '3' %>    
+                            <div class="panel-body friend-panel-body friend-panel-community3">
+                            <% elsif x.id.to_s.include? '2' %>    
+                            <div class="panel-body friend-panel-body friend-panel-community2">                 
+                            <% else %>
+                            <div class="panel-body friend-panel-body friend-panel-community1">
+                            <% end %>  
+                            <div class="friend-panel-button">
+                            <% if x.mozip_id == 2 %>
+                            <div class="friend-panel-mozip-size">
+                                <p><%= x.mozip.title %></p>
+                            </div>
+                            <% end %>   
+                            </div>
+                            <div class="friend-title-con">
+                                <p class="friend-number"># <%= x.id %>번째 만나<span class="friend-go">GO</span></p>    
+                                <!--<p class="friend-user-name"><%#= x.user.name? ? x.user.name : x.user.nic_name %><span class="friend-time"> <%= time_ago_in_words(x.created_at) %></span></p>-->
+                                <p class="friend-title"><%= x.title %></p>
+                            </div>
+                                <p class="friend-user-name"><span class="by_name">by</span> <%= x.user.nic_name %></p>
+                                 <div class="grand-row">
+                                    <% if x.person %>
+                                    <div class="parent-left">
+                                    <p class="friend-time">모집인원 <%= x.person %>명</p>
+                                    </div>
+                                    <% else %>
+                                    <div class="parent-left">
+                                    <p class="friend-time">모집인원 미정</p>
+                                    </div>
+                                    <% end %>
+                                    <div class="parent-right">
+                                    <p class="friend-time"><%= time_ago_in_words(x.created_at) %> | 댓글(<%= x.moimreplies.size %>)</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            </a>
+                            
+                        <% elsif x.moimcategory.id == 2 %> 
+                        <a href="/moim_show/<%= x.id %>">
+                        <% if x.id.to_s.include? '9' %>
+                        <div class="panel-body friend-panel-body friend-panel-art1">
+                        <% elsif x.id.to_s.include? '8' %>    
+                        <div class="panel-body friend-panel-body friend-panel-art8">
+                        <% elsif x.id.to_s.include? '7' %>    
+                        <div class="panel-body friend-panel-body friend-panel-art7">
+                        <% elsif x.id.to_s.include? '6' %>    
+                        <div class="panel-body friend-panel-body friend-panel-art6">
+                        <% elsif x.id.to_s.include? '5' %>    
+                        <div class="panel-body friend-panel-body friend-panel-art5">
+                        <% elsif x.id.to_s.include? '4' %>    
+                        <div class="panel-body friend-panel-body friend-panel-art4">
+                        <% elsif x.id.to_s.include? '3' %>    
+                        <div class="panel-body friend-panel-body friend-panel-art3">
+                        <% elsif x.id.to_s.include? '2' %>    
+                        <div class="panel-body friend-panel-body friend-panel-art2">            
+                        <% else %>
+                        <div class="panel-body friend-panel-body friend-panel-art9">
+                        <% end %>  
+                            <div class="friend-panel-button">
+                            <% if x.mozip_id == 2 %>
+                            <div class="friend-panel-mozip-size">
+                                <p><%= x.mozip.title %></p>
+                            </div>
+                            <% end %>   
+                            </div>
+                            <div class="friend-title-con">
+                                <p class="friend-number"># <%= x.id %>번째 만나<span class="friend-go">GO</span></p>    
+                                <!--<p class="friend-user-name"><%#= x.user.name? ? x.user.name : x.user.nic_name %><span class="friend-time"> <%= time_ago_in_words(x.created_at) %></span></p>-->
+                                <p class="friend-title"><%= x.title %></p>
+                            </div>
+                                <p class="friend-user-name"><span class="by_name">by</span> <%= x.user.nic_name %></p>
+                                 <div class="grand-row">
+                                    <% if x.person %>
+                                    <div class="parent-left">
+                                    <p class="friend-time">모집인원 <%= x.person %>명</p>
+                                    </div>
+                                    <% else %>
+                                    <div class="parent-left">
+                                    <p class="friend-time">모집인원 미정</p>
+                                    </div>
+                                    <% end %>
+                                    <div class="parent-right">
+                                    <p class="friend-time"><%= time_ago_in_words(x.created_at) %> | 댓글(<%= x.moimreplies.size %>)</p>
+                                    </div>
+                                </div>
+                        </div>
+                        </a>
+                        
+                        <% elsif x.moimcategory.id == 3 %>
+                        <a href="/moim_show/<%= x.id %>">
+                        <% if x.id.to_s.include? '8' %>    
+                        <div class="panel-body friend-panel-body friend-panel-it8">
+                        <% elsif x.id.to_s.include? '7' %>    
+                        <div class="panel-body friend-panel-body friend-panel-it7">
+                        <% elsif x.id.to_s.include? '6' %>    
+                        <div class="panel-body friend-panel-body friend-panel-it6">
+                        <% elsif x.id.to_s.include? '5' %>
+                        <div class="panel-body friend-panel-body friend-panel-it5">
+                        <% elsif x.id.to_s.include? '4' %>    
+                        <div class="panel-body friend-panel-body friend-panel-it4">
+                        <% elsif x.id.to_s.include? '3' %>    
+                        <div class="panel-body friend-panel-body friend-panel-it3">
+                        <% elsif x.id.to_s.include? '2' %>    
+                        <div class="panel-body friend-panel-body friend-panel-it2">             
+                        <% else %>
+                        <div class="panel-body friend-panel-body friend-panel-it1">
+                        <% end %>    
+                            <div class="friend-panel-button">
+                            <% if x.mozip_id == 2 %>
+                            <div class="friend-panel-mozip-size">
+                                <p><%= x.mozip.title %></p>
+                            </div>
+                            <% end %>   
+                            </div>
+                            <div class="friend-title-con">
+                                <p class="friend-number"># <%= x.id %>번째 만나<span class="friend-go">GO</span></p>    
+                                <!--<p class="friend-user-name"><%#= x.user.name? ? x.user.name : x.user.nic_name %><span class="friend-time"> <%= time_ago_in_words(x.created_at) %></span></p>-->
+                                <p class="friend-title"><%= x.title %></p>
+                            </div>
+                                <p class="friend-user-name"><span class="by_name">by</span> <%= x.user.nic_name %></p>
+                                 <div class="grand-row">
+                                    <% if x.person %>
+                                    <div class="parent-left">
+                                    <p class="friend-time">모집인원 <%= x.person %>명</p>
+                                    </div>
+                                    <% else %>
+                                    <div class="parent-left">
+                                    <p class="friend-time">모집인원 미정</p>
+                                    </div>
+                                    <% end %>
+                                    <div class="parent-right">
+                                    <p class="friend-time"><%= time_ago_in_words(x.created_at) %> | 댓글(<%= x.moimreplies.size %>)</p>
+                                    </div>
+                                </div>
+                        </div>
+                        </a>
+                        
+                        <% elsif x.moimcategory.id == 4 %>
+                        <a href="/moim_show/<%= x.id %>">
+                        <% if x.id.to_s.include? '9' %>
+                        <div class="panel-body friend-panel-body friend-panel-study9">
+                        <% elsif x.id.to_s.include? '8' %>    
+                        <div class="panel-body friend-panel-body friend-panel-study8">
+                        <% elsif x.id.to_s.include? '7' %>    
+                        <div class="panel-body friend-panel-body friend-panel-study7">
+                        <% elsif x.id.to_s.include? '6' %>    
+                        <div class="panel-body friend-panel-body friend-panel-study1">
+                        <% elsif x.id.to_s.include? '5' %>    
+                        <div class="panel-body friend-panel-body friend-panel-study5">
+                        <% elsif x.id.to_s.include? '4' %>    
+                        <div class="panel-body friend-panel-body friend-panel-study4">
+                        <% elsif x.id.to_s.include? '3' %>    
+                        <div class="panel-body friend-panel-body friend-panel-study3">
+                        <% elsif x.id.to_s.include? '2' %>    
+                        <div class="panel-body friend-panel-body friend-panel-study2">
+                        <% else %>
+                        <div class="panel-body friend-panel-body friend-panel-study6">
+                        <% end %>    
+                            <div class="friend-panel-button">
+                            <% if x.mozip_id == 2 %>
+                            <div class="friend-panel-mozip-size">
+                                <p><%= x.mozip.title %></p>
+                            </div>
+                            <% end %>   
+                            </div>
+                            <div class="friend-title-con">
+                                <p class="friend-number"># <%= x.id %>번째 만나<span class="friend-go">GO</span></p>    
+                                <!--<p class="friend-user-name"><%#= x.user.name? ? x.user.name : x.user.nic_name %><span class="friend-time"> <%= time_ago_in_words(x.created_at) %></span></p>-->
+                                <p class="friend-title"><%= x.title %></p>
+                            </div>
+                                <p class="friend-user-name"><span class="by_name">by</span> <%= x.user.nic_name %></p>
+                                
+                               <div class="grand-row">
+                                    <% if x.person %>
+                                    <div class="parent-left">
+                                    <p class="friend-time">모집인원 <%= x.person %>명</p>
+                                    </div>
+                                    <% else %>
+                                    <div class="parent-left">
+                                    <p class="friend-time">모집인원 미정</p>
+                                    </div>
+                                    <% end %>
+                                    <div class="parent-right">
+                                    <p class="friend-time"><%= time_ago_in_words(x.created_at) %> | 댓글(<%= x.moimreplies.size %>)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        <% end %>
+                    </div>
+                </div> 
+                <% end %>
+                <div class="paginate-con">
+                <%= will_paginate @moims, previous_label: '<< 이전', next_label: '다음 >>', page_links: false, class: "paginate" %>
+                </div>
+        </div>
+      </div>
+    </div>  
+    
+
+<script>
+$(document).ready(function() { 
+ $('.board-content').typeIt({
+     autoStart: false
+  })
+  .tiType('소모임 & 스터디가 필요할 때');
+});     
+</script>    

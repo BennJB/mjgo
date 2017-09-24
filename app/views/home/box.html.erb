@@ -1,35 +1,41 @@
-<div class="container">
-    <div class="board-title-size">
-          <p class="notice">notice <span class="notice-span">동아리 홍보란은 모집기간만 운영합니다.</span></p>  
-          <p class="board-title1">사고 팔<span class="go">GO</span></p>
-          <p class="board-content2">중고 장터가 필요할 때</p>
-          <p class="board-content"></p>
-          
-          <div class="sell-background">
-           <div class="category-con"> 
-            <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle btn-color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-             <p class="category-title"># 기타 <span class="caret"></span></p>
-            </button>
-             <ul class="dropdown-menu">
-              <li class="category-cotent"><a href="/index"># 서적</a></li>
-              <li class="category-cotent"><a href="/etc"># 기타</a></li>
-            </ul>
-            </div>
-        </div> 
-        </div>    
-    </div>
-  
-        <form class="input-group search-con">
-            <input type="text" class="form-control placeholder_default" name="query" placeholder="찾는 책을 검색해보세요.">
+<div class="container book_main">
+    
+    <div class="index-con">
+        <div class="board-title-size">
+              <!--<p class="notice">notice <span class="notice-span">모바일에 최적화되어, PC는 크롬 사용을 권장합니다.</span></p>  -->
+              <p class="board-title1">사고 팔<span class="go">GO</span></p>
+              <p class="board-content"></p>
+        </div>
+    
+        <form class="input-group book_query_input">
+            <input type="text" class="form-control placeholder_default index-input" name="query" placeholder="찾는 물건을 검색해보세요.">
             <span class="input-group-btn">
-            <button class="btn btn-danger" type="submit"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+            <button class="btn btn-danger btn-lg btn-mobile" type="submit"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
             </span>
         </form>
-          
-        <div class="grand-parent-write-size">  
-            <%= link_to "판매하기", "/item_new", class: "btn btn-default new_button" %>
+    </div>    
+         
+        <div class="row book_menu_con">
+            <div class="book_menu">
+                <a href="/item_new">
+                <img src="/images/text.png" class="book_menu_img" alt="book">  
+                <p class="book_menu_title" style="color: #FFA7A7;">글쓰기</p>
+                </a>
+            </div>
+            <div class="book_menu">
+                <a href="/index">
+                <img src="/images/books.png" class="book_menu_img" alt="book">  
+                <p class="book_menu_title">서적</p>
+                </a>
+            </div>
+            <div class="book_menu">
+                <a href="/box">
+                <img src="/images/trolley.png" class="book_menu_img" alt="box">  
+                <p class="book_menu_title">기타</p>
+                </a>
+            </div>
         </div>
+   
 </div>
 
 <div class="background background-etc-index">
@@ -44,27 +50,28 @@
             
             <div class="child index-post-img"> 
               <% if x.image.present? %>
-              <img src="<%= x.image[0].url %>" class="img-responsive img-design">
+              <img src="<%= x.image[0].url %>" class="img-responsive img-design" alt="postimage">
               <% else %>
               <%#= link_to image_tag("#{x.image.url}", class: "img-responsive"), "/show/#{x.id}" %>
-              <img src="assets/no_image.gif" class="img-responsive img-design">
+              <img src="/images/no_image.gif" class="img-responsive img-design" alt="postimage">
               <% end %>
               
                 <div class="selling-button">
                      <% if x.selling_id == 3 %>
-                    <button type="button" class="btn btn-danger selling-border"><%= x.selling.title %></button>
+                    <div class="btn btn-danger selling-border"><%= x.selling.title %></div>
                     <% elsif x.selling_id == 2 %>
-                    <button type="button" class="btn btn-warning selling-border"><%= x.selling.title %></button>
+                    <div class="btn btn-warning selling-border"><%= x.selling.title %></div>
                     <% else %>
-                    <button type="button" class="btn btn-success selling-border"><%= x.selling.title %></button>
+                    <div class="btn btn-success selling-border"><%= x.selling.title %></div>
                     <% end %>
                 </div>
             </div>
-            
+       
             <div class="child index-post-content">
-            
+            <!--<p class="index-user-name"></p>-->
                 <p class="index-user-time"><span class="by_name">by </span><%= x.user.name? ? x.user.name : x.user.nic_name %> · <%= time_ago_in_words(x.created_at) %></p>
-                <% if x.company.present? && x.writename.present? %>
+                
+                <% if x.company.present? or x.writename.present? or x.category_id == 2 %>
                 <div class="index-post-title">
                 <p class="post-title"><%= x.title %></p>
                 </div>
@@ -76,14 +83,22 @@
                 
                 <% if x.company.present? %>
                 <div class="index-post-title2">
-                <p class="index-post-company"><%= x.company %></p>
+                <p class="index-post-company">구입시기 <%= x.company %></p>
+                </div>
+                <% elsif x.company.blank? %>
+                <div class="index-post-title2">
+                <p class="index-post-company">구입시기</p>
                 </div>
                 <% else %>
                 <% end %>
                 
                 <% if x.writename.present? %> 
                 <div class="index-post-title3">
-                <p class="index-post-writename"><%= x.writename %> 지음</p>
+                <p class="index-post-writename"></p>
+                </div>
+                <% elsif x.writename.blank? %>
+                <div class="index-post-title3">
+                <p class="index-post-writename"></p>
                 </div>
                 <% else %>
                 <% end %>
@@ -115,6 +130,7 @@
          </div>
          </a>
      </div>
+     
     </div>
 <% end %>
             <div class="paginate-con">
@@ -130,6 +146,6 @@ $(document).ready(function() {
  $('.board-content').typeIt({
      autoStart: false
   })
-  .tiType('명지대 안에서 빠르고 안전한 직거래');
+  .tiType('캠퍼스 안에서 빠르고 안전한 직거래');
 });     
 </script>

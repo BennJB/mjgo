@@ -11,6 +11,7 @@ class LikesController < ApplicationController
             like.destroy    # 좋아요 한 유저가 있으면, 좋아요 취소.    
         end
          redirect_to "/show/#{params[:post_like_id]}"
+        #  redirect_to "/eat/coupon/#{params[:post_like_id]}"
     end
 end
 

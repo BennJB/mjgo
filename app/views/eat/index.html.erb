@@ -1,0 +1,158 @@
+<div class="cook_main">
+    <div class="cook_con">
+    <p class="cook_title">명지대 맛집 추천, 오늘 뭐먹지?</p>
+    
+    <form class="input-group">
+            <input type="text" class="form-control placeholder_default cook_input" name="query" placeholder="음식 혹은 찾는 가게를 검색해보세요.">
+            <span class="input-group-btn">
+            <button class="btn btn-warning btn-lg btn-mobile" type="submit"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+            </span>
+        </form>
+    </div>    
+    
+    <div class="cook_category">
+        <ul class="gnb">
+			<li><%= link_to "#삼겹살", '/?query=삼겹살' %></li>
+			<li><%= link_to "#짬뽕", '/?query=짬뽕' %></li>
+			<li><%= link_to "#돈까스", '/?query=돈까스' %></li>
+			<li><%= link_to "#오므라이스", '/?query=오므라이스' %></li>
+			<li><%= link_to "#곱창", '/?query=곱창' %></li>
+		</ul>
+    </div>
+</div>
+
+    <div id="link">
+        <div class="row index_menu_icon_con">
+            <div class="map_menu_icon">
+                <a class="cook_jquery" href="/menu1">
+                <img src="/images/rice.png" class="map_menu_icon_size" alt="rice">
+                <p class="index_menu_icon_text">한식</p>
+                </a>
+            </div>
+            <div class="map_menu_icon">
+                <a class="cook_jquery" href="/menu2">
+                <img src="/images/grill.png" class="map_menu_icon_size" alt="grill">
+                <p class="index_menu_icon_text">양식,고기</p>
+                </a>
+            </div>
+            <div class="map_menu_icon">
+                <a class="cook_jquery" href="/menu3">
+                <img src="/images/noodles.png" class="map_menu_icon_size" alt="noodle">
+                <p class="index_menu_icon_text">일식,중식</p>
+                </a>
+            </div>
+            <div class="map_menu_icon">
+                <a class="cook_jquery" href="/menu4">
+                <img src="/images/chicken.png" class="map_menu_icon_size" alt="chicken">
+                <p class="index_menu_icon_text">분식,치킨</p>
+                </a>
+            </div>
+            <div class="map_menu_icon">
+                <a class="cook_jquery" href="/menu5">
+                <img src="/images/coffee.png" class="map_menu_icon_size" alt="coffee">
+                <p class="index_menu_icon_text">카페</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 각 메뉴 리스트 view -->
+    <div id="page" class="eat_banner_back">
+    </div>
+
+
+    <!-- cook query view -->
+    <% if @cooks.nil? %>
+        <span style="display: none;"></span>
+    <% else %>
+    <div class="container">
+    <div class="cook_grandparent">
+        <p class="queryname">검색결과 <span class="queryname_span">#<%= @queryname %></span></p>
+        <% @cooks.each do |x| %>
+        <a href="/eat_show/<%= x.id %>"> 
+        <div class="cook_mediparent">
+        <div class="cook_parent">
+            
+            <!-- 이벤트 -->
+            <% if x.cookevents.first %>
+                <div class="cook_event">
+                <p class="cook_event_txt">이벤트</p>
+                </div>
+                <div class="cook_event_detail">
+                <p class="cook_event_detail_txt"><%= x.cookevents.first.title %></p>
+                </div>
+            <% else %>
+            <% end %>
+            <!-- 이벤트 end -->
+            
+            <% if x.image[0] %>
+            <img src="<%= x.image[0] %>" alt="koreacook">
+            <% end %>
+            <div class="menu_content">    
+                <p class="menu_content-text1"><%= x.title %></p>
+                <p class="menu_content-text2">추천메뉴 <%= x.menuone %></p>
+                <% if x.cookreplies.blank? %>
+        		<p class="menu_content-text2">평점 0</p>
+        		<% else %>
+        		<div class="star-rating menu_content-rating" data-score='<%= x.cookreplies.average(:rating).round(2) %>'></div>
+            	<% end %>
+            	<p class="menu_content-text3">리뷰 <span style="color: #ff4200; font-weight: 600;"><%= x.cookreplies.size %></span></p>
+            </div>
+        </div>
+        </div>
+        </a>
+        <% end %>
+        
+    </div>
+    </div>
+    <% end %>
+
+
+<!-- cook main choice banner start -->
+<div class="eat_banner_back">
+<div class="row cook_grandparent">
+    <div class="eat_banner eat_banner_pic">
+    <a href="/random_cook">    
+        <p class="eat_banner_text2">뽑는 즐거움</p>
+        <p class="eat_banner_text">복불복 추첨</p>  
+    </a>
+    </div>
+    <div class="eat_banner eat_banner_map">
+    <a href="/every_map">  
+        <p class="eat_banner_text2">골라 먹는 재미</p>
+        <p class="eat_banner_text">명지대 맛집 지도</p>    
+    </a>
+    </div>
+    <div class="eat_banner eat_banner_alone">
+        <p class="eat_banner_text2">MJGO 추천 리스트</p>
+        <p class="eat_banner_text">혼자 먹기 좋은 곳</p>  
+    </div>
+    <div class="eat_banner eat_banner_study">
+        <p class="eat_banner_text2">MJGO 추천 리스트</p>  
+        <p class="eat_banner_text">공부 하기 좋은 카페</p>  
+    </div>
+</div>
+</div>
+<!--mjgo choice banner end-->
+
+
+<script src="/jquery.raty.js" type="text/javascript"></script>  
+
+<script>
+$('.star-rating').raty({
+path: '/images/',
+readOnly: true,
+half: true,
+score: function() {
+	return $(this).attr('data-score');	
+	}
+});
+</script>
+
+<script>
+$('#star-rating').raty({
+path: '/images/',
+half: true,
+scoreName: 'rating'  // Name of the hidden field that holds the score value.
+});
+</script>

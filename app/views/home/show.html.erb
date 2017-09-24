@@ -15,25 +15,25 @@
             <div class="item active">
             <% if @post.image[0] %>
                 <a href="<%= @post.image[0].url %>">
-                <img src="<%= @post.image[0].url %>" class="img-responsive center-block"></a>
+                <img src="<%= @post.image[0].url %>" class="img-responsive center-block" alt="postimage"></a>
                 <% else %>
-                <img src="/assets/no_image.gif" class="img-responsive img-design">
+                <img src="/images/no_image.gif" class="img-responsive img-design" alt="postimage">
             <% end %>
             </div>
             <div class="item">
                 <% if @post.image[1] %>
                 <a href="<%= @post.image[1].url %>">
-                <img src="<%= @post.image[1].url %>" class="img-responsive center-block"></a>
+                <img src="<%= @post.image[1].url %>" class="img-responsive center-block" alt="postimage"></a>
                 <% else %>
-                <img src="/assets/no_image.gif" class="img-responsive img-design">
+                <img src="/images/no_image.gif" class="img-responsive img-design" alt="postimage">
                 <% end %>
             </div>
             <div class="item">
             <% if @post.image[2] %>
                 <a href="<%= @post.image[2].url %>">
-                <img src="<%= @post.image[2].url %>" class="img-responsive center-block"></a>
+                <img src="<%= @post.image[2].url %>" class="img-responsive center-block" alt="postimage"></a>
                 <% else %>
-                <img src="/assets/no_image.gif" class="img-responsive img-design">
+                <img src="/images/no_image.gif" class="img-responsive img-design" alt="postimage">
                 <% end %>
             </div>
         </div>
@@ -61,8 +61,12 @@
             <h4 class="show-name"><%= @post.user.name? ? @post.user.name : @post.user.nic_name %> 님</h4>
             <p class="show-time show-time-first"><%= time_ago_in_words(@post.created_at) %></p>
             <p class="show-title"><%= @post.title %></p>
-            <% if @post.company.present? %>
+            <% if @post.category_id == 1 && @post.company.present? %>
             <p class="show-company-writename"><%= @post.company %></p>
+            <% elsif @post.category_id == 2 && @post.company.present? %>
+            <p class="show-company-writename">구입시기 <%= @post.company %></p>
+            <br>
+            <% else %>
             <% end %>
             <% if @post.writename.present? %>
             <p class="show-company-writename writename-bottom"><%= @post.writename %> 지음</p>

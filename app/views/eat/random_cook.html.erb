@@ -1,0 +1,35 @@
+<div class="container random_every">
+    
+    <div class="random_title_con">
+    <p class="cook_map_title2">뽑는 즐거움</p>
+    <p class="cook_map_title">오늘 뭐 먹지?</p>
+    </div>
+    
+    <div id="dvCountDown" class="countdown_second" >
+    <span id = "lblCount"></span>&nbsp;
+    </div>
+
+    <!--<div class="roulette">-->
+    <!--<input type="image" src="/images/roulette.png" class="roulette_image" alt="roulette" onclick="DelayRedirect()">    -->
+    <a href="#"><p class="roulette_title" onclick="DelayRedirect()">START</p></a>
+    <!--</div>-->
+
+</div>
+
+<script type="text/javascript">
+function DelayRedirect() {
+    var seconds = 3;
+    var dvCountDown = document.getElementById("dvCountDown");
+    var lblCount = document.getElementById("lblCount");
+    dvCountDown.style.display = "block";
+    lblCount.innerHTML = seconds;
+    setInterval(function () {
+        seconds--;
+        lblCount.innerHTML = seconds;
+        if (seconds == 0) {
+            dvCountDown.style.display = "none";
+            window.location = "/random_page";
+        }
+    }, 1000);
+}
+</script>

@@ -1,5 +1,7 @@
+<div class="new_background">
+
 <%= form_for @moim, url: {controller: "moim", action: "moim_create"}, html: {class: "form-inline form-con"}, multipart: true do |f| %>  
-  
+
   <h3 class="new_selling"># 소모임 개설</h3>
   <hr>
    
@@ -29,4 +31,5 @@
     <%= f.submit "확인", class: "btn btn-info file-submit" %>
 <% end %>
 
+</div>
  

@@ -33,7 +33,7 @@
                   <% if x.image.present? %>
                   <a href="/dongari_show/<%= x.id %>"><img src="<%= x.image[0].url %>" class="img-responsive dongari-img-design"></a>
                   <% else %>
-                  <a href="/dongari_show/<%= x.id %>"><img src="assets/no_image.gif" class="img-responsive dongari-img-design"></a>
+                  <a href="/dongari_show/<%= x.id %>"><img src="/images/no_image.gif" class="img-responsive dongari-img-design"></a>
                   <% end %>
                   <!--<div class="caption">-->
                   <p class="dongari-user-name"><span class="by_name">by</span> <%= x.user.name? ? x.user.name : x.user.nic_name %></p>
