@@ -87,7 +87,7 @@ class EatController < ApplicationController
   end
   
   def eat_new
-    if user_signed_in? && current_user.storeceo?  
+    if user_signed_in? && (current_user.storeceo? or current_user.admin)  
     @cook = Cook.new
     else
     redirect_to "/"
