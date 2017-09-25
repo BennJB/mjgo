@@ -61,8 +61,8 @@ ActiveRecord::Schema.define(version: 20170925041222) do
     t.text "address"
     t.string "phone"
     t.string "opertime"
-    t.float "latitude"
-    t.float "longitude"
+    t.decimal "latitude", precision: 15, scale: 13
+    t.decimal "longitude", precision: 15, scale: 13
     t.string "menuone"
     t.string "menutwo"
     t.string "menuthr"
@@ -180,7 +180,7 @@ ActiveRecord::Schema.define(version: 20170925041222) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image"
+    t.text "image"
     t.integer "standard"
   end
 

@@ -8,8 +8,8 @@ class CreateCooks < ActiveRecord::Migration[5.1]
       t.text :address
       t.string :phone
       t.string :opertime
-      t.float :latitude
-      t.float :longitude
+      t.decimal :latitude, precision: 15, scale: 13
+      t.decimal :longitude, precision: 15, scale: 13
       
       t.string :menuone
       t.string :menutwo
