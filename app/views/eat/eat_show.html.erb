@@ -264,7 +264,7 @@
                         <p class="store-modal-title" id="myModalLabel"><%= @cook.title %></p>
                       </div>
                       <div class="modal-body store-modal-body">
-                        <% if @cook.image[2].present? %> %>  
+                        <% if @cook.image[2].present? %>  
                         <img src="<%= @cook.image[2].url %>" id="imagepreview" class="store-modal-content" alt="cook_menu">
                         <% end %>
                       </div>
@@ -306,28 +306,29 @@
     </div>
       
 <div class="container store-container">        
-   
-   
     <div class="rating-reply-con">
         <div class="review-con">
             <!--<a href="#">-->
                 <!--<img src="/images/like2.png" class="review_image" alt="review">-->
                 <!--<span class="review_title">좋아요</span>-->
             <!--</a>-->
-                <img src="/images/review2.png" class="review_image" alt="review">
-                <span id="review" class="review_title">댓글 달기</span>
+            <img src="/images/review2.png" class="review_image" alt="review">
+            <span id="review" class="review_title">댓글 달기</span>
            
+            <!--<div id="repmenu">-->
             <%= form_tag("/cook_reply/#{@cook.id}", method:"post") do %>
                 <div class="form-group">
-                    <textarea name="rep" class="form-control review-input" rows="1" placeholder= "댓글을 입력해주세요."></textarea>
+                    <%= tinymce %>
+                    <textarea name="rep" class="form-control review-input tinymce" rows="3"></textarea>
                     <!--<input type="text" name="rep" class="form-control review-input" id="exampleInputName2" placeholder="댓글을 입력해주세요.">-->
-                    <div id="star-rating" class="rating-option"></div>
+                   <div id="star-rating" class="rating-option"></div>
                     <div class="review-confrim-title">
                     <p>확인</p>
                     </div>
                     <input type="image" src="/images/checked.png" class="review-confirm" alt="image_confirm">
                 </div>
             <% end %>
+            <!--</div>-->
         </div>
     
         <div class="review-user-con">
@@ -335,7 +336,7 @@
             <div class="reply-all"> 
                 <p class="reply-name"><%= r.user.name? ? r.user.name : r.user.nic_name %> <span class="show-time"><%= time_ago_in_words(r.created_at) %></span></p>
                 <div class="star-rating store-rating-reply" data-score='<%= r.rating %>'></div>
-                <p class="cook-review-txt"><%= simple_format(r.content) %></p>
+                <p class="cook-review-txt"><%= content_tag(:div, r.content.html_safe, class: "tinymce-img") %></p>
                 <% if user_signed_in? && current_user.id == r.user.id %>
                     <a href="/destroy5/<%= @cook.id %>/<%= r.id %>" class="reply-delete" data-confirm="진짜 지울거에요?" data-method="post"><i class="fa fa-trash-o" aria-hidden="true"></i> 삭제</a><br>
                 <% end %>
@@ -393,6 +394,45 @@
                       padding-left: 7px;}
         .eat_content_margin {margin-bottom: 10px;}
         .eat_button {width: 148px;}
+
+
+@media (min-width: 0px) and (max-width: 550px) { 
+
+#mceu_25 {
+    display: none;
+}
+
+#mceu_49 {
+    display: none;
+}
+#mceu_38 {
+    height: 80px !important;
+    width: 350px !important;
+}
+#mceu_38-body {
+    height: 80px !important;
+    width: 350px !important;
+}
+#mceu_45 {
+    width: 350px !important;
+}
+#mceu_46 {
+    left: 160px !important;
+}
+#mceu_47 {
+    left: 230px !important;
+}
+.mce-container-body.mce-abs-layout {
+    width: 320px;
+}
+.mce-foot {
+    width: 320px;
+}
+.mce-window-head {
+    display: none;
+}
+}
+
 </style>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=53535b6a4f840c7180d6c79984b17e02"></script>
@@ -789,8 +829,8 @@ $('#clickme').click(function() {
 });
 
 // review toggle (open, close)
-$('#reviewclick').click(function() {
-    $('#cookreview').toggle('fast', function() {
+$('#clickrep').click(function() {
+    $('#repmenu').toggle('fast', function() {
     }); 
 });
 

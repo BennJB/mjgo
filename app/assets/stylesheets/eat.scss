@@ -464,7 +464,7 @@
 
 .store-modal-title {
     font-size: 20px;
-    color: #FFBB00;
+    color: #ff4200;
     font-weight: 600;
     text-align: center;
     margin-top: 0px;
@@ -519,7 +519,7 @@
 
 .review-confirm {
     position: absolute;
-    top: 108px;
+    top: 315px;
     right: 35px;
 }
 
@@ -528,7 +528,7 @@
     font-weight: 600;
     font-size: 15px;
     position: absolute;
-    top: 110px;
+    top: 315px;
     right: 2px;
 }
 
@@ -812,6 +812,11 @@ input[type="image" i]:focus {
     letter-spacing: 1px;
     font-size: 14px;
     font-weight: 600;
+}
+
+.tinymce-img img {
+    max-width : 400px;
+    max-height : 220px;
 }
 
 .cook_map_title2 {
@@ -1288,7 +1293,7 @@ input[type="image" i]:focus {
 
 .review-confrim-title {
     right: 6px;
-    top: 106px;
+    top: 355px;
     font-size: 13px;
 }
 
@@ -1302,7 +1307,7 @@ input[type="image" i]:focus {
 
 .review-confirm {
     position: absolute;
-    top: 103px;
+    top: 350px;
     right: 35px;
 }
 
@@ -1315,6 +1320,11 @@ input[type="image" i]:focus {
 .cook-review-txt {
     letter-spacing: 0px;
     font-size: 13px;
+}
+
+.tinymce-img img {
+    width : 100%;
+    max-height : 200px;
 }
 
 .carousel-inner.onebyone-carosel {

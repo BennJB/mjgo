@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   # 전체 게시판
   root 'eat#index'
   
+  post '/tinymce_assets' => 'tinymce_assets#create'
+  
   mount ActionCable.server => '/cable'
   
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'users/registrations' }

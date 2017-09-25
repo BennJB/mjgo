@@ -17,6 +17,9 @@
 // Loads all Bootstrap javascripts
 //= require bootstrap
 
+//= require tinymce
+//= require tinymce-jquery
+
 $(document).ready(function () {
     if (window.location.href.indexOf('#_=_') > 0) {
     window.location = window.location.href.replace(/#.*/, '');

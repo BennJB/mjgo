@@ -1,0 +1,4720 @@
+/* line 5, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.new_background {
+  padding-bottom: 50px;
+  padding-top: 120px;
+  width: 100%;
+  background-position: center center;
+  background-image: url("/images/new_form.jpeg");
+  background-repeat: no-repeat;
+}
+
+/* line 14, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.maps {
+  width: 500px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 21, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.map_wrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 350px;
+}
+
+/* line 28, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.map_wrap_icon {
+  position: relative;
+  overflow: hidden;
+  width: 800px;
+  height: 500px;
+}
+
+/* line 36, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_main {
+  width: 100%;
+  height: 450px;
+  background-position: center center;
+  background-image: url("/images/cook32.png");
+  background-repeat: no-repeat;
+}
+
+/* line 44, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_title {
+  padding-bottom: 50px;
+  padding-top: 160px;
+  text-align: center;
+  font-size: 37px;
+  color: #fffffF;
+}
+
+/* line 52, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_con {
+  margin: 0 auto;
+  width: 500px;
+}
+
+/* line 57, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_input {
+  padding-top: 21px;
+  padding-bottom: 22px;
+}
+
+/* line 62, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_category {
+  width: 520px;
+  margin: 20px auto 20px;
+}
+
+/* line 67, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.queryname {
+  color: #B0B0B0;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+/* line 74, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.queryname_span {
+  font-weight: 600;
+  font-size: 23px;
+  color: #ff792a;
+}
+
+/* line 80, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.gnb {
+  float: left;
+}
+
+/* line 84, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.gnb li {
+  font-size: 18px;
+  list-style: none;
+  float: left;
+  margin-left: 35px;
+}
+
+/* line 91, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.gnb > li > a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* line 96, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.gnb > li > a:hover {
+  color: #ff792a;
+}
+
+/* line 100, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_category::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 106, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_body {
+  width: 400px;
+  height: 350px;
+  margin: 30px auto;
+}
+
+/* line 112, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.index_menu_icon_con {
+  padding-top: 20px;
+  width: 484px;
+  margin: 0 auto;
+}
+
+/* line 118, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.index_menu_icon_text {
+  display: block;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* line 127, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.index_menu_icon_text:hover {
+  color: #FFE400;
+}
+
+/* line 131, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_jquery:hover {
+  color: #FFE400;
+}
+
+/* line 136, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_list-back {
+  height: 80px;
+  background: #ffffff;
+  width: 100%;
+}
+
+/* line 142, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.eat_banner_back {
+  width: 100%;
+}
+
+/* line 147, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_menu {
+  background-color: white;
+  margin-right: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  float: left;
+  width: 140px;
+  height: 40px;
+  text-align: center;
+  border-bottom: 2px solid rgba(150, 150, 150, 0.22);
+}
+
+/* line 160, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_grandparent {
+  padding-top: 10px;
+  border-top: 1px solid rgba(150, 150, 150, 0.22);
+  width: 810px;
+  margin: 0 auto;
+}
+
+/* line 167, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_grandparent::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 173, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_mediparent {
+  float: left;
+  height: 310px;
+}
+
+/* line 178, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_parent {
+  position: relative;
+  float: left;
+  width: 250px;
+  height: 188px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* line 187, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_event {
+  background-color: #f7702e;
+  position: absolute;
+  top: 40px;
+  left: 95px;
+  height: 25px;
+  width: 60px;
+}
+
+/* line 196, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.new_event {
+  background-color: #f7702e;
+  position: absolute;
+  top: 20px;
+  left: 925px;
+  height: 25px;
+  width: 100px;
+}
+
+/* line 205, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.new_event_txt {
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 13px;
+  padding-top: 3px;
+  margin: 0px;
+}
+
+/* line 213, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.event_edit {
+  position: absolute;
+  top: 50px;
+  right: 22px;
+}
+
+/* line 219, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_event_detail {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 75px;
+  left: 0px;
+  height: 40px;
+  width: 250px;
+}
+
+/* line 229, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_event_txt {
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 13px;
+  padding-top: 3px;
+  margin: 0px;
+}
+
+/* line 237, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_event_detail_txt {
+  line-height: 30px;
+  color: #FFFFFF;
+  font-weight: 600;
+  text-align: center;
+  font-size: 17px;
+  margin: 0px;
+  padding-top: 5px;
+}
+
+/* line 248, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_parent > img {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 253, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.menu_content-text1 {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+/* line 259, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.menu_content-text2 {
+  text-align: center;
+  color: #8a8b8f;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+/* line 266, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.menu_content-text3 {
+  text-align: center;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+/* line 272, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.menu_content {
+  text-align: center;
+  background: #ffffff;
+  height: 107px;
+  padding-top: 10px;
+}
+
+/* line 279, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+#link > a:hover {
+  border-color: #ff792a;
+  color: #ff792a;
+}
+
+/* line 285, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_menu_txt {
+  position: relative;
+  top: 20%;
+}
+
+/* line 290, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.eat_banner {
+  float: left;
+  background-color: #ffffff;
+  height: 150px;
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+/* line 297, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.eat_banner:nth-child(odd) {
+  margin-right: 10px;
+}
+
+/* line 302, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.eat_banner_map {
+  background-position: center center;
+  background-image: url("/images/cook_map32.jpg");
+  background-repeat: no-repeat;
+}
+
+/* line 308, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.eat_banner_pic {
+  background-position: center center;
+  background-image: url("/images/cook_pic.jpg");
+  background-repeat: no-repeat;
+}
+
+/* line 314, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.eat_banner_alone {
+  background-position: center center;
+  background-image: url("/images/cook_alone.jpg");
+  background-repeat: no-repeat;
+}
+
+/* line 320, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.eat_banner_study {
+  background-position: center center;
+  background-image: url("/images/cook_study.jpg");
+  background-repeat: no-repeat;
+}
+
+/* line 326, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.eat_banner_text {
+  color: #ffffff;
+  margin: 0;
+  font-size: 23px;
+  text-align: center;
+}
+
+/* line 334, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.eat_banner_text2 {
+  letter-spacing: 1px;
+  padding-top: 43px;
+  padding-bottom: 3px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFE400;
+  text-align: center;
+}
+
+/* line 348, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.span12 {
+  margin-top: 86px;
+}
+
+/* line 352, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store-container {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+/* line 360, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store_title_con {
+  position: relative;
+  border-top: 4px solid #F15F5F;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  width: 1050px;
+  margin: 10px auto;
+}
+
+/* line 371, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store_title_adver {
+  background-color: #f7702e;
+  width: 1050px;
+  margin: 10px auto;
+}
+
+/* line 377, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store-title_adver_txt {
+  color: #212121;
+  font-size: 23px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+/* line 387, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store-rating-con {
+  border-top: 1px solid rgba(150, 150, 150, 0.22);
+  border-bottom: 1px solid rgba(150, 150, 150, 0.22);
+  background-color: white;
+  width: 1050px;
+  margin: 0 auto;
+}
+
+/* line 396, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store_detail_con {
+  width: 1050px;
+  margin: 0 auto;
+}
+
+/* line 402, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store_detail_text1 {
+  position: relative;
+  background-color: white;
+  margin-right: 10px;
+  width: 600px;
+  height: 350px;
+  padding-left: 50px;
+  padding-top: 30px;
+  float: left;
+}
+
+/* line 413, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store_manage {
+  position: absolute;
+  top: 330px;
+  left: 460px;
+}
+
+/* line 419, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store_manage_txt {
+  margin-right: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* line 425, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store_detail_text2 {
+  background-color: white;
+  width: 440px;
+  float: left;
+}
+
+/* line 431, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.btn-detail-storeprice {
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+/* line 436, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.fa-chevron-left {
+  margin-top: 60%;
+  color: #D5D5D5;
+}
+
+/* line 437, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.fa-chevron-right {
+  margin-top: 60%;
+  color: #D5D5D5;
+}
+
+/* line 439, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.carousel-inner.onebyone-carosel {
+  margin: auto;
+  width: 80%;
+}
+
+/* line 444, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store-title {
+  margin: 0;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* line 453, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store-title-cooklist {
+  font-size: 16px;
+  color: #9a9a9a;
+}
+
+/* line 458, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store-title-review {
+  margin: 0;
+  padding-bottom: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* line 465, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store-modal-title {
+  font-size: 20px;
+  color: #FFBB00;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* line 474, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store-modal-body {
+  padding: 3px;
+}
+
+/* line 478, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store-modal-content {
+  width: 100%;
+  height: 400px;
+}
+
+/* line 483, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store-rating {
+  padding-top: 25px;
+  margin: 0px;
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* line 491, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store-rating-number {
+  margin: 0px;
+  font-weight: 600;
+  color: #F15F5F;
+  font-size: 50px;
+  text-align: center;
+}
+
+/* line 499, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.review_image {
+  padding-left: 10px;
+}
+
+/* line 503, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.review_title {
+  padding-right: 10px;
+  padding-left: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #222;
+}
+
+/* line 511, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.rating-option {
+  padding-top: 5px;
+  text-align: right;
+}
+
+/* line 516, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.rating-option > img {
+  width: 19px;
+}
+
+/* line 520, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.review-confirm {
+  position: absolute;
+  top: 108px;
+  right: 35px;
+}
+
+/* line 526, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.review-confrim-title {
+  color: #353535;
+  font-weight: 600;
+  font-size: 15px;
+  position: absolute;
+  top: 110px;
+  right: 2px;
+}
+
+/* line 535, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store-rating-star {
+  width: 132px;
+  margin: 0 auto;
+  padding-bottom: 25px;
+}
+
+/* line 541, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.rating-reply-con {
+  background-color: white;
+  width: 1050px;
+  margin: 10px auto;
+}
+
+/* line 547, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.review-con {
+  position: relative;
+  padding-top: 15px;
+  margin: 0 auto;
+  width: 600px;
+}
+
+/* line 554, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.review-user-con {
+  border-top: 1px solid rgba(150, 150, 150, 0.22);
+  padding: 30px 30px;
+  margin: 50px auto;
+  width: 800px;
+}
+
+/* line 561, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.review-input {
+  margin-top: 5px;
+  height: 32px;
+}
+
+/* line 566, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store-rating-reply {
+  margin-bottom: 10px;
+}
+
+/* line 570, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store-rating-star > img {
+  width: 23px;
+}
+
+/* line 574, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store-rating-form {
+  float: left;
+}
+
+/* line 578, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.store-rating-form > img {
+  margin: 5px 0px;
+  width: 20px;
+}
+
+/* line 583, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.rating_con {
+  width: 80%;
+  margin: 0 auto 100px;
+}
+
+/* line 588, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.menu_grandparent {
+  width: 100%;
+}
+
+/* line 592, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.menu_grandparent::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 599, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.menu_parent1 {
+  float: left;
+}
+
+/* line 603, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.menu_title1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* line 608, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.menu_content1 {
+  margin: 0px;
+  font-size: 16px;
+}
+
+/* line 613, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.menu_title_main {
+  float: left;
+}
+
+/* line 617, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.price-detail {
+  width: 400px;
+}
+
+/* line 621, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.menu_parent3 {
+  margin-left: 30%;
+}
+
+/* line 625, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.menu_number {
+  float: left;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+/* line 631, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.menu-number2 {
+  font-size: 16px;
+}
+
+/* line 635, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.margin-0 {
+  margin: 0px;
+}
+
+/* line 639, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.menu_price {
+  margin-left: 74px;
+  float: left;
+}
+
+/* line 644, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_price {
+  padding-left: 30px;
+}
+
+/* line 648, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.openmenu {
+  padding-left: 270px;
+}
+
+/* line 652, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.openmenu-title {
+  top: 318px;
+  left: 220px;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 20px;
+  color: #D90224;
+  position: absolute;
+}
+
+/* line 661, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.menu_parent2 {
+  margin-left: 20%;
+}
+
+/* line 666, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.map-hide {
+  display: none;
+}
+
+/* line 670, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.fa-map {
+  color: #FFBB00;
+}
+
+/* line 674, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_image {
+  height: 250px;
+  width: 100%;
+}
+
+/* line 680, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_map_every {
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("/images/cook_map_every56.png");
+}
+
+/* line 687, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.random_every {
+  height: 800px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("/images/random_cook34.jpg");
+}
+
+/* line 695, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_map_title_con {
+  width: 260px;
+  margin: 80px auto 20px;
+}
+
+/* line 700, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.random_title_con {
+  width: 213px;
+  margin: 70px auto 0px;
+}
+
+/* line 705, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.roulette {
+  position: relative;
+  width: 210px;
+  margin: 70px auto 120px;
+}
+
+/* line 711, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.roulette_image {
+  width: 220px;
+}
+
+/* line 715, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+input[type="image" i]:focus {
+  outline: none;
+}
+
+/* line 719, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.countdown_second {
+  margin-top: 70px;
+  text-align: center;
+  display: none;
+  font-size: 70px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+/* line 738, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.roulette_title {
+  margin-top: 80px;
+  text-align: center;
+  font-family: 'Architects Daughter', cursive;
+  color: #FFFFFF;
+  font-size: 80px;
+  font-weight: 600;
+}
+
+/* line 747, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.random_page_content {
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* line 753, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.random_page_content > img {
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  width: 100%;
+  height: 200px;
+}
+
+/* line 761, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.random_page_title {
+  margin: 0;
+  font-size: 30px;
+  color: #FFBB00;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* line 770, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.random_page_pic {
+  margin: 0;
+  margin-bottom: 2px;
+  color: #EAEAEA;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* line 778, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.random_page_review {
+  margin: 0;
+  color: #FFFFFF;
+  font-size: 15px;
+}
+
+/* line 784, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.btn-random-onemore {
+  color: #FFFFFF;
+  margin-top: 40px;
+  border: rgba(150, 150, 150, 0.22);
+  background: rgba(150, 150, 150, 0.22);
+}
+
+/* line 791, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.btn-random-onemore:hover {
+  background-color: #121212;
+  color: #FFFFFF;
+}
+
+/* line 796, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.btn-random-onemore:focus {
+  color: #FFFFFF;
+}
+
+/* line 802, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_map_title {
+  border-bottom: 1px solid #FFFFFF;
+  letter-spacing: 1px;
+  text-align: center;
+  font-size: 35px;
+  color: #FFFFFF;
+  padding-top: 2px;
+}
+
+/* line 811, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook-review-txt {
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* line 817, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.tinymce-img img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+/* line 822, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.cook_map_title2 {
+  letter-spacing: 1px;
+  margin: 0;
+  padding-top: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFE400;
+  text-align: center;
+}
+
+/* line 833, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.map_menu_icon_con {
+  padding-top: 60px;
+  width: 488px;
+  margin: 0 auto;
+}
+
+/* line 839, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.map_menu_icon_size {
+  width: 50px;
+}
+
+/* line 843, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.map_menu_icon_con_map {
+  width: 750px;
+  height: 500px;
+  margin: 0 auto 50px;
+  border-radius: 15px;
+}
+
+/* line 850, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.maps_every_size {
+  border-radius: 15px;
+  width: 750px;
+  height: 500px;
+}
+
+/* line 857, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.map_menu_icon {
+  text-align: center;
+  float: left;
+  margin-right: 50px;
+}
+
+/* line 863, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.map_menu_icon_text {
+  display: block;
+  padding-top: 10px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* line 872, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.map_menu_icon_text:hover {
+  color: #FFE400;
+}
+
+/* line 877, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+.map_menu_icon:nth-child(5) {
+  margin-right: 0px;
+}
+
+@media (max-width: 991px) {
+  /* line 883, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .new_background {
+    padding-top: 120px;
+  }
+
+  /* line 887, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .maps {
+    width: 500px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* line 894, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .map_wrap {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    height: 350px;
+  }
+
+  /* line 902, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_image {
+    height: 220px;
+    width: 100%;
+  }
+
+  /* line 906, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .col-sm-4 {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 914, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .new_background {
+    padding-top: 20px;
+  }
+
+  /* line 918, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_image {
+    height: 190px;
+    width: 100%;
+  }
+
+  /* line 923, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .col-sm-4 {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+}
+@media (min-width: 551px) and (max-width: 766px) {
+  /* line 932, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .new_background {
+    padding-top: 20px;
+  }
+
+  /* line 936, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .menu-modal-content {
+    width: 100%;
+  }
+
+  /* line 940, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_grandparent {
+    width: 540px;
+  }
+
+  /* line 944, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_parent {
+    width: 250px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  /* line 950, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_parent > img {
+    width: 250px;
+  }
+
+  /* line 954, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_image {
+    height: 180px;
+    width: 100%;
+  }
+
+  /* line 959, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .col-xs-4 {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+}
+@media (min-width: 0px) and (max-width: 550px) {
+  /* line 968, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .new_background {
+    padding-top: 20px;
+  }
+
+  /* line 972, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .menu-modal-content {
+    width: 100%;
+  }
+
+  /* line 976, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .map-name {
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 600;
+    color: black;
+    font-size: 15px;
+  }
+
+  /* line 983, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .map-hide {
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  /* line 988, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .maps {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* line 995, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .map_wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 350px;
+  }
+
+  /* line 1002, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .btn-mobile {
+    padding: 5px 12px 7px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 4px;
+  }
+
+  /* line 1009, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_main {
+    height: 190px;
+    background-image: url("/images/eat_mobile50.jpg");
+  }
+
+  /* line 1014, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_title {
+    padding-bottom: 20px;
+    padding-top: 40px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fffffF;
+  }
+
+  /* line 1023, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_con {
+    margin: 0 auto;
+    width: 310px;
+  }
+
+  /* line 1028, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_input {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  /* line 1033, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_category {
+    width: 320px;
+    margin: 10px auto 10px;
+  }
+
+  /* line 1038, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .gnb {
+    float: left;
+  }
+
+  /* line 1042, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .gnb li {
+    font-size: 12px;
+    list-style: none;
+    float: left;
+    margin-left: 18px;
+  }
+
+  /* line 1049, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .gnb > li > a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  /* line 1054, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .gnb > li > a:hover {
+    color: #ff792a;
+  }
+
+  /* line 1059, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_category::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  /* line 1065, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_body {
+    width: 320px;
+    height: 350px;
+    margin: 0px auto;
+  }
+
+  /* line 1071, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_menu {
+    line-height: 20px;
+    font-size: 13px;
+    width: 78px;
+    height: 35px;
+  }
+
+  /* line 1081, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .index_menu_icon_con {
+    padding-top: 10px;
+    width: 310px;
+    margin: 0 auto;
+  }
+
+  /* line 1087, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .index_menu_icon_text {
+    margin-bottom: 10px;
+    padding-top: 10px;
+    font-size: 12px;
+  }
+
+  /* line 1093, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .menu_content {
+    height: 92px;
+  }
+
+  /* line 1097, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_grandparent {
+    padding-top: 10px;
+    width: 320px;
+  }
+
+  /* line 1102, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_parent {
+    height: 130px;
+    width: 150px;
+  }
+
+  /* line 1107, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_parent:nth-child(odd) {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  /* line 1112, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_parent:nth-child(even) {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  /* line 1117, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_parent > img {
+    height: 130px;
+    width: 150px;
+  }
+
+  /* line 1122, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .new_event {
+    top: 60px;
+    left: 260px;
+    height: 21px;
+    width: 90px;
+  }
+
+  /* line 1129, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .new_event_txt {
+    font-size: 11px;
+    padding-top: 3px;
+    margin: 0px;
+  }
+
+  /* line 1135, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .event_edit {
+    top: 85px;
+    right: 9px;
+  }
+
+  /* line 1140, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_event {
+    position: absolute;
+    top: 30px;
+    left: 51px;
+    height: 21px;
+    width: 50px;
+  }
+
+  /* line 1148, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_event_txt {
+    font-size: 10px;
+  }
+
+  /* line 1152, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_event_detail {
+    top: 55px;
+    left: 0px;
+    height: 28px;
+    width: 150px;
+  }
+
+  /* line 1159, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_event_detail_txt {
+    line-height: 20px;
+    font-size: 11px;
+  }
+
+  /* line 1164, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .queryname {
+    margin-left: 3px;
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  /* line 1170, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .queryname_span {
+    font-size: 17px;
+  }
+
+  /* line 1174, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .eat_banner {
+    height: 120px;
+    width: 100%;
+  }
+
+  /* line 1179, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .eat_banner_text {
+    font-size: 20px;
+  }
+
+  /* line 1183, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .eat_banner_text2 {
+    font-weight: 400;
+    padding-bottom: 0px;
+    padding-top: 32px;
+    font-size: 13px;
+  }
+
+  /* line 1192, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .span12 {
+    margin-top: 0px;
+  }
+
+  /* line 1196, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store-title {
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* line 1205, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store_title_adver {
+    background-color: #f7702e;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  /* line 1211, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store-title_adver_txt {
+    font-size: 17px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  /* line 1217, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store-title-review {
+    font-size: 14px;
+  }
+
+  /* line 1221, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store-title-cooklist {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  /* line 1226, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store_title_con {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  /* line 1231, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store_detail_con {
+    width: 350px;
+  }
+
+  /* line 1235, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store_detail_text1 {
+    position: relative;
+    background-color: white;
+    width: 340px;
+    height: 315px;
+    padding: 20px 0px 0px 20px;
+    margin: 0 auto;
+  }
+
+  /* line 1244, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store_manage {
+    top: 320px;
+    left: 210px;
+  }
+
+  /* line 1249, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store_detail_text2 {
+    float: none;
+    width: 340px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(150, 150, 150, 0.22);
+  }
+
+  /* line 1257, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .menu_parent2 {
+    margin-left: 80px;
+  }
+
+  /* line 1261, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store-rating-con {
+    width: 340px;
+  }
+
+  /* line 1265, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store-rating {
+    font-size: 20px;
+  }
+
+  /* line 1269, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store-rating-number {
+    font-size: 40px;
+  }
+
+  /* line 1273, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .rating-reply-con {
+    width: 340px;
+  }
+
+  /* line 1277, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store-rating-reply {
+    margin-bottom: 5px;
+  }
+
+  /* line 1281, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .review-con {
+    padding-top: 15px;
+    width: 340px;
+  }
+
+  /* line 1286, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .review_title {
+    font-size: 13px;
+  }
+
+  /* line 1290, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .review-input {
+    margin-top: 0px;
+  }
+
+  /* line 1294, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .review-confrim-title {
+    right: 6px;
+    top: 106px;
+    font-size: 13px;
+  }
+
+  /* line 1300, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .rating-option {
+    padding-top: 3px;
+  }
+
+  /* line 1304, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .rating-option > img {
+    width: 21px;
+  }
+
+  /* line 1308, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .review-confirm {
+    position: absolute;
+    top: 103px;
+    right: 35px;
+  }
+
+  /* line 1314, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .review-user-con {
+    padding: 10px;
+    margin: 55px auto;
+    width: 340px;
+  }
+
+  /* line 1320, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook-review-txt {
+    letter-spacing: 0px;
+    font-size: 13px;
+  }
+
+  /* line 1325, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .tinymce-img img {
+    max-width: 100%;
+    max-height: 200px;
+  }
+
+  /* line 1330, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .carousel-inner.onebyone-carosel {
+    width: 100%;
+  }
+
+  /* line 1333, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .fa-chevron-left {
+    margin-top: 85%;
+    color: #FFFFFF;
+  }
+
+  /* line 1337, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .fa-chevron-right {
+    margin-top: 85%;
+    color: #FFFFFF;
+  }
+
+  /* line 1344, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .menu_parent2_mobile {
+    margin-left: 30%;
+  }
+
+  /* line 1348, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .btn-detail-storeprice {
+    padding: 3px 12px;
+    font-size: 13px;
+  }
+
+  /* line 1355, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .menu_title1 {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  /* line 1361, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .menu_content1 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding-top: 1px;
+  }
+
+  /* line 1367, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .menu_price {
+    margin-left: 55px;
+  }
+
+  /* line 1371, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .menu_number {
+    margin: 0px;
+    font-size: 14px;
+  }
+
+  /* line 1376, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .menu-number2 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  /* line 1381, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .menu_parent3 {
+    margin-left: 50%;
+  }
+
+  /* line 1385, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .price-detail {
+    width: 200px;
+  }
+
+  /* line 1389, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .openmenu-title {
+    top: 261px;
+    left: 95px;
+  }
+
+  /* line 1394, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .openmenu {
+    padding-left: 170px;
+  }
+
+  /* line 1398, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .btn-map {
+    margin-top: 5px;
+  }
+
+  /* line 1402, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .menu_content-text1 {
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+
+  /* line 1408, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .menu_content-text2 {
+    color: #8a8b8f;
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+
+  /* line 1414, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .menu_content-text3 {
+    font-size: 12px;
+    margin-top: 3px;
+  }
+
+  /* line 1419, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_mediparent {
+    height: 230px;
+  }
+
+  /* line 1423, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_image {
+    height: 145px;
+    width: 100%;
+  }
+
+  /* line 1428, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store-rating-reply > img {
+    width: 13px;
+  }
+
+  /* line 1432, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store-rating-form > img {
+    margin: 5px 0px;
+    width: 20px;
+  }
+
+  /* line 1437, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .rating_con {
+    width: 100%;
+  }
+
+  /* line 1441, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .store-modal-content {
+    width: 100%;
+    height: 300px;
+  }
+
+  /* line 1446, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_map_every {
+    padding: 0px;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("/images/cook_map_every43.png");
+  }
+
+  /* line 1454, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_map_title_con {
+    width: 153px;
+    margin: 0 auto;
+  }
+
+  /* line 1459, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .random_title_con {
+    width: 126px;
+    margin: 0 auto;
+  }
+
+  /* line 1464, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .countdown_second {
+    font-size: 70px;
+    margin-top: 60px;
+  }
+
+  /* line 1475, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .roulette_title {
+    margin-top: 60px;
+    font-size: 70px;
+  }
+
+  /* line 1480, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .random_every {
+    height: 450px;
+  }
+
+  /* line 1484, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .random_page_every {
+    height: 570px;
+  }
+
+  /* line 1488, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_map_title {
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding-top: 2px;
+  }
+
+  /* line 1494, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .cook_map_title2 {
+    letter-spacing: 1px;
+    margin: 0;
+    padding-top: 30px;
+    font-size: 13px;
+  }
+
+  /* line 1501, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .map_menu_icon_con {
+    padding-top: 40px;
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  /* line 1507, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .map_menu_icon {
+    margin-right: 20px;
+  }
+
+  /* line 1511, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .map_menu_icon_con_map {
+    width: 340px;
+    height: 350px;
+    margin: 0 auto 50px;
+    border-radius: 20px;
+  }
+
+  /* line 1517, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .maps_every_size {
+    border-radius: 20px;
+    width: 340px;
+    height: 350px;
+  }
+
+  /* line 1523, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .map_menu_icon_text {
+    padding-top: 10px;
+    font-size: 12px;
+  }
+
+  /* line 1528, /home/ubuntu/workspace/app/assets/stylesheets/eat.scss */
+  .map_menu_icon_size {
+    width: 40px;
+  }
+}
+@charset "UTF-8";
+/* line 6, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 11, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* line 16, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.navbar-fixed-top {
+  height: 76px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* line 21, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.freetalk-parent {
+  position: relative;
+}
+
+/* line 25, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.freetalk {
+  font-family: 'Architects Daughter', cursive;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+/* line 32, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.go {
+  font-family: 'Architects Daughter', cursive;
+  font-weight: 800;
+  color: #F15F5F;
+}
+
+/* line 38, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.notice {
+  color: #F15F5F;
+  font-family: 'Architects Daughter', cursive;
+  font-weight: 800;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+/* line 48, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.notice-span {
+  text-decoration: underline;
+  color: #5E5E5E;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* line 57, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.sell-background {
+  margin-top: 15px;
+}
+
+/* line 67, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.type-box {
+  font-size: 35px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* line 74, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.advertise1 {
+  height: 110px;
+  background-color: #FFA7A7;
+}
+
+/* line 78, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.advertise2 {
+  background-size: cover;
+  background-image: url("/assets/pagoda1.png");
+  background-repeat: no-repeat;
+  height: 110px;
+}
+
+/* line 86, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.modal-body {
+  padding-top: 5px;
+}
+
+/* line 90, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.modal-contents {
+  margin: 0 auto;
+  width: 288px;
+  font-size: 13px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* line 99, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  height: 450px;
+  width: 100%;
+}
+
+/* line 104, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.dropdown-backdrop {
+  position: static;
+}
+
+/* line 108, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.dropdown-menu {
+  text-align: center;
+  min-width: 105px;
+}
+
+/* line 113, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.background {
+  padding: 10px 0;
+}
+
+/* line 120, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.background-etc-index {
+  padding-top: 20px;
+  background-color: #e9ebee;
+}
+
+/* line 125, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.service-background {
+  margin-top: 20px;
+  padding: 20px 0;
+  background-color: #D4F4FA;
+}
+
+/* line 132, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p, .header .nav-item-child {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* line 136, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.dropdown-menu > li > a {
+  margin-top: 6px;
+  font-weight: 700;
+}
+
+/* line 141, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.header .nav-item-child {
+  font-size: 15px;
+}
+
+/* line 145, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.header .nav-item-child:focus, .nav-item-child:hover {
+  color: #F15F5F;
+}
+
+/* line 149, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.modal-title {
+  font-family: 'Architects Daughter', cursive;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* line 156, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+div.form > hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 161, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.login .box .social {
+  margin: 0 auto 20px;
+}
+
+/* line 165, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.modal-content {
+  background-color: #ffffff;
+}
+
+/* line 169, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.no_sign {
+  border-top: 4px solid #F15F5F;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  border-radius: 2px;
+  text-align: center;
+  width: 440px;
+  margin: 150px auto 50px;
+}
+
+/* line 180, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.no_sign2 {
+  border-top: 4px solid #008299;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  border-radius: 2px;
+  text-align: center;
+  width: 440px;
+  margin: 50px auto 400px;
+}
+
+/* line 191, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.no_email {
+  border-top: 4px solid #F15F5F;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  border-radius: 2px;
+  text-align: center;
+  width: 440px;
+  margin: 160px auto 400px;
+}
+
+/* line 201, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.no_email_text_facebook {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* line 207, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.no_email_link {
+  text-decoration: underline;
+  color: #F15F5F;
+}
+
+/* line 212, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.no_email_text {
+  font-size: 17px;
+}
+
+/* line 218, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.register-con {
+  margin: 0 auto;
+  width: 350px;
+  padding-top: 140px;
+  padding-bottom: 220px;
+}
+
+/* line 226, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.edit-con {
+  border-top: 4px solid #F15F5F;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  border-radius: 2px;
+  margin: 120px auto 50px;
+  width: 350px;
+  padding: 25px 20px 50px 20px;
+}
+
+/* line 236, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.edit-title {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 23px;
+}
+
+/* line 243, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.edit-password {
+  margin-bottom: 1px;
+}
+
+/* line 246, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.edit-password-error {
+  font-size: 15px;
+  margin: 0px;
+  color: red;
+}
+
+/* line 252, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.edit-content-sub {
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: #868686;
+}
+
+/* line 257, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.edit-btn {
+  text-align: center;
+}
+
+/* line 260, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.edit-btn-first {
+  margin-right: 30px;
+}
+
+/* line 265, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.field {
+  margin-bottom: 20px;
+}
+
+/* line 271, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.grand-row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 276, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.parent-left {
+  float: left;
+}
+
+/* line 279, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.parent-right {
+  float: right;
+}
+
+/* line 284, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.panel {
+  border-radius: 10px;
+}
+
+/* line 288, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.border-radius-0 {
+  border-radius: 0px;
+}
+
+/* line 292, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.grand-parent-write-size {
+  padding-left: 90px;
+}
+
+/* line 296, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.grand-parent {
+  margin: 0 auto;
+  width: 880px;
+}
+
+/* line 301, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.grand-parent::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 307, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.parent {
+  float: left;
+  width: 210px;
+}
+
+/* line 313, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.parent_first {
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+/* line 325, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.panel-default-white {
+  border-color: #FFFFFF;
+}
+
+/* line 329, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.panel-body {
+  padding: 20px;
+}
+
+/* line 335, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.message-con-bottom {
+  margin-top: 100px;
+  margin-bottom: 400px;
+}
+
+/* line 340, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.message-title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+/* line 348, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.messages-panel-body {
+  padding: 15px;
+}
+
+/* line 352, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.messages-panel-user {
+  color: #4374D9;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+/* line 358, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.panel-padding {
+  padding: 0px;
+}
+
+/* line 362, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.child {
+  position: relative;
+  height: 160px;
+}
+
+/* line 369, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.btn-black {
+  color: #BDBDBD;
+  background-color: #242424;
+  border-color: #BDBDBD;
+}
+
+/* line 375, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.btn-info:hover {
+  color: #fff;
+}
+
+/* line 379, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.img-design {
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 394, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.index-post-content {
+  height: 130px;
+  width: 185px;
+  margin-left: 15px;
+  margin-right: 15px;
+  float: left;
+}
+
+/* line 402, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.index-post-content-item {
+  height: 115px;
+}
+
+/* line 406, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.index-post-content > a {
+  display: block;
+}
+
+/* line 410, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.parent-right > .index-user-time {
+  padding-top: 2px;
+  color: #707070;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* line 418, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.post-title {
+  margin-bottom: 0;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 15px;
+  color: black;
+}
+
+/* line 426, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.post-title > a > .span-content {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* line 432, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.form-con {
+  background-color: #FFFFFF;
+  border-top: 4px solid #F15F5F;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  border-radius: 2px;
+  padding: 15px 30px;
+  width: 530px;
+  margin: 0px auto;
+}
+
+/* line 445, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.child > .index-user-name {
+  color: #4374D9;
+  overflow: hidden;
+  margin: 8px 0 0px 0;
+  font-size: 15px;
+  font-weight: 600;
+  height: 22px;
+}
+
+/* line 454, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.child > .index-user-time {
+  color: #707070;
+  margin: 5px 0 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  height: 22px;
+}
+
+/* line 462, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.child > .index-post-title {
+  overflow: hidden;
+  height: 23px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+/* line 470, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.child > .index-post-title-present {
+  overflow: hidden;
+  height: 23px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+
+/* line 478, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.child > .index-post-title-item {
+  overflow: hidden;
+  height: 45px;
+  margin-top: 3px;
+  margin-bottom: 27px;
+}
+
+/* line 485, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.child > .index-post-title2 {
+  overflow: hidden;
+  height: 16px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* line 492, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.child > .index-post-title3 {
+  overflow: hidden;
+  height: 18px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+/* line 499, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.index-post-company {
+  margin: 0;
+  color: #707070;
+  font-size: 13px;
+}
+
+/* line 504, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.index-post-writename {
+  margin: 0;
+  color: #707070;
+  font-size: 13px;
+}
+
+/* line 510, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.index-standard {
+  margin-top: 3px;
+  font-size: 13px;
+  text-decoration: line-through;
+  float: left;
+}
+
+/* line 517, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.parent-left > .index-price {
+  margin-left: 5px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #FF7012;
+}
+
+/* line 525, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.show-name {
+  color: #4374D9;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+/* line 531, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.moim-show-number {
+  color: #616161;
+  margin-top: 6px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* line 538, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.show-title {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* line 544, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.show-company-writename {
+  margin: 0;
+  color: #707070;
+  font-size: 16px;
+}
+
+/* line 550, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.writename-bottom {
+  margin-bottom: 15px;
+}
+
+/* line 554, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.text-right {
+  margin-bottom: 10px;
+}
+
+/* line 558, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.show-time {
+  color: #9E9E9E;
+  font-size: 13px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+}
+
+/* line 565, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.show-time-first {
+  font-size: 15px;
+}
+
+/* line 569, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.reply-all > hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 574, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.show-standard {
+  margin: 0px;
+  font-size: 16px;
+  text-decoration: line-through;
+}
+
+/* line 580, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.show-price {
+  font-weight: 600;
+  font-size: 19px;
+  color: #FF7012;
+}
+
+/* line 586, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.show-content {
+  border-bottom: 1px solid rgba(150, 150, 150, 0.22);
+  font-size: 16px;
+}
+
+/* line 591, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.main-title {
+  color: #FFFFFF;
+  font-family: 'Architects Daughter', cursive;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* line 598, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.need_login {
+  font-size: 24px;
+}
+
+/* line 602, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.password-forgot-title {
+  padding-top: 10px;
+  font-family: 'NanumSquare', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* line 609, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.forgot-admin {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+/* line 614, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.forgot-admin1 {
+  margin-bottom: 0px;
+  font-size: 17px;
+}
+
+/* line 619, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.forgot-admin2 {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+/* line 624, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.forgot-con {
+  border: 1px solid #ececec;
+  border-radius: 10px;
+}
+
+/* line 629, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.admin-content {
+  padding-left: 115px;
+  text-align: left;
+}
+
+/* line 634, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.error-title1 {
+  font-family: 'NanumSquare', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* line 640, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.error-content {
+  margin: 0 auto;
+  width: 300px;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 10px 0px 10px 0px;
+}
+
+/* line 648, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.book_main {
+  width: 100%;
+  height: 450px;
+  background-position: center center;
+  background-image: url(/images/index50.jpg);
+  background-repeat: no-repeat;
+}
+
+/* line 656, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.meet_main {
+  width: 100%;
+  height: 450px;
+  background-position: center center;
+  background-image: url(/images/meet39.jpg);
+  background-repeat: no-repeat;
+}
+
+/* line 664, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.nav-item-second {
+  color: white;
+}
+
+/* line 668, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.index-con {
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+/* line 674, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.index-input {
+  padding-top: 21px;
+  padding-bottom: 22px;
+}
+
+/* line 679, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.board-title-size {
+  margin-top: 0px;
+}
+
+/* line 683, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.board-title1 {
+  margin-top: 60px;
+  color: #FFFFFF;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* line 691, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.mypage_paginate {
+  margin-top: 0px;
+  text-align: center;
+}
+
+/* line 696, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.board-content {
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 30px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+/* line 705, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.board-content2 {
+  color: #FFFFFF;
+  font-size: 22px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* line 713, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.book_query_input {
+  margin-top: 10px;
+}
+
+/* line 717, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.book_menu_con {
+  width: 231px;
+  margin: 60px auto 0;
+}
+
+/* line 722, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.book_menu {
+  text-align: center;
+  float: left;
+  margin-right: 40px;
+}
+
+/* line 728, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.book_menu_title {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+/* line 735, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.book_menu_img {
+  width: 50px;
+}
+
+/* line 739, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.book_menu_title:hover {
+  color: #FFA7A7;
+}
+
+/* line 743, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.book_menu:nth-child(3) {
+  margin-right: 0px;
+}
+
+/* line 747, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.moim_menu_con {
+  width: 422px;
+  margin: 50px auto 0;
+}
+
+/* line 752, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.moim_menu {
+  text-align: center;
+  float: left;
+  margin-right: 40px;
+}
+
+/* line 758, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.moim_menu:nth-child(5) {
+  margin-right: 0px;
+}
+
+/* line 762, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.book_menu:nth-child(5) {
+  margin-right: 0px;
+}
+
+/* line 766, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.moim_menu_title {
+  padding-top: 5px;
+  color: #FFFFFF;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* line 774, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.moim_menu_title:hover {
+  color: #3DB7CC;
+}
+
+/* line 778, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.category-title {
+  margin: 0px;
+  font-size: 20px;
+}
+
+/* line 783, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.category-cotent {
+  margin: 0px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 17px;
+}
+
+/* line 789, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.category-con {
+  text-align: center;
+  padding-top: 0px;
+  margin: 0 auto;
+}
+
+/* line 795, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.category-style {
+  width: 80px;
+  height: 30px;
+}
+
+/* line 800, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.nav-margin {
+  margin-left: 0px;
+}
+
+/* line 804, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.board-top {
+  margin-top: 50px;
+}
+
+/* line 808, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+a {
+  color: black;
+}
+
+/* line 812, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.btn-default {
+  border-color: #BDBDBD;
+}
+
+/* line 815, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.btn-color {
+  border-color: #BDBDBD;
+}
+
+/* line 819, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.new_team_button {
+  color: #2457BD;
+  border-color: #2457BD;
+  margin-top: 35px;
+  font-weight: 600;
+}
+
+/* line 826, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.new_selling {
+  letter-spacing: 1px;
+  color: #F15F5F;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* line 833, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.fa-github-alt {
+  padding-left: 15px;
+}
+
+/* line 837, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.like-color {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* line 842, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.like-icon-color-main {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+
+/* line 849, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.like-icon-color {
+  font-weight: 500;
+  color: black;
+}
+
+/* line 855, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.form-p {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+
+/* line 862, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.file-submit {
+  margin-top: 5px;
+}
+
+/* line 866, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.delete-update-link {
+  font-weight: 700;
+  font-size: 14px;
+  margin-right: 10px;
+  color: #D13076;
+}
+
+/* line 873, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.delete-update-link:hover {
+  color: #FFABED;
+}
+
+/* line 877, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.like-link {
+  color: #D13076;
+}
+
+/* line 881, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.reply-name {
+  color: #4374D9;
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+
+/* line 887, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.reply-content {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* line 892, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.reply-delete {
+  margin-right: 10px;
+}
+
+/* line 896, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.reply-input {
+  height: 25px;
+}
+
+/* line 902, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.paginate-con {
+  text-align: center;
+}
+
+/* line 905, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.paginate {
+  margin-bottom: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #F15F5F;
+}
+
+/* line 912, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.paginate > a {
+  margin-right: 20px;
+}
+
+/* line 916, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.paginate > a:visited {
+  color: black;
+}
+
+/* line 920, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.paginate > .current {
+  margin-right: 20px;
+  font-weight: 700;
+}
+
+/* line 925, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.previous_page {
+  margin-left: 20px;
+}
+
+/* line 929, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.disabled {
+  margin-right: 20px;
+}
+
+/* line 934, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.card-size {
+  width: 550px;
+  margin: 90px auto;
+}
+
+/* line 939, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.message-con-bottom {
+  margin-bottom: 400px;
+}
+
+/* line 944, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.panel {
+  border: 1px solid #ececec;
+  margin-bottom: 10px;
+}
+
+/* line 949, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.panel-post-show {
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+/* line 954, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+footer {
+  background-color: #222222;
+  padding: 30px 0;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
+/* line 961, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.footer-font {
+  margin-bottom: 3px;
+  color: #FFFFFF;
+}
+
+/* line 968, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.selling-button {
+  position: absolute;
+  top: 0px;
+}
+
+/* line 973, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.selling-border {
+  border-radius: 10px;
+}
+
+/* line 979, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.moim-index-padding {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* line 984, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-img {
+  float: left;
+  height: 130px;
+  width: 100px;
+}
+
+/* line 990, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-talk {
+  margin: 8px 12px 12px 12px;
+  height: 145px;
+}
+
+/* line 995, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-reply {
+  font-weight: 600;
+}
+
+/* line 999, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.col-web {
+  margin-top: 20px;
+  padding-right: 0px;
+}
+
+/* line 1004, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-number {
+  margin-top: 10px;
+  margin-left: 15px;
+  color: #EDEDED;
+  font-size: 12px;
+}
+
+/* line 1012, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-go {
+  font-size: 13px;
+  font-family: 'Architects Daughter', cursive;
+}
+
+/* line 1017, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-user-name {
+  margin-bottom: 5px;
+  text-align: center;
+  color: #B4B4B4;
+  font-size: 13px;
+}
+
+/* line 1024, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.by_name {
+  color: #B4B4B4;
+  font-family: 'Damion', cursive;
+}
+
+/* line 1029, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-time {
+  padding-left: 15px;
+  margin-right: 15px;
+  text-align: right;
+  color: #EAEAEA;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* line 1038, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-title {
+  text-align: center;
+  font-weight: 500;
+  color: #FFFFFF;
+  overflow: hidden;
+  height: 64px;
+  font-size: 23px;
+  font-weight: 500;
+  margin: 18px 40px 10px 40px;
+}
+
+/* line 1049, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-title-con {
+  padding: 0px;
+}
+
+/* line 1053, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-person {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+/* line 1058, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-detail-button {
+  color: #FF5A5A;
+  font-weight: 700;
+}
+
+/* line 1063, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+mark {
+  background-color: #D4F4FA;
+}
+
+/* line 1067, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-img-design {
+  height: 100%;
+}
+
+/* line 1071, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-sub-img {
+  height: 200px;
+}
+
+/* line 1075, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-sub-img-design {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 1080, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.mypick_gongmo-text {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* line 1086, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-content {
+  float: left;
+}
+
+/* line 1090, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+/* line 1096, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-mozip-size {
+  padding: 10px;
+  text-align: center;
+  background-color: #FFFFFF;
+  width: 55px;
+  height: 65px;
+}
+
+/* line 1104, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-mozip-size > p {
+  font-weight: 600;
+  color: #959595;
+  font-size: 15px;
+}
+
+/* line 1111, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-button-border {
+  border-radius: 0px;
+  border-color: #FFFFFF;
+}
+
+/* line 1116, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-body {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 146px;
+  padding: 0px;
+}
+
+/* line 1125, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-community1 {
+  background-image: url("/images/community.jpg");
+}
+
+/* line 1128, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-community2 {
+  background-image: url("/images/community2.jpg");
+}
+
+/* line 1131, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-community3 {
+  background-image: url("/images/community3.jpg");
+}
+
+/* line 1134, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-community4 {
+  background-image: url("/images/community4.jpg");
+}
+
+/* line 1137, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-community5 {
+  background-image: url("/images/community5.jpg");
+}
+
+/* line 1140, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-community6 {
+  background-image: url("/images/community6.jpg");
+}
+
+/* line 1143, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-community7 {
+  background-image: url("/images/community7.jpg");
+}
+
+/* line 1146, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-community8 {
+  background-image: url("/images/community8.jpg");
+}
+
+/* line 1151, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-art1 {
+  background-image: url("/images/art.jpg");
+}
+
+/* line 1154, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-art2 {
+  background-image: url("/images/art2.jpg");
+}
+
+/* line 1157, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-art3 {
+  background-image: url("/images/art3.jpg");
+}
+
+/* line 1160, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-art4 {
+  background-image: url("/images/art4.jpg");
+}
+
+/* line 1163, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-art5 {
+  background-image: url("/images/art5.jpg");
+}
+
+/* line 1166, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-art6 {
+  background-image: url("/images/art6.jpg");
+}
+
+/* line 1169, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-art7 {
+  background-image: url("/images/art7.jpg");
+}
+
+/* line 1172, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-art8 {
+  background-image: url("/images/art8.jpg");
+}
+
+/* line 1175, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-art9 {
+  background-image: url("/images/art9.jpg");
+}
+
+/* line 1179, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-it1 {
+  background-image: url("/images/it.jpg");
+}
+
+/* line 1182, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-it2 {
+  background-image: url("/images/it2.jpg");
+}
+
+/* line 1185, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-it3 {
+  background-image: url("/images/it3.jpg");
+}
+
+/* line 1188, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-it4 {
+  background-image: url("/images/it4.jpg");
+}
+
+/* line 1191, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-it5 {
+  background-image: url("/images/it5.jpg");
+}
+
+/* line 1194, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-it6 {
+  background-image: url("/images/it6.jpg");
+}
+
+/* line 1197, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-it7 {
+  background-image: url("/images/it7.jpg");
+}
+
+/* line 1200, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-it8 {
+  background-image: url("/images/it8.jpg");
+}
+
+/* line 1204, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-study1 {
+  background-image: url("/images/study.jpg");
+}
+
+/* line 1207, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-study2 {
+  background-image: url("/images/study2.jpg");
+}
+
+/* line 1210, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-study3 {
+  background-image: url("/images/study3.jpg");
+}
+
+/* line 1213, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-study4 {
+  background-image: url("/images/study4.jpg");
+}
+
+/* line 1216, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-study5 {
+  background-image: url("/images/study5.jpg");
+}
+
+/* line 1219, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-study6 {
+  background-image: url("/images/study6.jpg");
+}
+
+/* line 1222, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-study7 {
+  background-image: url("/images/study7.jpg");
+}
+
+/* line 1225, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-study8 {
+  background-image: url("/images/study8.jpg");
+}
+
+/* line 1228, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.friend-panel-study9 {
+  background-image: url("/images/study9.jpg");
+}
+
+/* line 1232, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.moim-panel-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+/* line 1238, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.moim-panel-button-border {
+  border-radius: 0px;
+  border-color: #EAEAEA;
+  border-top: 5px solid #FF5A5A;
+}
+
+/* line 1244, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.moim-panel-button-border-default {
+  border-radius: 0px;
+  border-color: #EAEAEA;
+  border-top: 5px solid #747474;
+}
+
+/* line 1250, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.moim-panel-button-text {
+  color: #F15F5F;
+  font-weight: 800;
+}
+
+/* line 1256, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.dongari-button-padding {
+  padding-left: 175px;
+}
+
+/* line 1260, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.dongari-warning {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* line 1265, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.dongari-background {
+  margin-bottom: 300px;
+}
+
+/* line 1269, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.dongari-view-4 {
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* line 1274, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.dongari-view-padding {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 1279, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.dongari-button {
+  margin-top: 10px;
+}
+
+/* line 1283, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.dongari-user-name {
+  padding-top: 5px;
+  margin-bottom: 0px;
+  color: #989898;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* line 1291, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.dongari-title {
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 700;
+  height: 45px;
+}
+
+/* line 1298, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.dongari-index {
+  height: 315px;
+}
+
+/* line 1302, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.dongari-img {
+  height: 250px;
+}
+
+/* line 1306, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.dongari-show-person {
+  font-size: 15px;
+  font-weight: 700;
+  color: #353535;
+}
+
+/* line 1312, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.dongari-show-title {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* line 1318, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.dongari-img-design {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 1323, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.poster-text {
+  font-weight: 700;
+}
+
+/* line 1327, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.thumbnail-padding {
+  padding: 0px;
+}
+
+/* line 1331, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.profile {
+  border-top: 4px solid #F15F5F;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  border-radius: 2px;
+  padding-top: 20px;
+  width: 400px;
+  margin: 130px auto 50px;
+}
+
+/* line 1342, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.profile-gnb {
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* line 1348, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.profile-gnb > a:link {
+  color: #F15F5F;
+}
+
+/* line 1353, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.profile-menu {
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+/* line 1359, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.profile-button {
+  text-align: right;
+}
+
+/* line 1363, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.profile-con {
+  padding-top: 5px;
+}
+
+/* line 1367, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.profile-git {
+  padding-left: 60px;
+  padding-right: 20px;
+  float: left;
+  font-size: 4em;
+}
+
+/* line 1374, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.profile-name {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+/* line 1382, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.mypage-con {
+  width: 860px;
+  margin: 0 auto 200px;
+}
+
+/* line 1386, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.mypage-con::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 1391, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.mypage-category-con {
+  width: 420px;
+  float: left;
+}
+
+/* line 1395, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.mypage-category-con:first-child {
+  margin-bottom: 0px;
+  margin-right: 20px;
+}
+
+/* line 1399, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.mypage-category-con:nth-child(3) {
+  margin-right: 20px;
+}
+
+/* line 1403, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.mypage-main-title {
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+/* line 1410, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.mypage-row {
+  border-top: 4px solid #FF9436;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  border-radius: 2px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 10px;
+  height: 165px;
+}
+
+/* line 1422, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.mypage-row-border-color {
+  border-top: 4px solid #428bca;
+}
+
+/* line 1426, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.mypage-gnb::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 1432, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.mypage-gnb {
+  list-style-type: none;
+}
+
+/* line 1435, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+ul.mypage-gnb > li {
+  float: left;
+}
+
+/* line 1439, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.mypage-id {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* line 1443, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.mypage-title {
+  width: 65%;
+  overflow: hidden;
+  height: 24px;
+}
+
+/* line 1448, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.mypage-time {
+  padding-left: 18px;
+}
+
+/* line 1452, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+.mypage-text {
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  /* line 1461, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .navbar-fixed-top {
+    background-color: #FFFFFF;
+    height: 73px;
+  }
+
+  /* line 1466, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .main-title {
+    color: #000000;
+  }
+
+  /* line 1470, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .header .nav-item-child {
+    color: #000000;
+  }
+
+  /* line 1475, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .mypage-con {
+    width: 650px;
+    margin: 0 auto 200px;
+  }
+
+  /* line 1480, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .mypage-category-con {
+    width: 315px;
+    float: left;
+  }
+
+  /* line 1485, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .mypage-title {
+    width: 53%;
+  }
+
+  /* line 1489, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .panel {
+    margin-bottom: 10px;
+  }
+
+  /* line 1493, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .panel-post-show {
+    margin-bottom: 80px;
+  }
+
+  /* line 1497, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .like-icon-color {
+    font-size: 20px;
+  }
+
+  /* line 1500, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .dropdown-menu {
+    position: absolute;
+  }
+
+  /* line 1504, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  /* line 1514, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .header .navbar-nav {
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-color: white;
+    border: 1px solid #D5D5D5;
+  }
+
+  /* line 1521, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .menu-bar-right {
+    float: right;
+  }
+
+  /* line 1525, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .grand-parent-only-size {
+    width: 600px;
+  }
+
+  /* line 1529, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .grand-parent-write-size {
+    padding-left: 70px;
+  }
+
+  /* line 1533, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .parent {
+    float: left;
+    width: 210px;
+  }
+
+  /* line 1539, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .parent_first {
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  /* line 1545, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .grand-parent {
+    width: 660px;
+  }
+
+  /* line 1550, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .card-size {
+    width: 550px;
+    margin: 90px auto;
+  }
+
+  /* line 1555, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .message-con-bottom {
+    margin-bottom: 400px;
+  }
+
+  /*동아리*/
+  /* line 1560, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .dongari-view-4 {
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  /* line 1564, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .dongari-button-padding {
+    padding-left: 0px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 1572, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .background {
+    margin-top: 0px;
+  }
+
+  /* line 1576, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .header .nav-item-second {
+    padding-top: 3px;
+  }
+
+  /* line 1580, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .header .nav-item-child {
+    color: #000000;
+  }
+
+  /* line 1584, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .header .nav-item-first {
+    padding-top: 10px;
+  }
+
+  /* line 1588, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .header .navbar-logo-wrap {
+    padding: 7px 0;
+  }
+
+  /* line 1592, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .navbar-fixed-top {
+    background-color: #FFFFFF;
+    height: 73px;
+  }
+
+  /* line 1597, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .main-title {
+    color: #000000;
+  }
+
+  /* line 1601, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .form-con {
+    width: 500px;
+    margin: 100px auto 80px auto;
+  }
+
+  /* line 1606, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .panel-post-show {
+    margin-bottom: 80px;
+  }
+
+  /* line 1610, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .grand-parent-write-size {
+    padding-left: 70px;
+  }
+
+  /* line 1614, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .parent_first {
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  /* line 1620, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .grand-parent {
+    width: 440px;
+  }
+
+  /* line 1624, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .menu-bar-right {
+    float: right;
+  }
+
+  /* line 1629, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .card-size {
+    width: 550px;
+    margin: 90px auto;
+  }
+
+  /* line 1634, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .message-con-bottom {
+    margin-bottom: 400px;
+  }
+
+  /* line 1639, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .col-mobile {
+    margin: 20px auto 0;
+    width: 400px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  /*동아리*/
+  /* line 1647, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .dongari-view-4 {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  /* line 1652, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .dongari-button-padding {
+    padding-left: 0px;
+  }
+}
+@media (max-width: 654px) {
+  /* line 1659, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .board-title1 {
+    color: #FFFFFF;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  /* line 1666, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .profile {
+    margin-bottom: 0px;
+  }
+
+  /* line 1670, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .mypage-con {
+    margin: 0 auto;
+    width: 600px;
+  }
+
+  /* line 1674, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .mypage-category-con {
+    margin: 0 auto 10px;
+    width: 400px;
+    float: none;
+  }
+
+  /* line 1679, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .mypage-category-con:first-child {
+    margin: 0 auto 10px;
+  }
+
+  /* line 1682, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .mypage-category-con:nth-child(3) {
+    margin: 0 auto 10px;
+  }
+
+  /* line 1686, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .mypage-title {
+    width: 63%;
+  }
+
+  /* line 1690, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .header .nav-item-second {
+    padding-top: 3px;
+  }
+
+  /* line 1694, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .header .navbar-logo-wrap {
+    padding: 7px 0;
+  }
+
+  /* line 1698, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .header .nav-item-child {
+    color: #000000;
+  }
+
+  /* line 1702, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .header .nav-item-first {
+    padding-top: 10px;
+  }
+
+  /* line 1706, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .panel-padding {
+    padding: 0px;
+  }
+
+  /* line 1710, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .menu-bar-right {
+    float: right;
+  }
+
+  /* line 1714, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .dropdown-menu {
+    min-width: 0px;
+  }
+
+  /* line 1718, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .panel {
+    margin-bottom: 10px;
+  }
+
+  /* line 1722, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .panel-post-show {
+    margin-bottom: 60px;
+  }
+
+  /* line 1726, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .background {
+    padding: 10px 0;
+  }
+
+  /* line 1730, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .grand-parent-only-size {
+    width: 330px;
+  }
+
+  /* line 1734, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .grand-parent {
+    width: 330px;
+  }
+
+  /* line 1738, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .parent {
+    margin: 0 auto;
+    float: none;
+    width: 330px;
+  }
+
+  /* line 1744, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .child {
+    height: 115px;
+  }
+
+  /* line 1748, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .index-post-img {
+    width: 115px;
+    float: left;
+  }
+
+  /* line 1753, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .index-post-content {
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 190px;
+    float: left;
+  }
+
+  /* line 1761, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .post-title {
+    margin-bottom: 0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    color: black;
+  }
+
+  /* line 1769, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .index-post-writename {
+    font-size: 11px;
+  }
+
+  /* line 1773, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .post-title > a > .span-content {
+    text-decoration: none;
+    font-size: 13px;
+  }
+
+  /* line 1778, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .child > .index-user-name {
+    color: #4374D9;
+    overflow: hidden;
+    margin: 4px 0 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    height: 18px;
+  }
+
+  /* line 1787, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .child > .index-user-time {
+    color: #707070;
+    margin: 6px 0 5px 0;
+    font-size: 11px;
+    height: 18px;
+  }
+
+  /* line 1794, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .child > .index-post-title {
+    overflow: hidden;
+    height: 21px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+  /* line 1801, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .child > .index-post-title3 {
+    margin-bottom: 3px;
+  }
+
+  /* line 1805, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .parent-left > .index-price {
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 800;
+    color: #FF7012;
+    margin-bottom: 0px;
+  }
+
+  /* line 1813, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .board-title {
+    width: 190px;
+  }
+
+  /* line 1816, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .board-writer {
+    width: 70px;
+  }
+
+  /* line 1819, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .board-time {
+    width: 70px;
+  }
+
+  /* line 1824, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .selling-border {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+
+  /* line 1830, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .col-mobile {
+    margin: 20px auto 0px;
+    width: 400px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  /*동아리*/
+  /* line 1838, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .dongari-view-4 {
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  /* line 1842, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .dongari-button-padding {
+    padding-left: 0px;
+  }
+}
+@media (min-width: 0px) and (max-width: 550px) {
+  /* line 1850, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  body {
+    padding-top: 66px;
+  }
+
+  /* line 1854, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .paginate-con {
+    margin-top: 20px;
+  }
+
+  /* line 1858, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .notice-span {
+    font-size: 12px;
+    color: #828282;
+  }
+
+  /* line 1863, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .friend-detail-button {
+    display: none;
+  }
+
+  /* line 1867, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .new_selling {
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  /* line 1873, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .input-size {
+    width: 136px;
+  }
+
+  /* line 1877, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .mypage-row {
+    height: 150px;
+  }
+
+  /* line 1881, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .mypage-title {
+    height: 18px;
+  }
+
+  /* line 1885, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .mypage-con {
+    margin: 0 auto;
+    width: 300px;
+  }
+
+  /* line 1889, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .mypage-category-con {
+    margin: 0 auto 10px;
+    width: 300px;
+    float: none;
+  }
+
+  /* line 1894, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .mypage-category-con:first-child {
+    margin: 0 auto 10px;
+  }
+
+  /* line 1897, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .mypage-category-con:nth-child(3) {
+    margin: 0 auto 10px;
+  }
+
+  /* line 1901, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .mypage-title {
+    width: 55%;
+  }
+
+  /* line 1904, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .no_sign {
+    width: 330px;
+    margin: 30px auto 30px;
+  }
+
+  /* line 1909, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .no_sign2 {
+    width: 330px;
+    margin: 30px auto 400px;
+  }
+
+  /* line 1914, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .no_email {
+    width: 330px;
+    margin: 30px auto 400px;
+  }
+
+  /* line 1918, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .no_email_text {
+    font-size: 14px;
+  }
+
+  /* line 1922, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .type-box {
+    margin-top: 0px;
+    font-size: 25px;
+  }
+
+  /* line 1927, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .sell-background {
+    margin-top: 0px;
+  }
+
+  /* line 1931, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .book_main {
+    background-image: url(/images/book_mobile33.jpg);
+    height: 190px;
+  }
+
+  /* line 1936, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .meet_main {
+    background-image: url(/images/meet_mobile33.jpg);
+    height: 190px;
+  }
+
+  /* line 1941, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .index-con {
+    width: 310px;
+    padding-top: 30px;
+  }
+
+  /* line 1945, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .index-input {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  /* line 1950, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .book_menu {
+    padding-bottom: 3px;
+    border-radius: 30%;
+    background-color: #FFFFFF;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 5px;
+  }
+
+  /* line 1959, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .book_menu_con {
+    margin: 51px auto 0;
+    width: 190px;
+  }
+
+  /* line 1964, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .book_menu_title {
+    padding-top: 3px;
+    margin: 0;
+    font-size: 12px;
+    color: #363636;
+  }
+
+  /* line 1971, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .book_menu_img {
+    width: 40px;
+  }
+
+  /* line 1975, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .friend-main-list {
+    margin-top: 45px;
+  }
+
+  /* line 1979, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .moim_menu_con {
+    border-bottom: 1px solid rgba(150, 150, 150, 0.22);
+    width: 290px;
+    margin: 50px auto 0;
+  }
+
+  /* line 1985, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .moim_menu {
+    margin-right: 20px;
+  }
+
+  /* line 1989, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .moim_menu:nth-child(5) {
+    margin-right: 0px;
+  }
+
+  /* line 1993, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .moim_menu_title {
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  /* line 2000, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .header .nav-item-second {
+    padding-top: 3px;
+  }
+
+  /* line 2004, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .header .nav-item-child {
+    color: #000000;
+  }
+
+  /* line 2008, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .header .nav-item-first {
+    padding-top: 10px;
+  }
+
+  /* line 2012, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .navbar-fixed-top {
+    background-color: #FFFFFF;
+    height: 63px;
+  }
+
+  /* line 2017, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .main-title {
+    color: #000000;
+  }
+
+  /* line 2021, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .grand-parent-write-size {
+    padding-left: 5px;
+  }
+
+  /* line 2025, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .background {
+    background-image: none;
+    background-color: #e9ebee;
+    margin: 0;
+    padding: 80px 0;
+  }
+
+  /* line 2033, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .board-title-size {
+    margin-top: 0px;
+  }
+
+  /* line 2037, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .board-title1 {
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  /* line 2044, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .board-content {
+    margin-bottom: 0px;
+    font-size: 20px;
+  }
+
+  /* line 2049, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .board-content2 {
+    margin-top: 2px;
+    margin-bottom: 0px;
+    font-size: 17px;
+  }
+
+  /* line 2058, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .col-mobile {
+    margin: 45px auto 0px;
+    width: 330px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  /* line 2065, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .friend-panel-body {
+    height: 119px;
+  }
+
+  /* line 2069, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .friend-title {
+    line-height: 26px;
+    height: 52px;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 15px 25px 2px 25px;
+  }
+
+  /* line 2077, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .dongari-user-name {
+    color: #B4B4B4;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  /* line 2083, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .friend-number {
+    margin-top: 8px;
+    font-size: 11px;
+    color: #B4B4B4;
+  }
+
+  /* line 2089, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .friend-user-name {
+    margin-bottom: 10px;
+  }
+
+  /* line 2093, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .friend-time {
+    font-size: 11px;
+  }
+
+  /* line 2097, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .friend-person {
+    font-size: 12px;
+  }
+
+  /* line 2101, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .moblie-margin-top {
+    margin-top: 50px;
+  }
+
+  /* line 2106, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .category-con {
+    padding-top: 10px;
+  }
+
+  /* line 2110, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .category-title {
+    font-size: 15px;
+  }
+
+  /* line 2115, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    height: 300px;
+    width: 100%;
+  }
+
+  /* line 2120, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .show-name {
+    font-size: 15px;
+  }
+
+  /* line 2124, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .show-title {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  /* line 2129, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .show-price {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  /* line 2134, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .show-company-writename {
+    font-size: 14px;
+  }
+
+  /* line 2138, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .show-content {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  /* line 2143, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .delete-update-link {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  /* line 2148, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .reply-name {
+    font-size: 13px;
+  }
+
+  /* line 2152, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .show-time {
+    font-size: 12px;
+  }
+
+  /* line 2156, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .show-time-first {
+    font-size: 13px;
+  }
+
+  /* line 2160, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .reply-content {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  /* line 2165, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .panel-padding {
+    padding: 0px;
+  }
+
+  /* line 2169, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .menu-bar-right {
+    float: right;
+  }
+
+  /* line 2173, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .dropdown-menu {
+    min-width: 0px;
+  }
+
+  /* line 2177, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .panel {
+    margin-bottom: 4px;
+  }
+
+  /* line 2181, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .panel-post-show {
+    margin-bottom: 60px;
+  }
+
+  /* line 2185, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .grand-parent-only-size {
+    width: 330px;
+  }
+
+  /* line 2189, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .grand-parent {
+    width: 330px;
+  }
+
+  /* line 2193, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .parent {
+    margin: 0 auto;
+    float: none;
+    width: 330px;
+  }
+
+  /* line 2199, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .child {
+    height: 115px;
+  }
+
+  /* line 2203, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .index-post-img {
+    width: 130px;
+    float: left;
+  }
+
+  /* line 2208, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .index-standard {
+    margin-top: 3px;
+    font-size: 12px;
+  }
+
+  /* line 2213, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .index-post-content {
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 175px;
+    float: left;
+  }
+
+  /* line 2221, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .post-title {
+    margin-bottom: 0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    color: black;
+  }
+
+  /* line 2229, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .child > .index-post-title-item {
+    margin-bottom: 15px;
+  }
+
+  /* line 2233, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .post-title > a > .span-content {
+    text-decoration: none;
+    font-size: 13px;
+  }
+
+  /* line 2238, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .child > .index-user-name {
+    color: #4374D9;
+    overflow: hidden;
+    margin: 4px 0 0 0;
+    font-size: 13px;
+    font-weight: 600;
+    height: 18px;
+  }
+
+  /* line 2247, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .child > .index-user-time {
+    color: #707070;
+    margin: 6px 0 5px 0;
+    font-size: 11px;
+    height: 18px;
+  }
+
+  /* line 2254, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .child > .index-post-title {
+    overflow: hidden;
+    height: 21px;
+    margin-top: 1px;
+    margin-bottom: 3px;
+  }
+
+  /* line 2261, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .child > .index-post-title3 {
+    margin-bottom: 3px;
+  }
+
+  /* line 2265, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .index-post-company {
+    font-size: 11px;
+  }
+
+  /* line 2269, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .index-post-writename {
+    font-size: 11px;
+  }
+
+  /* line 2273, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .parent-left > .index-price {
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 800;
+    color: #FF7012;
+    margin-bottom: 0px;
+  }
+
+  /* line 2282, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .like-color {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  /* line 2287, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .like-icon-color-main {
+    font-size: 13px;
+  }
+
+  /* line 2291, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .card-size {
+    width: 330px;
+    margin: 0px auto;
+  }
+
+  /* line 2296, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .message-con-bottom {
+    margin-bottom: 300px;
+  }
+
+  /* line 2300, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .form-con {
+    padding: 15px;
+    width: 330px;
+    margin: 0 auto 80px auto;
+  }
+
+  /* line 2306, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .uni-title {
+    margin-bottom: 0px;
+  }
+
+  /* line 2310, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .register-con {
+    width: 320px;
+    padding-top: 20px;
+    padding-bottom: 130px;
+  }
+
+  /* line 2316, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .need_login {
+    font-size: 21px;
+  }
+
+  /* line 2320, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .forgot-admin {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  /* line 2325, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .forgot-admin1 {
+    margin-bottom: 0px;
+    font-size: 15px;
+  }
+
+  /* line 2330, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .forgot-admin2 {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  /* line 2335, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .admin-content {
+    padding-left: 68px;
+  }
+
+  /* line 2339, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .error-title1 {
+    font-size: 15px;
+  }
+
+  /* line 2343, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .selling-border {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+
+  /* line 2349, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .new_team_button {
+    margin-top: 20px;
+  }
+
+  /* line 2353, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  footer {
+    padding: 20px 0;
+  }
+
+  /* line 2358, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .btn-color {
+    padding: 5px 8px;
+  }
+
+  /* line 2363, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .parent-right > .index-user-time {
+    font-size: 12px;
+    padding-top: 3px;
+  }
+
+  /* line 2369, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .advertise-content {
+    width: 300px;
+  }
+
+  /* line 2374, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .edit-title {
+    margin-bottom: 15px;
+  }
+
+  /* line 2379, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .edit-password {
+    margin-bottom: 0px;
+  }
+
+  /* line 2383, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .edit-con {
+    padding-bottom: 40px;
+    width: 300px;
+    margin-top: 30px;
+  }
+
+  /* line 2388, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .field {
+    margin-bottom: 13px;
+  }
+
+  /*동아리*/
+  /* line 2393, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .dongari-index {
+    height: 315px;
+  }
+
+  /* line 2397, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .dongari-view-4 {
+    width: 330px;
+    margin: 0 auto;
+  }
+
+  /* line 2402, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .dongari-button {
+    margin-top: 5px;
+  }
+
+  /* line 2406, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .dongari-button-padding {
+    padding-left: 0px;
+  }
+
+  /* line 2410, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .fa-github-alt {
+    padding-left: 0px;
+  }
+
+  /* line 2413, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .dongari-show-title {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+
+  /* line 2418, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .header .navbar-logo-wrap {
+    padding: 0px;
+  }
+
+  /* line 2423, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .message-title {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  /* line 2430, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .profile {
+    padding-top: 10px;
+    width: 300px;
+    margin: 20px auto 15px;
+  }
+
+  /* line 2436, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .profile-git {
+    padding-left: 30px;
+  }
+
+  /* line 2441, /home/ubuntu/workspace/app/assets/stylesheets/home.scss */
+  .table {
+    height: 160px;
+  }
+}
+/* line 1, /home/ubuntu/workspace/app/assets/stylesheets/messages.scss */
+.message-left-color {
+  background-color: #FFF2E6;
+}
+
+/* line 5, /home/ubuntu/workspace/app/assets/stylesheets/messages.scss */
+.message-right-color {
+  background-color: #E5FFFF;
+}
+
+/* line 9, /home/ubuntu/workspace/app/assets/stylesheets/messages.scss */
+.message-all > p {
+  margin: 0 0 2px 0;
+}
+
+/* line 13, /home/ubuntu/workspace/app/assets/stylesheets/messages.scss */
+.message-user-name-first {
+  color: #D13076;
+  margin: 4px 0 2px 0;
+  font-size: 14px;
+  font-weight: 600;
+  height: 22px;
+}
+
+/* line 21, /home/ubuntu/workspace/app/assets/stylesheets/messages.scss */
+.message-user-name-coffee {
+  color: #000000;
+  margin: 4px 0 2px 0;
+  font-size: 14px;
+  font-weight: 600;
+  height: 22px;
+}
+
+/* line 28, /home/ubuntu/workspace/app/assets/stylesheets/messages.scss */
+.message-user-name {
+  color: #4374D9;
+  margin: 4px 0 2px 0;
+  font-size: 14px;
+  font-weight: 600;
+  height: 22px;
+}
+
+/* line 36, /home/ubuntu/workspace/app/assets/stylesheets/messages.scss */
+.message-user-time {
+  font-weight: 400;
+  color: #949494;
+  margin: 0;
+  font-size: 12px;
+  height: 20px;
+}
+
+@media (min-width: 0px) and (max-width: 550px) {
+  /* line 46, /home/ubuntu/workspace/app/assets/stylesheets/messages.scss */
+  .btn-sm {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+  /* line 51, /home/ubuntu/workspace/app/assets/stylesheets/messages.scss */
+  .message-user-name-first {
+    color: #D13076;
+    overflow: hidden;
+    margin: 4px 0 2px 0;
+    font-size: 13px;
+    font-weight: 600;
+    height: 18px;
+  }
+
+  /* line 60, /home/ubuntu/workspace/app/assets/stylesheets/messages.scss */
+  .message-user-name {
+    color: #4374D9;
+    overflow: hidden;
+    margin: 4px 0 2px 0;
+    font-size: 13px;
+    font-weight: 600;
+    height: 18px;
+  }
+
+  /* line 69, /home/ubuntu/workspace/app/assets/stylesheets/messages.scss */
+  .message-user-time {
+    font-weight: 500;
+    color: #949494;
+    margin: 0;
+    font-size: 13px;
+    height: 18px;
+  }
+
+  /* line 77, /home/ubuntu/workspace/app/assets/stylesheets/messages.scss */
+  .message-content {
+    font-size: 13px;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+ /* @import 'bootstrap'을 하게 되면, home.scss 스타일 먹히지 않는다.*/
+
+
+    @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+    @import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+    @import url('https://fonts.googleapis.com/css?family=Damion');
+    @import url('https://fonts.googleapis.com/css?family=Architects+Daughter');

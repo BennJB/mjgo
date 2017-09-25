@@ -5,8 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'fog-aws'
+gem 'fog'
 gem 'carrierwave', '~> 1.0'
+gem 'tinymce-rails-imageupload', '~> 4.0.0.beta'
 gem 'mini_magick'
 
 gem 'devise'
@@ -18,6 +19,8 @@ gem 'will_paginate', '~> 3.1.0'
 
 gem 'omniauth-facebook'
 gem 'figaro' 
+
+gem 'tinymce-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
