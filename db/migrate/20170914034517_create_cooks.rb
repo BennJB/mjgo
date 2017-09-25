@@ -23,7 +23,7 @@ class CreateCooks < ActiveRecord::Migration[5.1]
       t.string :four
       t.string :five
       
-      t.string :image     
+      t.text :image     
       
       t.integer :cookchoice_id
       t.integer :cooklist_id
