@@ -10,7 +10,7 @@ Devise.setup do |config|
   
   
   config.omniauth :facebook, "", "", scope: 'email', info_fields: 'email,name',
-  callback_url: "http://13.124.238.45/users/auth/facebook/callback"
+  callback_url: "http://www.mjgo.me/users/auth/facebook/callback"
 
 
 
