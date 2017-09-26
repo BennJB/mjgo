@@ -250,27 +250,28 @@
             </div>
         </div>
        
-        <a href="#">
+        <% if @cook.image[2].present? %>
+        <a href="<%= @cook.image[2].url %>">
         <img src="/images/open-menu.png" id="pop" class="openmenu" alt="openmenu">
         <span class="openmenu-title">OPEN THE</span>
         </a>        
-                
+        <% end %>        
                 <!-- Creates the bootstrap modal where the image will appear -->
-                <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header" style="border-bottom: none;">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <p class="store-modal-title" id="myModalLabel"><%= @cook.title %></p>
-                      </div>
-                      <div class="modal-body store-modal-body">
-                        <% if @cook.image[2].present? %>  
-                        <img src="<%= @cook.image[2].url %>" id="imagepreview" class="store-modal-content" alt="cook_menu">
-                        <% end %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <!--<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+                <!--  <div class="modal-dialog">-->
+                <!--    <div class="modal-content">-->
+                <!--      <div class="modal-header" style="border-bottom: none;">-->
+                <!--        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>-->
+                <!--        <p class="store-modal-title" id="myModalLabel"><%#= @cook.title %></p>-->
+                <!--      </div>-->
+                <!--      <div class="modal-body store-modal-body">-->
+                <!--        <%# if @cook.image[2].present? %>  -->
+                <!--        <img src="<%#= @cook.image[2].url %>" id="imagepreview" class="store-modal-content" alt="cook_menu">-->
+                <!--        <%# end %>-->
+                <!--      </div>-->
+                <!--    </div>-->
+                <!--  </div>-->
+                <!--</div>-->
         </div>
         <!--store_detail_text-->
     
@@ -398,44 +399,49 @@
 
 @media (min-width: 0px) and (max-width: 550px) { 
 
-#mceu_25 {
-    display: none;
+#mceu_20 {
+    display: none !important;
 }
 
-#mceu_49 {
-    display: none;
+#mceu_30-head {
+    display: none !important;
 }
-#mceu_38 {
-    height: 80px !important;
-    width: 350px !important;
+
+#mceu_41 {
+    display: none !important;
 }
-#mceu_38-body {
-    height: 80px !important;
-    width: 350px !important;
+
+#mceu_30 {
+    height: 90px !important;
+    width: 330px !important;
 }
-#mceu_45 {
-    width: 350px !important;
+
+#mceu_30-body {
+    height: 90px !important;
+    width: 330px !important;
 }
-#mceu_46 {
-    left: 160px !important;
+
+#mceu_37 {
+    width: 330px !important;
 }
-#mceu_47 {
-    left: 230px !important;
+
+#mceu_33 {
+    width: 150px !important;
 }
-.mce-container-body.mce-abs-layout {
-    width: 320px;
+
+/*button move*/
+#mceu_38 { 
+    left: 190px !important;
 }
-.mce-foot {
-    width: 320px;
+#mceu_39 {
+    left: 250px !important;
 }
-.mce-window-head {
-    display: none;
-}
+
 }
 
 </style>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey="></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ccec2e369f7cf7d5d17c43fb089006c7"></script>
 <script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
     mapOption = { 
@@ -861,8 +867,8 @@ scoreName: 'rating'  // Name of the hidden field that holds the score value.
 </script>
 
 <script>
-$("#pop").on("click", function() {
-   $('#imagepreview'); // here asign the image to the modal when the user click the enlarge link
-   $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
-});
-</script>
+// $("#pop").on("click", function() {
+//   $('#imagepreview'); // here asign the image to the modal when the user click the enlarge link
+//   $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
+// });
+// </script>
