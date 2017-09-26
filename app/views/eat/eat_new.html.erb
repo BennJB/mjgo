@@ -97,6 +97,8 @@
     <%= f.text_field :five, class: "form-control input-size", id: "exampleInputName2", placeholder: "숫자만 입력해주세요." %>
     </div>
     
+    <p style="margin: 10px 0 0px;">* 사진은 <span style="color: red;">최대 7장</span>까지 올릴 수 있으며,</p>
+    <p style="margin: 0px;"><span style="color: red;">3번째 사진</span>에는 <span style="font-weight: 600;">메뉴판 사진</span>을 넣어주세요.</p>
     <!--<input type="file" name="image" class="file-submit">-->
     <%= f.file_field :image, class: "file-submit", multiple: true %>
     

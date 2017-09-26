@@ -15,7 +15,7 @@
         
           <div class="panel panel-default">
             <div class="panel-body messages-panel-body grand-row">
-              <span class="messages-panel-user"><%= recipient.nic_name %></span>
+              <span class="messages-panel-user"><%= conversation.messages.last.user.nic_name %></span>
               <span><%= conversation.messages.last.body %></span>
               <div class="parent-right">
               <%= time_ago_in_words(conversation.messages.last.created_at) %>

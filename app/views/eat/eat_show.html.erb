@@ -333,7 +333,7 @@
         </div>
     
         <div class="review-user-con">
-        <% @cook.cookreplies.each do |r| %>
+        <% @cook.cookreplies.reverse.each do |r| %>
             <div class="reply-all"> 
                 <p class="reply-name"><%= r.user.name? ? r.user.name : r.user.nic_name %> <span class="show-time"><%= time_ago_in_words(r.created_at) %></span></p>
                 <div class="star-rating store-rating-reply" data-score='<%= r.rating %>'></div>
@@ -398,6 +398,10 @@
 
 
 @media (min-width: 0px) and (max-width: 550px) { 
+
+#mceu_3 {
+    display: none !important;
+}
 
 #mceu_20 {
     display: none !important;

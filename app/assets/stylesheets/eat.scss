@@ -519,7 +519,7 @@
 
 .review-confirm {
     position: absolute;
-    top: 315px;
+    top: 285px;
     right: 35px;
 }
 
@@ -528,7 +528,7 @@
     font-weight: 600;
     font-size: 15px;
     position: absolute;
-    top: 315px;
+    top: 285px;
     right: 2px;
 }
 
@@ -619,7 +619,7 @@
 }
 
 .menu_parent3 {
-    margin-left: 30%;
+    margin-left: 35%;
 }
 
 .menu_number {
@@ -814,6 +814,10 @@ input[type="image" i]:focus {
     font-weight: 600;
 }
 
+.tinymce-img {
+    font-size: 15px;
+}
+
 .tinymce-img img {
     max-width : 400px;
     max-height : 220px;
@@ -964,6 +968,11 @@ input[type="image" i]:focus {
 }
 
 @media (min-width: 0px) and (max-width: 550px) { 
+
+.tinymce-img {
+    font-size: 13px;
+    font-weight: 600;
+}
 
 .new_background {
     padding-top: 20px;
@@ -1379,7 +1388,7 @@ input[type="image" i]:focus {
 }
 
 .menu_parent3 {
-    margin-left: 50%;
+    margin-left: 60%;
 }
 
 .price-detail {

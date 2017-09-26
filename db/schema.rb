@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20170925041222) do
   end
 
   create_table "cookreplies", force: :cascade do |t|
-    t.string "content"
+    t.text "content"
     t.string "rating"
     t.integer "cook_id"
     t.integer "user_id"
