@@ -133,7 +133,7 @@ var positions = [
                 '<p class="menu_content-text2">추천메뉴 <%= x.menuone %></p>' +
                 '<p class="menu_content-text3">리뷰 <span style="color: #ff4200; font-weight: 600;"><%= x.cookreplies.size %></span></p>' +
                 '<a href="/eat_show/<%= x.id %>"><button type="button" class="btn btn-danger btn-sm eat_button">자세히 보기</button></a>',
-        latlng: new daum.maps.LatLng(<%= x.latitude %>, <%= x.longitude %>)
+        latlng: new daum.maps.LatLng(<%= x.latitude.to_f %>, <%= x.longitude.to_f %>)
         
     }
 ];

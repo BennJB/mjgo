@@ -435,11 +435,11 @@
 
 </style>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=53535b6a4f840c7180d6c79984b17e02"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey="></script>
 <script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
     mapOption = { 
-        center: new daum.maps.LatLng(<%= @cook.latitude %>, <%= @cook.longitude %>), // 지도의 중심좌표
+        center: new daum.maps.LatLng(<%= @cook.latitude.to_f %>, <%= @cook.longitude.to_f %>), // 지도의 중심좌표
         level: 3, // 지도의 확대 레벨
         disableDoubleClickZoom: true,
         scrollwheel: true
@@ -475,7 +475,7 @@ var positions = [
                  '<p class="menu_content-text2">추천메뉴 <%= @cook.menuone %></p>' +
                  '<p class="menu_content-text3">리뷰 <span style="color: #ff4200; font-weight: 600;"><%= @cook.cookreplies.size %></span></p>' +
                  '<a href="/eat_show/<%= @cook.id %>"><button type="button" class="btn btn-danger btn-sm eat_button">자세히 보기</button></a>',
-        latlng: new daum.maps.LatLng(<%= @cook.latitude %>, <%= @cook.longitude %>)
+        latlng: new daum.maps.LatLng(<%= @cook.latitude.to_f %>, <%= @cook.longitude.to_f %>)
     }
 ];
 
