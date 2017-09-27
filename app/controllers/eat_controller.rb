@@ -136,6 +136,7 @@ class EatController < ApplicationController
   def reply
     new_reply = Cookreply.new
     new_reply.content = params[:rep]
+    new_reply.image = params[:image]
     new_reply.rating = params[:rating]
     new_reply.cook_id =params[:id]
     new_reply.user_id = current_user.id

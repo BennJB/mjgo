@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20170925041222) do
   create_table "cookreplies", force: :cascade do |t|
     t.text "content"
     t.string "rating"
+    t.text "image"
     t.integer "cook_id"
     t.integer "user_id"
     t.datetime "created_at", null: false

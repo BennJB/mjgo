@@ -508,6 +508,21 @@
     color: #222;
 }
 
+.cook_reply_submit {
+    text-align: right;
+    margin-top: 5px;
+}
+
+.rating-position {
+    position: absolute;
+    top: 85px;
+    right: 0;
+}
+
+.rating-position > img{
+    width: 19px;
+}
+
 .rating-option {
     padding-top: 5px;
     text-align: right;
@@ -815,6 +830,7 @@ input[type="image" i]:focus {
 }
 
 .tinymce-img {
+    margin-bottom: 6px;
     font-size: 15px;
 }
 
@@ -1310,8 +1326,17 @@ input[type="image" i]:focus {
     padding-top: 3px;
 }
 
+.rating-position {
+    top: 80px;
+}
+
+
+.rating-position > img{
+    width: 19px;
+}
+
 .rating-option > img {
-    width: 21px;
+    width: 19px;
 }
 
 .review-confirm {

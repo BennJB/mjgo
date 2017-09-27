@@ -4,6 +4,7 @@ class CreateCookreplies < ActiveRecord::Migration[5.1]
   
       t.text :content
       t.string :rating
+      t.text :image
       
       t.integer :cook_id
       t.integer :user_id
