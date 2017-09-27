@@ -138,7 +138,11 @@
     <% end %>
     </div>
     <div class="text-center">
+    <% if @post.category_id == 1 %>     
     <%= link_to '목록으로 가기', '/index', class: "btn btn-default btn-sm" %>
+    <% else %>
+    <%= link_to '목록으로 가기', '/box', class: "btn btn-default btn-sm" %>
+    <% end %>
     </div>  
   </div>
  </div>
