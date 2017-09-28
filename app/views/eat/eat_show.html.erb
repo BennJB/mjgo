@@ -91,7 +91,7 @@
     <div class="store_title_con">
     
     <!--이벤트 생성 버튼-->
-    <% if user_signed_in? && current_user.admin? %>
+    <% if user_signed_in? && (current_user.id == @cook.user.id or current_user.admin) %>
         <% if @cook.cookevents.first %>
             <a href="/event_update/<%= @cook.id %>/<%= @cook.cookevents.first.id %>">
             <div class="new_event">

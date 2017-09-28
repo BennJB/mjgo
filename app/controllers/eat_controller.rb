@@ -25,7 +25,7 @@ class EatController < ApplicationController
   end
   
   def new_event
-    if user_signed_in? && current_user.admin?  
+    if user_signed_in? && ( current_user.id == Cook.find(params[:id]).user_id or current_user.admin? )  
     @cook = Cook.find(params[:id])  
     else
     redirect_to "/"
@@ -45,7 +45,7 @@ class EatController < ApplicationController
   
   # 이벤트 수정
   def event_update
-    if user_signed_in? && current_user.admin?
+    if user_signed_in? && ( current_user.id == Cook.find(params[:id]).user_id or current_user.admin? )
     @event = Cookevent.find(params[:cookevent_id]) 
     else
     redirect_to "/"
