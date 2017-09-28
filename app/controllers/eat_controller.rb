@@ -9,7 +9,7 @@ class EatController < ApplicationController
     @cooks == nil
     else
     @queryname = params[:query]     # 검색어 입력되면, 출력하려고 변수에 저장
-    @cooks = Cook.all.where("title LIKE ? OR menuone LIKE ?", "%#{params[:query]}%","%#{params[:query]}%") && Cook.all.where("title LIKE ? OR menuone LIKE ?", "%#{params[:query].gsub(" ","")}%","%#{params[:query].gsub(" ","")}%").order('created_at DESC').paginate(:page => params[:page], :per_page => 12)  
+    @cooks = Cook.all.where("title LIKE ? OR content LIKE ?", "%#{params[:query]}%","%#{params[:query]}%") && Cook.all.where("title LIKE ? OR content LIKE ?", "%#{params[:query].gsub(" ","")}%","%#{params[:query].gsub(" ","")}%").order('created_at DESC').paginate(:page => params[:page], :per_page => 12)  
     end
   end
   
