@@ -401,7 +401,6 @@
 }
 
 .store_detail_text1 {
-    position: relative;
     background-color: white;
     margin-right: 10px;
     width: 600px;
@@ -411,10 +410,15 @@
     float: left;
 }
 
+.menu_five {
+    position: relative;
+}
+
 .store_manage {
     position: absolute;
-    top: 330px;
-    left: 460px;
+    width: 150px;
+    top: 60px;
+    left: 285px;
 }
 
 .store_manage_txt {
@@ -666,8 +670,9 @@
 }
 
 .openmenu-title {
-    top: 318px;
-    left: 220px;
+    width: 120px;
+    top: 55px;
+    left: 65px;
     font-family: 'Architects Daughter', cursive;
     font-size: 20px;
     color: #D90224;
@@ -1259,7 +1264,6 @@ input[type="image" i]:focus {
 }
 
 .store_detail_text1 {
-    position: relative;
     background-color: white;
     width: 340px;
     height: 315px;
@@ -1268,8 +1272,8 @@ input[type="image" i]:focus {
 }
 
 .store_manage {
-    top: 320px;
-    left: 210px;
+    top: 95px;
+    left: 120px;
 }
 
 .store_detail_text2 {
@@ -1422,8 +1426,8 @@ input[type="image" i]:focus {
 }
 
 .openmenu-title {
-    top: 261px;
-    left: 95px;
+    top: 48px;
+    left: 0px;
 }
 
 .openmenu {
