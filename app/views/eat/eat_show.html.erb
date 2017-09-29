@@ -227,7 +227,8 @@
                     <div class="price-detail">
                         <div class="menu_parent1 menu_five">
                                 <% if @cook.image[2].present? %>
-                                <span class="openmenu-title">OPEN THE</span>
+                                <a href="<%= @cook.image[2].url %>">
+                                <span class="openmenu-title">OPEN THE</span></a>
                                 <% end %>
                                 <div class="store_manage">
                                 <% if user_signed_in? && (current_user.id == @cook.user.id or current_user.admin) %>
