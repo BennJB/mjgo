@@ -3,7 +3,6 @@ class EatController < ApplicationController
     before_action :authenticate_user!, except: [:index, :food1, :food2, :food3, :food4, :food5, :random_cook, :random_page, :every_map, :eat_show]
     before_action :set_cook, only: [:eat_show, :destroy, :eat_update, :eat_update_new]
 
-
   def index
     if params[:query].nil?
     @cooks == nil
